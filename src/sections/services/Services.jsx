@@ -6,7 +6,7 @@ const Services = () => {
     return (
         <section id="services">
             <h2>My knowledge</h2>
-            <p>Here are the Languages / Techonologies for which I can offer my services</p>
+            <p>Here are the Languages / Technologies for which I can offer my services</p>
             <div className="container services__container" data-aos="fade-up">
                 {
                     data.map(item => (
