@@ -38,28 +38,36 @@ header {
 }
 
 .header__socials {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    position: fixed;
+    left: 2rem;
+    top: 9.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    z-index: 100;
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.header__socials.show {
+    opacity: 1;
+    transition: 1s ease-in;
 }
 
 .header__socials a {
     width: 2.8rem;
     aspect-ratio: 1/1;
-    background: var(--color-light);
-    color: var(--color-black);
+    background: var(--color-primary);
+    color: var(--color-white);
     display: grid;
     place-items: center;
     border-radius: var(--border-radius-3);
 }
 
 .header__socials a:hover {
-    background: var(--color-primary);
-    color: var(--color-white);
-    transform: translateX(-0.5rem);
+    background: var(--color-light);
+    color: var(--color-black);
+    transform: translateX(0.5rem);
 }
 
 .header__socials .social-icon {
@@ -72,6 +80,10 @@ header {
     header {
         margin-top: 0;
         height: 100vh;
+    }
+
+    .header__socials {
+        display: none;
     }
 }
 

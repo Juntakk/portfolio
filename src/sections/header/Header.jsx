@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import data from './data'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -7,6 +7,8 @@ import './header.css'
 
 
 const Header = () => {
+
+
     useEffect(() => {
         AOS.init({ duration: 2000 });
 
@@ -43,6 +45,51 @@ const Header = () => {
         });
     }, []);
 
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        let timeoutId;
+
+        const handleScroll = () => {
+            const socialsContainer = document.querySelector('.header__socials');
+            const scrollThreshold = 2; // Adjust the threshold as needed
+
+            if (window.scrollY > scrollThreshold || isHovered) {
+                socialsContainer.classList.add('show');
+                clearTimeout(timeoutId);
+            } else {
+                socialsContainer.classList.remove('show');
+            }
+        };
+
+        const handleHover = () => {
+            setIsHovered(true);
+            clearTimeout(timeoutId);
+        };
+
+        const handleHoverEnd = () => {
+            setIsHovered(false);
+
+            // Add a delay before checking scroll position again to prevent immediate fade-out
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                handleScroll();
+            }, 300); // Adjust the delay as needed (in milliseconds)
+        };
+
+        // Attach the event listeners when the component mounts
+        window.addEventListener('scroll', handleScroll);
+        document.querySelector('.header__socials').addEventListener('mouseover', handleHover);
+        document.querySelector('.header__socials').addEventListener('mouseout', handleHoverEnd);
+
+        // Clean up the event listeners when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.querySelector('.header__socials').removeEventListener('mouseover', handleHover);
+            document.querySelector('.header__socials').removeEventListener('mouseout', handleHoverEnd);
+        };
+    }, [isHovered]);
+
     return (
         <header id="header">
             <div id="particles-js" className="particles__container"></div>
@@ -63,7 +110,8 @@ const Header = () => {
                             </a>
                         ))
                     }
-                </div>           </div>
+                </div>
+            </div>
         </header>
     );
 };
