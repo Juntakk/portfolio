@@ -15,7 +15,7 @@ const Header = () => {
         // Configure particles.js
         window.particlesJS('particles-js', {
             particles: {
-                number: { value: 122, density: { enable: true, value_area: 900 } },
+                number: { value: 122, density: { enable: true, value_area: 700 } },
                 color: { value: '#87837c' },
                 shape: {
                     type: 'circle',
@@ -23,8 +23,8 @@ const Header = () => {
                     polygon: { nb_sides: 3 },
                 },
                 opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
-                size: { value: 12, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-                line_linked: { enable: false, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: '#87837c', opacity: 0.4, width: 1 },
                 move: {
                     enable: true,
                     speed: 3,
@@ -52,7 +52,7 @@ const Header = () => {
 
         const handleScroll = () => {
             const socialsContainer = document.querySelector('.header__socials');
-            const scrollThreshold = 2; // Adjust the threshold as needed
+            const scrollThreshold = 20; // Adjust the threshold as needed
 
             if (window.scrollY > scrollThreshold || isHovered) {
                 socialsContainer.classList.add('show');

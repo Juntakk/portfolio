@@ -5,12 +5,11 @@ import Image4 from "../../assets/market.png"
 import Image5 from "../../assets/game_2.png"
 import Image6 from "../../assets/php_project_1.png"
 import Image7 from "../../assets/game_3.png"
-import Image8 from "../../assets/lets_play.png"
 
 const data = [
     {
         id: 1,
-        category: "frontend",
+        category: "mobile",
         image: Image1,
         title: "Activity Reservation App",
         desc: "Simple and efficient Java reservation app, using Android Studio and SQL for a school project.",
