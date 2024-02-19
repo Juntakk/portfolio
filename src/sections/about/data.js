@@ -1,14 +1,21 @@
-import { GiCowled } from "react-icons/gi";
-import { SiCodeigniter } from "react-icons/si";
-import { GiBoltShield } from "react-icons/gi";
+import { AiFillExperiment } from "react-icons/ai";
+import { MdWork } from "react-icons/md";
+import { FaBrain } from "react-icons/fa";
 
 const data = [
-    { id: 1, icon: <GiCowled />, title: "Experience", desc: "1+ Year Coding" },
-    { id: 2, icon: <SiCodeigniter />, title: "Projects", desc: "8+ Completed" },
-    {
-        id: 3, icon: <GiBoltShield />, title: "Skills", desc: "10+ Aptitudes"
-    }
-]
+  {
+    id: 1,
+    icon: <AiFillExperiment />,
+    title: "Experience",
+    desc: "2+ Years Coding",
+  },
+  { id: 2, icon: <MdWork />, title: "Projects", desc: "15+ Completed" },
+  {
+    id: 3,
+    icon: <FaBrain />,
+    title: "Skills",
+    desc: "10+ Aptitudes",
+  },
+];
 
 export default data;
-
