@@ -23,6 +23,7 @@
 }
 
 .card.portfolio__project {
+  padding: 1rem;
   animation: animateProject 800ms ease-in forwards;
 }
 

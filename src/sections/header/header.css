@@ -65,7 +65,7 @@ header {
 
 .header__socials a:hover {
   background: var(--color-light);
-  color: var(--color-black);
+  color: var(--color-primary);
   transform: translateX(0.5rem);
   border: 2px solid;
   border-color: var(--color-primary);

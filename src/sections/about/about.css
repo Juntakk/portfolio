@@ -67,6 +67,7 @@
 
 .about__left .btn {
   margin-top: 2.5rem;
+  margin-left: 3rem;
 }
 
 /*TABLETS*/
@@ -76,11 +77,23 @@
   }
 
   .about__container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+  }
+  .about__cards {
+    padding: 1rem;
+    margin-top: 0rem;
   }
 
-  .about__left h2 {
+  .card.about__card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about__left h1,
+  h4 {
     text-align: center;
+    padding: 1rem;
   }
 }
 
@@ -93,5 +106,11 @@
 
   .about__left .btn {
     margin-top: 2rem;
+  }
+  .about__left h1 {
+    font-size: 2rem;
+  }
+  .about__left h4 {
+    font-size: 1rem;
   }
 }
