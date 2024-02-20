@@ -100,12 +100,23 @@
 /*PHONES*/
 @media screen and (max-width: 600px) {
   .about__cards {
-    /* grid-template-columns: 1fr 1fr; */
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .about__left .btn {
     margin-top: 2rem;
+    margin-left: 5rem;
   }
   .about__left h1 {
     font-size: 2rem;
