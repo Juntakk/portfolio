@@ -57,7 +57,7 @@ header {
   width: 2.8rem;
   aspect-ratio: 1/1;
   background: var(--color-primary);
-  color: var(--color-black);
+  color: var(--color-light);
   display: grid;
   place-items: center;
   border-radius: var(--border-radius-3);
@@ -67,6 +67,8 @@ header {
   background: var(--color-light);
   color: var(--color-black);
   transform: translateX(0.5rem);
+  border: 2px solid;
+  border-color: var(--color-primary);
 }
 
 .header__socials .social-icon {

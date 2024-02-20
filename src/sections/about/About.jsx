@@ -10,27 +10,30 @@ const About = () => {
     <section id="about" data-aos="fade-in">
       <div className="container about__container">
         <div className="about__left">
-          <h2>About me</h2>
-          <div className="about__cards">
-            {data.map((item) => (
-              <Card key={item.id} className="about__card">
-                <span className="about__card-icon">{item.icon}</span>
-                <h5>{item.title}</h5>
-                <small>{item.desc}</small>
-              </Card>
-            ))}
-          </div>
-          <p>
-            Hey there! I'm a creative soul passionate about bringing ideas to
-            life through coding. I thrive on crafting digital
-            experiences—whether it's websites, apps, or games. I've savored them
-            all, and I'm eager to share the taste. Let's embark on the exciting
-            journey of technology together!
-          </p>{" "}
+          <h1>
+            I'm Nick, a Full-Stack Programmer <br></br> with a hunger<br></br>{" "}
+            for knowledge
+          </h1>
+
+          <h4>
+            I've spent the last 2 years learning, practicing and honing my
+            coding skills with various projects and hobbies and I am ready to
+            use these skills to make a difference somewhere, somehow.
+          </h4>
+
           <a href={CV} download className="btn primary">
             Download CV
             <LiaCloudDownloadAltSolid />
           </a>
+        </div>
+        <div className="about__cards">
+          {data.map((item) => (
+            <Card key={item.id} className="about__card">
+              <span className="about__card-icon">{item.icon}</span>
+              <h5>{item.title}</h5>
+              <small>{item.desc}</small>
+            </Card>
+          ))}
         </div>
         <div className="about__right">
           <div className="about__portrait">

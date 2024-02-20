@@ -1,7 +1,7 @@
 .about__container {
   display: grid;
-  grid-template-columns: 63% 25%;
-  gap: 12%;
+  grid-template-columns: 50% 13% 25%;
+  gap: 5%;
 }
 
 .about__portrait {
@@ -23,24 +23,21 @@
 }
 
 .about__cards {
-  margin: 3rem 0 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  text-align: center;
-}
-
-.card .about__card {
   text-align: center;
 }
 
 .about__card-icon {
   font-size: 1.8rem;
-  color: var(--color-black);
-  border-radius: var(--border-radius-3);
+  color: var(--color-primary);
+  border-radius: 150px;
   width: fit-content;
   margin-inline: auto;
-  padding: 0.6rem;
+  margin-top: -0.4rem;
+  padding: 0.3rem;
   display: flex;
   align-items: center;
   transition: var(--transition);
@@ -52,12 +49,20 @@
 }
 
 .card.about__card h5 {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
-.about__left p {
+.about__left h1 {
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.about__left h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: silver;
   margin-bottom: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 
 .about__left .btn {
@@ -82,7 +87,7 @@
 /*PHONES*/
 @media screen and (max-width: 600px) {
   .about__cards {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     gap: 1rem;
   }
 
