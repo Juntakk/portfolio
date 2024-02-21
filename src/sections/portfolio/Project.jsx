@@ -10,14 +10,6 @@ const Project = ({ project }) => {
       <p>{project.desc}</p>
       <div className="portfolio__project-cta">
         <a
-          href={project.demo}
-          className="btn sm"
-          target="_blank"
-          rel="noopner noreferrer"
-        >
-          Preview
-        </a>
-        <a
           href={project.github}
           className="btn sm primary"
           target="_blank"

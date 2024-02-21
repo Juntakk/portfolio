@@ -11,8 +11,8 @@ const About = () => {
       <div className="container about__container">
         <div className="about__left">
           <h1>
-            I'm Nick, a Full-Stack Programmer <br></br> with a hunger<br></br>{" "}
-            for knowledge
+            I'm Nick, a Full-Stack Programmer <br></br> with a hunger for
+            <br></br> knowledge
           </h1>
 
           <h4>
@@ -23,21 +23,22 @@ const About = () => {
 
           <a href={CV} download className="btn primary">
             Download CV
-            <LiaCloudDownloadAltSolid />
+            <LiaCloudDownloadAltSolid className="icon" />
           </a>
         </div>
-        <div className="about__cards">
-          {data.map((item) => (
-            <Card key={item.id} className="about__card">
-              <span className="about__card-icon">{item.icon}</span>
-              <h5>{item.title}</h5>
-              <small>{item.desc}</small>
-            </Card>
-          ))}
+
+        <div className="about__portrait">
+          <img src={AboutImage} alt="About" />
         </div>
         <div className="about__right">
-          <div className="about__portrait">
-            <img src={AboutImage} alt="About" />
+          <div className="about__cards">
+            {data.map((item) => (
+              <Card key={item.id} className="about__card">
+                <span className="about__card-icon">{item.icon}</span>
+                <h5>{item.title}</h5>
+                <small>{item.desc}</small>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

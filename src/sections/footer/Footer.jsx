@@ -1,10 +1,10 @@
-import { links, socials } from "./data"
-import "./footer.css"
+import { links, socials } from "./data";
+import "./footer.css";
 
 const Footer = () => {
-    return (
-        <footer>
-            <div className="container footer__container">
+  return (
+    <footer>
+      {/* <div className="container footer__container">
                 <ul className="nav__menu">
                     {
                         links.map(fLink => <li key={fLink.id}><a href={fLink.link}>{fLink.title}</a></li>)
@@ -15,12 +15,12 @@ const Footer = () => {
                         socials.map(social => <a key={social.id} href={social.link} target="_blank" rel="noopener noreferrer">{social.icon}</a>)
                     }
                 </div>
-            </div>
-            <div className="footer__copyright">
-                <small>2024 Nicolas Habashi Gauthier &copy; All Rights Reserved</small>
-            </div>
-        </footer>
-    )
-}
+            </div> */}
+      <div className="footer__copyright">
+        <small>2024 Nicolas Habashi Gauthier &copy; All Rights Reserved</small>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
