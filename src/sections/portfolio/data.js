@@ -48,7 +48,7 @@ const data = [
     category: "games",
     image: Image5,
     title: "Mini-Game 2",
-    desc: "Now ankle deep in the C++ waters, I discover how to implement simple animations and gameplay.",
+    desc: "Now ankle deep in the C++ waters, I implement animations and gameplay, adding some levels as I continue working on it.",
     demo: "https://youtu.be/s4NtbWSKATc",
     github: "https://github.com/Juntakk/mini-game-2",
   },
