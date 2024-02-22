@@ -78,6 +78,16 @@ main.bg-2 {
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
   --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
 }
+main.bg-1 {
+  --black-lightness: 10%;
+  --dark-lightness: 20%;
+  --light-lightness: 70%;
+  --white-lightness: 75%;
+  --color-white: hsl(0, 5%, var(--white-lightness));
+  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
+  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
+  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
+}
 
 main {
   color: var(--color-dark);
@@ -238,7 +248,11 @@ img {
 /* MEDIA QUERIES (phones) */
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
   }
 
   h2 {
@@ -254,10 +268,13 @@ img {
   }
 
   .btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.4rem 1rem;
   }
 
   section > p {
     width: var(--container-width-md);
+  }
+  section {
+    padding-top: 4rem;
   }
 }

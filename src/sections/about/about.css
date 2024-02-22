@@ -139,13 +139,17 @@
     display: none;
   }
 
+  .about__container p {
+    width: 15rem;
+    text-align: center;
+  }
+
   .about__left .btn {
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .about__left h1 {
     font-size: 2rem;
-  }
-  .about__left h4 {
-    font-size: 1rem;
   }
 }
