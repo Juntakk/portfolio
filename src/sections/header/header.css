@@ -55,7 +55,7 @@ header {
 
 .header__socials a {
   width: 2.8rem;
-  width: 2.8rem;
+  height: 2.8rem;
   background: var(--color-primary);
   color: var(--color-light);
   display: grid;
