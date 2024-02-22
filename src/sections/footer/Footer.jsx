@@ -1,4 +1,3 @@
-import { links, socials } from "./data";
 import "./footer.css";
 
 const Footer = () => {
