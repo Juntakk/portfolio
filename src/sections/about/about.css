@@ -79,18 +79,31 @@
 }
 
 /*TABLETS*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1444px) {
   .about__right {
     display: none;
   }
 
-  .about__container {
+  .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .about__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .about__cards {
-    padding: 1rem;
-    margin-top: 0rem;
+    display: none;
+  }
+
+  .about__portrait {
+    display: none;
   }
 
   .card.about__card {
@@ -103,23 +116,27 @@
     text-align: center;
     padding: 1rem;
   }
+  .about__left a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*PHONES*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .about__cards {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+    display: none;
   }
   .about__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .about__portrait {
+    display: none;
   }
 
   .about__left .btn {
