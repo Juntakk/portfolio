@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import data from './data'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -7,14 +7,16 @@ import './header.css'
 
 
 const Header = () => {
+
+
     useEffect(() => {
         AOS.init({ duration: 2000 });
 
         // Configure particles.js
         window.particlesJS('particles-js', {
             particles: {
-                number: { value: 122, density: { enable: true, value_area: 800 } },
-                color: { value: '#bf7404' },
+                number: { value: 122, density: { enable: true, value_area: 700 } },
+                color: { value: '#87837c' },
                 shape: {
                     type: 'circle',
                     stroke: { width: 0, color: '#000000' },
@@ -22,10 +24,10 @@ const Header = () => {
                 },
                 opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
                 size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                line_linked: { enable: true, distance: 150, color: '#87837c', opacity: 0.4, width: 1 },
                 move: {
                     enable: true,
-                    speed: 6,
+                    speed: 3,
                     direction: 'none',
                     random: false,
                     straight: false,
@@ -36,12 +38,57 @@ const Header = () => {
             },
             interactivity: {
                 detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                events: { onhover: { enable: false, mode: 'repulse' }, onclick: { enable: false, mode: 'push' }, resize: false },
                 modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } },
             },
             retina_detect: true,
         });
     }, []);
+
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        let timeoutId;
+
+        const handleScroll = () => {
+            const socialsContainer = document.querySelector('.header__socials');
+            const scrollThreshold = 20; // Adjust the threshold as needed
+
+            if (window.scrollY > scrollThreshold || isHovered) {
+                socialsContainer.classList.add('show');
+                clearTimeout(timeoutId);
+            } else {
+                socialsContainer.classList.remove('show');
+            }
+        };
+
+        const handleHover = () => {
+            setIsHovered(true);
+            clearTimeout(timeoutId);
+        };
+
+        const handleHoverEnd = () => {
+            setIsHovered(false);
+
+            // Add a delay before checking scroll position again to prevent immediate fade-out
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                handleScroll();
+            }, 300); // Adjust the delay as needed (in milliseconds)
+        };
+
+        // Attach the event listeners when the component mounts
+        window.addEventListener('scroll', handleScroll);
+        document.querySelector('.header__socials').addEventListener('mouseover', handleHover);
+        document.querySelector('.header__socials').addEventListener('mouseout', handleHoverEnd);
+
+        // Clean up the event listeners when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.querySelector('.header__socials').removeEventListener('mouseover', handleHover);
+            document.querySelector('.header__socials').removeEventListener('mouseout', handleHoverEnd);
+        };
+    }, [isHovered]);
 
     return (
         <header id="header">
@@ -63,7 +110,8 @@ const Header = () => {
                             </a>
                         ))
                     }
-                </div>           </div>
+                </div>
+            </div>
         </header>
     );
 };

@@ -1,0 +1,19 @@
+#certificates {
+  padding-bottom: 0;
+}
+
+.swiper-slide {
+  cursor: grab;
+}
+
+.certificate__image {
+  width: fit-content;
+  border-radius: var(--border-radius-3);
+}
+
+.certificate__title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-black);
+  padding: 0;
+}
