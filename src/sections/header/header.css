@@ -38,7 +38,7 @@ header {
 
 .header__socials {
   position: fixed;
-  left: 2rem;
+  left: 1rem;
   top: 9.5rem;
   display: flex;
   flex-direction: column;

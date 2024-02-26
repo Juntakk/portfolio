@@ -11,10 +11,10 @@
 :root {
   --primary-hue: 270;
   --black-lightness: 15%;
-  --dark-lightness: 44%;
+  --dark-lightness: 20%;
   --light-lightness: 94%;
   --white-lightness: 100%;
-  --color-primary: hsl(var(--primary-hue), 89%, 41%);
+  --color-primary: hsl(var(--primary-hue), 100%, 20%);
   --color-white: hsl(0, 5%, var(--white-lightness));
   --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
@@ -45,27 +45,27 @@ body {
 
 /* THEME change using react */
 main.color-1 {
-  --primary-hue: 272;
+  --color-primary: hsl(272, 70%, 42%);
 }
 
 main.color-2 {
-  --primary-hue: 129;
+  --color-primary: hsl(130, 92%, 28%);
 }
 
 main.color-3 {
-  --primary-hue: 240;
+  --color-primary: hsl(240, 70%, 46%);
 }
 
 main.color-4 {
-  --primary-hue: 325;
+  --color-primary: hsl(325, 82%, 53%);
 }
 
 main.color-5 {
-  --primary-hue: 0;
+  --color-primary: hsl(0, 67%, 49%);
 }
 
 main.color-6 {
-  --primary-hue: 45;
+  --color-primary: hsl(32, 88%, 41%);
 }
 
 main.bg-2 {
@@ -81,8 +81,8 @@ main.bg-2 {
 main.bg-1 {
   --black-lightness: 10%;
   --dark-lightness: 20%;
-  --light-lightness: 70%;
-  --white-lightness: 75%;
+  --light-lightness: 80%;
+  --white-lightness: 85%;
   --color-white: hsl(0, 5%, var(--white-lightness));
   --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));

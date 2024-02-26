@@ -9,7 +9,7 @@ import Image7 from "../../assets/game_3.png";
 const data = [
   {
     id: 1,
-    category: "Mobile",
+    category: "Apps",
     image: Image1,
     title: "Reservation App",
     desc: "Simple and efficient Java reservation app, using Android Studio and SQL creating and authenticating users.",
@@ -18,7 +18,7 @@ const data = [
   },
   {
     id: 2,
-    category: "Backend",
+    category: "API's",
     image: Image2,
     title: "TecMap",
     desc: "Back-end project in Node.js building a framework API for login, friend management and CRUD.",
@@ -36,7 +36,7 @@ const data = [
   },
   {
     id: 4,
-    category: "Frontend",
+    category: "Websites",
     image: Image4,
     title: "Market Website",
     desc: "Utilizing ASP.net to create a website for a small town market using a database and a cart functionnality.",
@@ -54,7 +54,7 @@ const data = [
   },
   {
     id: 6,
-    category: "Frontend",
+    category: "Websites",
     image: Image6,
     title: "ConnectSport",
     desc: "Using PHP to control the server-side functionnalities and communication with databases. Messaging system with email.",
