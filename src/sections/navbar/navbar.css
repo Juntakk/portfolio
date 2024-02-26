@@ -20,7 +20,7 @@ nav {
 
 .nav__logo {
   font-size: 3rem;
-  /* overflow: hidden; */
+  overflow: hidden;
   color: var(--color-light);
 }
 

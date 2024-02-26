@@ -15,11 +15,11 @@ const About = () => {
             <br></br> knowledge
           </h1>
 
-          <h4>
+          <p>
             I've spent the last 2 years learning, practicing and honing my
             coding skills with various projects and hobbies and I am ready to
             use these skills to make a difference somewhere, somehow.
-          </h4>
+          </p>
 
           <a href={CV} download className="btn primary">
             Download CV
