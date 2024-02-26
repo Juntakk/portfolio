@@ -47,4 +47,16 @@
   .card.service {
     gap: 1.2 rem;
   }
+  #services h2 {
+    margin-top: 2rem;
+  }
+  #services h4 {
+    margin-left: -4rem;
+    font-size: 1.4rem;
+    padding: 0.2rem;
+  }
+  .service__icon {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
 }

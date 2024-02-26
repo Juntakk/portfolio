@@ -35,7 +35,7 @@ const data = [
   {
     id: 5,
     icon: <DiRuby />,
-    title: "Ruby / Ruby on Rails",
+    title: "Ruby",
     desc: "Getting better by the day, I write clean and elegant Ruby to build robust and scalable web applications efficiently using object-oriented programming.",
   },
   {

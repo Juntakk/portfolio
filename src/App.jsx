@@ -32,8 +32,8 @@ const App = () => {
   const floatingNavToggleHandler = () => {
     // check if we scrolled up or down at least 20px
     if (
-      siteYPostion < mainRef?.current?.getBoundingClientRect().y - 20 ||
-      siteYPostion > mainRef?.current?.getBoundingClientRect().y + 20
+      siteYPostion < mainRef?.current?.getBoundingClientRect().y - 5 ||
+      siteYPostion > mainRef?.current?.getBoundingClientRect().y + 5
     ) {
       showFloatingNavHandler();
     } else {
@@ -44,7 +44,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
+    const checkYPosition = setInterval(floatingNavToggleHandler, 1000);
 
     // cleanup function
     return () => clearInterval(checkYPosition);
