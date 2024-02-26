@@ -8,7 +8,7 @@ const Theme = () => {
   return (
     <Modal className="theme__modal">
       <h3>Customize your theme</h3>
-      <small>Change the primary and background color to your preferenc.</small>
+      <small>Change the primary and background color to your preference.</small>
       <div className="theme__primary-wrapper">
         <h5>Primary Color</h5>
         <div className="theme__primary-colors">

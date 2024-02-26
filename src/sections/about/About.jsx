@@ -30,6 +30,7 @@ const About = () => {
         <div className="about__portrait">
           <img src={AboutImage} alt="About" />
         </div>
+        
         <div className="about__right">
           <div className="about__cards">
             {data.map((item) => (
