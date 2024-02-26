@@ -9,7 +9,7 @@ import Image7 from "../../assets/game_3.png";
 const data = [
   {
     id: 1,
-    category: "mobile",
+    category: "Mobile",
     image: Image1,
     title: "Reservation App",
     desc: "Simple and efficient Java reservation app, using Android Studio and SQL creating and authenticating users.",
@@ -18,16 +18,16 @@ const data = [
   },
   {
     id: 2,
-    category: "backend",
+    category: "Backend",
     image: Image2,
     title: "TecMap",
-    desc: "Back-end project building a framework API for login, friend management and CRUD. Using localization in real-time",
+    desc: "Back-end project in Node.js building a framework API for login, friend management and CRUD.",
     demo: "https://youtu.be/pSVMF_BiTb0",
     github: "https://github.com/Juntakk/tec-map",
   },
   {
     id: 3,
-    category: "games",
+    category: "Games",
     image: Image3,
     title: "Bullet-Hell",
     desc: "Dipping my toes in C++ waters where I learn Raylib, using vectors to create movement. Work in progress.",
@@ -36,7 +36,7 @@ const data = [
   },
   {
     id: 4,
-    category: "frontend",
+    category: "Frontend",
     image: Image4,
     title: "Market Website",
     desc: "Utilizing ASP.net to create a website for a small town market using a database and a cart functionnality.",
@@ -45,7 +45,7 @@ const data = [
   },
   {
     id: 5,
-    category: "games",
+    category: "Games",
     image: Image5,
     title: "Platformer",
     desc: "Now ankle deep in the C++ waters, I implement animations and gameplay, adding some levels as I go.",
@@ -54,7 +54,7 @@ const data = [
   },
   {
     id: 6,
-    category: "frontend",
+    category: "Frontend",
     image: Image6,
     title: "ConnectSport",
     desc: "Using PHP to control the server-side functionnalities and communication with databases. Messaging system with email.",
@@ -63,7 +63,7 @@ const data = [
   },
   {
     id: 7,
-    category: "games",
+    category: "Games",
     image: Image7,
     title: "Mini-RPG",
     desc: "Now knee deep in my C++ journey, I continue practicing and learning as a wannabe GameDev, challenging.",
