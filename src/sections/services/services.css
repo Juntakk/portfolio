@@ -2,12 +2,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem 4rem;
+  padding: 2rem;
 }
 
 .card.service {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .service__icon {
@@ -27,6 +29,18 @@
 
 .service h4 {
   margin-bottom: 0.7rem;
+}
+
+.progress__container {
+  height: 4;
+  background-color: var(--color-primary);
+  margin: 10;
+}
+
+.percentage {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 /*TABLETS*/
