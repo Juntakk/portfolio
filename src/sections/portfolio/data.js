@@ -5,6 +5,7 @@ import Image4 from "../../assets/market.png";
 import Image5 from "../../assets/game_2.png";
 import Image6 from "../../assets/php_project_1.png";
 import Image7 from "../../assets/game_3.png";
+import Image8 from "../../assets/taskbro.png";
 
 const data = [
   {
@@ -36,7 +37,7 @@ const data = [
   },
   {
     id: 4,
-    category: "Websites",
+    category: "Web",
     image: Image4,
     title: "Market Website",
     desc: "Utilizing ASP.net to create a website for a small town market using a database and a cart functionnality.",
@@ -54,7 +55,16 @@ const data = [
   },
   {
     id: 6,
-    category: "Websites",
+    category: "Web",
+    image: Image8,
+    title: "TaskBro",
+    desc: "One of many more to come, React is so amazingly fun. Task app with local storage to save tasks forever.",
+    demo: "https://taskbro.netlify.app/",
+    github: "https://github.com/Juntakk/taskbro",
+  },
+  {
+    id: 8,
+    category: "Web",
     image: Image6,
     title: "ConnectSport",
     desc: "Using PHP to control the server-side functionnalities and communication with databases. Messaging system with email.",

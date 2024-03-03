@@ -17,6 +17,14 @@ const Project = ({ project }) => {
         >
           Github
         </a>
+        <a
+          href={project.demo}
+          className="btn sm primary"
+          target="_blank"
+          rel="noopner noreferrer"
+        >
+          Demo
+        </a>
       </div>
     </Card>
   );
