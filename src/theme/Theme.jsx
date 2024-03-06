@@ -3,14 +3,18 @@ import BackgroundColor from "./BackgroundColor";
 import PrimaryColor from "./PrimaryColor";
 import { primaryColors, backgroundColors } from "./data";
 import "./theme.css";
+import { useLanguage } from "./LanguageContext";
 
 const Theme = () => {
+  const { language } = useLanguage();
+
   return (
     <Modal className="theme__modal">
-      <h3>Customize your theme</h3>
-      <small>Change the primary and background color to your preference.</small>
+      <h3>
+        {language === "en" ? "Customization Station" : "Personnalisation"}
+      </h3>
       <div className="theme__primary-wrapper">
-        <h5>Primary Color</h5>
+        <h5> {language === "en" ? "Primary Color" : "Couleur Primaire"}</h5>
         <div className="theme__primary-colors">
           {primaryColors.map((pColor) => (
             <PrimaryColor key={pColor.className} className={pColor.className} />
@@ -18,7 +22,7 @@ const Theme = () => {
         </div>
       </div>
       <div className="theme__background-wrapper">
-        <h5>Background Color</h5>
+        <h5>{language === "en" ? "Background Color" : "Couleur de Fond"}</h5>
         <div className="theme__background-colors">
           {backgroundColors.map((bColor) => (
             <BackgroundColor
@@ -28,10 +32,6 @@ const Theme = () => {
           ))}
         </div>
       </div>
-      {/* <div className="language">
-        <h5>Choose a language</h5>
-
-      </div> */}
     </Modal>
   );
 };

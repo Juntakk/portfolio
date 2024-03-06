@@ -1,16 +1,16 @@
 import Card from "../../components/Card";
 
-const Project = ({ project }) => {
+const Project = ({ project, data }) => {
   return (
     <Card className="portfolio__project">
       <div className="portfolio__project-image">
-        <img src={project.image} alt="Portfolio Project" />
+        <img src={data[project.id - 1].image} alt="Portfolio Project" />
       </div>
-      <h4>{project.title}</h4>
-      <p>{project.desc}</p>
+      <h4>{data[project.id - 1].title}</h4>
+      <p>{data[project.id - 1].desc}</p>
       <div className="portfolio__project-cta">
         <a
-          href={project.github}
+          href={data[project.id - 1].github}
           className="btn sm primary"
           target="_blank"
           rel="noopner noreferrer"
@@ -18,7 +18,7 @@ const Project = ({ project }) => {
           Github
         </a>
         <a
-          href={project.demo}
+          href={data[project.id - 1].demo}
           className="btn sm primary"
           target="_blank"
           rel="noopner noreferrer"

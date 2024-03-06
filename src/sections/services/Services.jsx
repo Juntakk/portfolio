@@ -1,15 +1,21 @@
-import data from "./data";
+import data_en from "./data";
+import data_fr from "./data_fr";
 import Card from "../../components/Card";
 import "./services.css";
 import ProgressBar from "./ProgressBar";
+import { useLanguage } from "../../theme/LanguageContext";
 
 const Services = () => {
+  const { language } = useLanguage();
+  const data = language === "en" ? data_en : data_fr;
+
   return (
     <section id="services">
-      <h2>My knowledge</h2>
+      <h2>{language === "en" ? "My Knowledge" : "Mes Connaissances"}</h2>
       <p>
-        Here are the Languages / Technologies for which I can offer my services
-        with their respective level of skill
+        {language === "en"
+          ? "Here are the Languages / Frameworks for which I can offer my services with their respective level of skill"
+          : "Voici les langages / frameworks pour lesquels je peux offrir mes services, avec leur niveau de compétence respectif "}
       </p>
 
       <div className="container services__container" data-aos="fade-up">

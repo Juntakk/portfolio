@@ -2,20 +2,20 @@ import { AiFillExperiment } from "react-icons/ai";
 import { MdWork } from "react-icons/md";
 import { FaBrain } from "react-icons/fa";
 
-const data = [
+const data_fr = [
   {
     id: 1,
     icon: <AiFillExperiment />,
-    title: "Experience",
-    desc: "2+ Years Coding",
+    title: "Expérience",
+    desc: "2+ Années",
   },
-  { id: 2, icon: <MdWork />, title: "Projects", desc: "15+ Completed" },
+  { id: 2, icon: <MdWork />, title: "Projets", desc: "15+ Complétés" },
   {
     id: 3,
     icon: <FaBrain />,
-    title: "Skills",
+    title: "Compétences",
     desc: "8+ Languages / Frameworks",
   },
 ];
 
-export default data;
+export default data_fr;

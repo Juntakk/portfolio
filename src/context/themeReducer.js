@@ -26,14 +26,6 @@ const themeReducer = (state, action) => {
   if (action.type === "bg-2") {
     return { ...state, background: "bg-1" };
   }
-
-  //For language
-  // if (action.type === "en") {
-  //   return { ...state, language: "en" };
-  // }
-  // if (action.type === "fr") {
-  //   return { ...state, language: "fr" };
-  // }
 };
 
 export default themeReducer;

@@ -4,8 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "particles.js";
 import "./header.css";
+import { useLanguage } from "../../theme/LanguageContext";
 
 const Header = () => {
+  const { language } = useLanguage();
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
 
@@ -131,17 +134,19 @@ const Header = () => {
       <div className="container header__container">
         <h1 data-aos="fade-up">Nicolas Habashi Gauthier</h1>
         <p data-aos="fade-up">
-          "Immerse yourself in your work, fall in love with it, and dedicate
-          your life to mastering your skill. That's the secret of success."
+          {language === "en"
+            ? "Immerse yourself in your work, fall in love with it, and dedicate your life to mastering your skill. That's the secret of success."
+            : "Plongez-vous dans votre travail, tombez amoureux de lui et consacrez votre vie à maîtriser votre compétence. C'est le secret du succès."}
+          ;
           <br />
           <br /> - Jiro Ono, "Jiro Dreams of Sushi"{" "}
         </p>
         <div className="header__cta" data-aos="fade-up">
           <a href="#contact" className="btn primary">
-            Let's Talk
+            {language === "en" ? "Let's Talk" : "Discutons"}
           </a>
           <a href="#portfolio" className="btn light">
-            My Work
+            {language === "en" ? "My Projects" : "Mes Projets"}
           </a>
         </div>
         <div className="header__socials">
