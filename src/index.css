@@ -81,8 +81,8 @@ main.bg-2 {
 main.bg-1 {
   --black-lightness: 10%;
   --dark-lightness: 20%;
-  --light-lightness: 80%;
-  --white-lightness: 85%;
+  --light-lightness: 90%;
+  --white-lightness: 95%;
   --color-white: hsl(0, 5%, var(--white-lightness));
   --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
