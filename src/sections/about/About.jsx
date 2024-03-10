@@ -17,8 +17,8 @@ const About = () => {
         <div className="about__left">
           <h1>
             {language === "en"
-              ? "I'm Nick, a Full-Stack Programmer with a hunger for knowledge"
-              : "Je suis Nick, un programmeur Full-Stack avec une soif d'apprentissage"}
+              ? "I'm Nick, a Full-Stack Developer with a hunger for knowledge"
+              : "Je suis Nick, un Développeur Full-Stack avec une soif d'apprentissage"}
           </h1>
 
           <p>
