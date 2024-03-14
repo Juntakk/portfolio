@@ -23,8 +23,10 @@
 }
 
 .service:hover .service__icon {
-  background: var(--color-light);
+  background: var(--color-white);
   color: var(--color-primary);
+  border: 1px;
+  border-color: var(--color-primary);
 }
 
 .service h4 {

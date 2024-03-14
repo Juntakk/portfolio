@@ -17,14 +17,18 @@ const Project = ({ project, data }) => {
         >
           Github
         </a>
-        <a
-          href={data[project.id - 1].demo}
-          className="btn sm primary"
-          target="_blank"
-          rel="noopner noreferrer"
-        >
-          Demo
-        </a>
+        {data[project.id - 1].demo.startsWith("http") ? (
+          <a
+            href={data[project.id - 1].demo}
+            className="btn sm primary"
+            target="_blank"
+            rel="noopner noreferrer"
+          >
+            Demo
+          </a>
+        ) : (
+          ""
+        )}
       </div>
     </Card>
   );
