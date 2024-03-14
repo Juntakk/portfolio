@@ -23,13 +23,6 @@ const data = [
     level: 70,
   },
   {
-    id: 2,
-    icon: <FaNodeJs />,
-    title: "Node.js",
-    desc: "I leverage Node.js to engineer scalable backend solutions, specializing in RESTful APIs and real-time applications. Utilizing a stable CRUD for my applications.",
-    level: 60,
-  },
-  {
     id: 3,
     icon: <FaCircleNodes />,
     title: "JavaScript",

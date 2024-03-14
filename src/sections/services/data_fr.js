@@ -6,7 +6,6 @@ import { FaReact } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
 
 const data_fr = [
   {
@@ -22,13 +21,6 @@ const data_fr = [
     title: "Node.js",
     desc: "Node est brillant, comment rendre amusant la création de routes solides et sécurisées pour garantir un backend solide pour tout projet. Rendre tout cela facile en coulisses.",
     level: 70,
-  },
-  {
-    id: 2,
-    icon: <FaNodeJs />,
-    title: "Node.js",
-    desc: "Je mets en œuvre des solutions backend robustes et évolutives avec Node.js, me spécialisant dans le développement d'API RESTful et d'applications en temps réel. Utilisant un CRUD stable pour mes applications.",
-    level: 60,
   },
   {
     id: 3,
