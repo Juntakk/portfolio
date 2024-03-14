@@ -6,7 +6,6 @@ import { FaReact } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
 
 const data = [
   {
