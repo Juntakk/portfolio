@@ -4,6 +4,7 @@ import { SiCsharp } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 
@@ -21,6 +22,13 @@ const data = [
     title: "Node.js",
     desc: "Node is brilliant, making it easy and fun to build strong and secure routes to ensure a solid backend to any project. Making everything behind the curtains with ease.",
     level: 70,
+  },
+  {
+    id: 2,
+    icon: <FaNodeJs />,
+    title: "Node.js",
+    desc: "I leverage Node.js to engineer scalable backend solutions, specializing in RESTful APIs and real-time applications. Utilizing a stable CRUD for my applications.",
+    level: 60,
   },
   {
     id: 3,
