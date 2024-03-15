@@ -6,6 +6,7 @@ import Image5 from "../../assets/game_2.png";
 import Image6 from "../../assets/seeflix.png";
 import Image7 from "../../assets/game_3.png";
 import Image8 from "../../assets/taskbro.png";
+import Image9 from "../../assets/steem.png";
 
 const data = [
   {
@@ -37,6 +38,15 @@ const data = [
   },
   {
     id: 4,
+    category: "Web",
+    image: Image9,
+    title: "Steem",
+    desc: "Projet en cours ; Clône de Steam en utilisant React, Node et Tailwind. Présentement en implémentation de Wishlist.",
+    demo: "https://stiim.netlify.app/",
+    github: "https://github.com/Juntakk/Steem",
+  },
+  {
+    id: 5,
     category: "Jeux",
     image: Image3,
     title: "Pew Pew",
@@ -45,7 +55,7 @@ const data = [
     github: "https://github.com/Juntakk/mini-game-1",
   },
   {
-    id: 5,
+    id: 6,
     category: "Web",
     image: Image8,
     title: "TaskBro",
@@ -54,7 +64,7 @@ const data = [
     github: "https://github.com/Juntakk/taskbro",
   },
   {
-    id: 6,
+    id: 7,
     category: "Web",
     image: Image4,
     title: "Mucho Foodo",
@@ -63,7 +73,7 @@ const data = [
     github: "https://github.com/Juntakk/ASP.NET-WebForm",
   },
   {
-    id: 7,
+    id: 8,
     category: "Jeux",
     image: Image5,
     title: "Bob Jumps",
@@ -72,7 +82,7 @@ const data = [
     github: "https://github.com/Juntakk/mini-game-2",
   },
   {
-    id: 8,
+    id: 9,
     category: "Mobile",
     image: Image1,
     title: "Reservation App",
