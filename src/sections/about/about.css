@@ -3,7 +3,7 @@
   grid-template-columns: 50% 15% 15%;
   gap: 3%;
 }
-
+/* 
 .about__portrait {
   height: fit-content;
   max-height: 100%;
@@ -11,12 +11,12 @@
   border: 1rem solid var(--color-white);
   border-radius: var(--border-radius-3);
   transition: var(--transition);
-}
+} */
 
 .about__portrait img {
   height: 28rem;
   margin-top: 1.4rem;
-  width: 142%;
+  width: 122%;
 }
 
 .about__cards {
@@ -51,10 +51,10 @@
 }
 
 .about__card {
-  background: var(--color-light);
+  background: var(--color-white);
 }
 .about__card:hover {
-  border-color: var(--color-light);
+  border-color: var(--color-primary);
   transform: translateY(-0.5rem);
 }
 .about__left {

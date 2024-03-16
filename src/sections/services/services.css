@@ -10,23 +10,28 @@
   align-items: flex-start;
   gap: 1rem;
   padding-bottom: 1rem;
+  border-color: var(--color-light);
+}
+.card.service:hover {
+  transform: translateY(-0.5rem);
+  cursor: default;
 }
 
 .service__icon {
-  background: var(--color-primary);
+  background: var(--color-white);
   padding: 0.6rem;
   margin-left: 0.5rem;
   border-radius: 150px;
-  font-size: 1.2rem;
-  color: var(--color-white);
+  font-size: 1.4rem;
+  color: var(--color-primary);
   transition: var(--transition);
+  border-color: var(--color-primary);
+  border: 3px solid;
 }
 
 .service:hover .service__icon {
-  background: var(--color-white);
-  color: var(--color-primary);
-  border: 1px;
-  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 .service h4 {
