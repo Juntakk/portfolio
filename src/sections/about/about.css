@@ -1,11 +1,10 @@
 .about__container {
   display: grid;
-  grid-template-columns: 50% 20% 13%;
-  gap: 5%;
+  grid-template-columns: 50% 15% 15%;
+  gap: 3%;
 }
 
 .about__portrait {
-  margin-top: 3rem;
   height: fit-content;
   max-height: 100%;
   width: 13rem;
@@ -15,22 +14,18 @@
 }
 
 .about__portrait img {
-  height: 25rem;
-  width: 100%;
-}
-
-.about__portrait:hover {
-  border-width: 0.5rem;
-  transform: scale(1.05);
-  /* border-color: var(--color-primary); */
+  height: 28rem;
+  margin-top: 1.4rem;
+  width: 142%;
 }
 
 .about__cards {
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
   text-align: center;
+  padding-inline: 1rem;
 }
 
 .about__card-icon {
@@ -60,6 +55,12 @@
 }
 .about__card:hover {
   border-color: var(--color-light);
+  transform: translateY(-0.5rem);
+}
+.about__left {
+  text-align: right;
+  width: 35rem;
+  margin-left: 7rem;
 }
 
 .about__left h1 {
@@ -69,7 +70,7 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.about__left h4 {
+.about__left p {
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
@@ -78,11 +79,6 @@
 
 .about__left .btn {
   margin-top: 2.5rem;
-}
-
-.icon {
-  font-size: 25;
-  font-weight: bold;
 }
 
 /*TABLETS*/
@@ -103,6 +99,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 0rem;
   }
 
   .about__cards {
@@ -119,7 +116,7 @@
   }
 
   .about__left h1,
-  h4 {
+  p {
     text-align: center;
     padding: 1rem;
   }
@@ -147,16 +144,16 @@
   }
 
   .about__container p {
-    width: 15rem;
     text-align: center;
+    max-width: 25rem;
   }
 
-  .about__left .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .about__left h1 {
-    font-size: 2rem;
+    max-width: 20rem;
+    font-size: 2.5rem;
+  }
+
+  .about__left {
+    max-width: 20rem;
   }
 }

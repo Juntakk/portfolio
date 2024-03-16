@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem 4rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .card.service {
@@ -31,6 +31,7 @@
 
 .service h4 {
   margin-bottom: 0.7rem;
+  font-size: 1.6rem;
 }
 
 .progress__container {
@@ -46,6 +47,12 @@
 }
 
 /*TABLETS*/
+@media screen and (max-width: 1445px) {
+  .service__details p {
+    text-align: left;
+    padding: 5px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .services__container {
     grid-template-columns: 1fr;
@@ -62,14 +69,6 @@
 
   .card.service {
     gap: 1.2 rem;
-  }
-  #services h2 {
-    margin-top: 2rem;
-  }
-  #services h4 {
-    margin-left: -4rem;
-    font-size: 1.4rem;
-    padding: 0.2rem;
   }
   .service__icon {
     font-size: 2rem;

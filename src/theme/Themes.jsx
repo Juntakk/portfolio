@@ -5,7 +5,7 @@ import { primaryColors, backgroundColors } from "./data";
 import "./theme.css";
 import { useLanguage } from "./LanguageContext";
 
-const Theme = () => {
+const Themes = () => {
   const { language } = useLanguage();
 
   return (
@@ -36,4 +36,4 @@ const Theme = () => {
   );
 };
 
-export default Theme;
+export default Themes;

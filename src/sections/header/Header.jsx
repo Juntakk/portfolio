@@ -137,7 +137,6 @@ const Header = () => {
           {language === "en"
             ? "Immerse yourself in your work, fall in love with it, and dedicate your life to mastering your skill. That's the secret of success."
             : "Plongez-vous dans votre travail, tombez amoureux de lui et consacrez votre vie à maîtriser votre compétence. C'est le secret du succès."}
-          ;
           <br />
           <br /> - Jiro Ono, "Jiro Dreams of Sushi"{" "}
         </p>

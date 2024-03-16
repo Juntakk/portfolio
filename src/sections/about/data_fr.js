@@ -14,7 +14,7 @@ const data_fr = [
     id: 3,
     icon: <FaBrain />,
     title: "Compétences",
-    desc: "8+ Languages / Frameworks",
+    desc: "8+ Technologies",
   },
 ];
 

@@ -1,7 +1,5 @@
 import AboutImage from "../../assets/header.jpg";
-import CV from "../../assets/CV.pdf";
-import CV_FR from "../../assets/CV_FR.pdf";
-import { LiaCloudDownloadAltSolid } from "react-icons/lia";
+
 import data_en from "./data";
 import data_fr from "./data_fr";
 import Card from "../../components/Card";
@@ -26,19 +24,6 @@ const About = () => {
               ? "I've spent the last 2 years learning, practicing and honing my coding skills with various projects and hobbies and I am ready to use these skills to make a difference somewhere, somehow."
               : "J'ai passé les deux dernières années à apprendre, pratiquer et perfectionner mes compétences en programmation avec divers projets et hobbies, et je suis prêt à utiliser ces compétences pour faire une différence quelque part, de quelque manière que ce soit."}
           </p>
-
-          <a
-            href={language === "en" ? CV : CV_FR}
-            download
-            className="btn primary"
-          >
-            {language === "en" ? "Download my CV" : "Téléchargez mon CV"}
-            <LiaCloudDownloadAltSolid className="icon" />
-          </a>
-        </div>
-
-        <div className="about__portrait">
-          <img src={AboutImage} alt="About" />
         </div>
 
         <div className="about__right">
@@ -51,6 +36,9 @@ const About = () => {
               </Card>
             ))}
           </div>
+        </div>
+        <div className="about__portrait">
+          <img src={AboutImage} alt="About" />
         </div>
       </div>
     </section>

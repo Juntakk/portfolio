@@ -18,6 +18,11 @@
   }
 }
 
+.language__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card.theme__modal:hover {
   background: #dedede;
 }

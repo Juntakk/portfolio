@@ -14,7 +14,7 @@ const data = [
     id: 3,
     icon: <FaBrain />,
     title: "Skills",
-    desc: "8+ Languages / Frameworks",
+    desc: "8+ Technologies",
   },
 ];
 

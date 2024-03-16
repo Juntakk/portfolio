@@ -5,6 +5,9 @@ import "./navbar.css";
 import { useModalContext } from "../../context/modal-context";
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
+import CV from "../../assets/CV.pdf";
+import CV_FR from "../../assets/CV_FR.pdf";
+import { LiaCloudDownloadAltSolid } from "react-icons/lia";
 
 const Navbar = () => {
   const { showModalHandler } = useModalContext();
@@ -24,7 +27,12 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <button id="theme__icon" onClick={showModalHandler}>
+        <a href={language === "en" ? CV : CV_FR} download className="cv">
+          {language === "en" ? "CV" : "CV"}{" "}
+          <LiaCloudDownloadAltSolid className="icon" />
+        </a>
+        <button className="theme__icon" onClick={showModalHandler}>
+          <span className="theme__text">Theme</span>
           <IoIosColorPalette />
         </button>
       </div>
