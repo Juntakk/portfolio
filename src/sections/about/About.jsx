@@ -10,8 +10,8 @@ const About = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
   return (
-    <section id="about" data-aos="fade-in">
-      <div className="container about__container">
+    <section id="about">
+      <div className="container about__container" data-aos="fade-up">
         <div className="about__left">
           <h1>
             {language === "en"

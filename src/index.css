@@ -180,15 +180,16 @@ img {
   background: var(--color-light);
   color: var(--color-black);
   padding: 0.6rem 2.5rem;
-  border: 2px solid transparent;
+  border: 1.5px solid transparent;
   border-radius: var(--border-radius-2);
   cursor: pointer;
 }
 
 .btn:hover {
   background-color: transparent;
-  border-color: var(--color-light);
+  border-color: var(--color-dark);
   transform: translateY(-0.5rem);
+  color: var(--color-dark);
 }
 
 .btn.white {

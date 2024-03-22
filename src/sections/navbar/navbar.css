@@ -11,6 +11,25 @@ nav {
   transition: var(--transition);
 }
 
+.nav__right {
+  display: flex;
+}
+
+.nav__right .theme__icon:hover {
+  color: var(--color-black);
+  transform: scale(1.1);
+  transition: 0.7s all;
+}
+.nav__right .nav__logo:hover {
+  color: var(--color-black);
+  transform: scale(1.1);
+  transition: 0.7s all;
+}
+
+.theme__text {
+  margin-bottom: 20px;
+}
+
 .nav__container {
   display: flex;
   justify-content: space-around;
@@ -43,7 +62,7 @@ nav {
   align-items: center;
   justify-content: center;
   color: var(--color-light);
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -51,6 +70,14 @@ nav {
   color: var(--color-black);
   transform: scale(1.05);
   transition: 0.7s all;
+}
+.line {
+  color: var(--color-white);
+  font-size: 40px;
+}
+
+.line:hover {
+  cursor: default;
 }
 
 .nav__menu {
@@ -60,6 +87,10 @@ nav {
 
 .nav__menu a {
   color: var(--color-light);
+  font-weight: bolder;
+}
+.nav__menu a:hover {
+  color: var(--color-black);
   font-weight: bolder;
 }
 
@@ -86,7 +117,7 @@ nav {
 }
 
 /*HIDE NAV MENU ON TABLETS AND PHONES */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1100px) {
   .nav__menu {
     display: none;
   }

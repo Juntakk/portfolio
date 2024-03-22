@@ -17,9 +17,10 @@ const Navbar = () => {
   return (
     <nav>
       <div className="container nav__container">
-        <i className="nav__logo">
-          <LanguageToggle />
-        </i>
+        <a href={language === "en" ? CV : CV_FR} download className="cv">
+          <span className="cv__text">{language === "en" ? "CV" : "CV"}</span>{" "}
+          <LiaCloudDownloadAltSolid className="icon" />
+        </a>
         <ul className="nav__menu">
           {data.map((item) => (
             <li key={item.id}>
@@ -27,14 +28,16 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <a href={language === "en" ? CV : CV_FR} download className="cv">
-          {language === "en" ? "CV" : "CV"}{" "}
-          <LiaCloudDownloadAltSolid className="icon" />
-        </a>
-        <button className="theme__icon" onClick={showModalHandler}>
-          <span className="theme__text">Theme</span>
-          <IoIosColorPalette />
-        </button>
+        <div className="nav__right">
+          <button className="theme__icon" onClick={showModalHandler}>
+            {/* <span className="theme__text">Color</span> */}
+            <IoIosColorPalette />
+          </button>
+          <span className="line">|</span>
+          <i className="nav__logo">
+            <LanguageToggle />
+          </i>
+        </div>
       </div>
     </nav>
   );

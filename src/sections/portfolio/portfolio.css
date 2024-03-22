@@ -12,6 +12,7 @@
 
 .btn.cat__btn:hover {
   transform: translateY(-0.5rem);
+  color: var(--color-black);
 }
 
 .portfolio__projects {

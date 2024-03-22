@@ -15,6 +15,7 @@
 .card.service:hover {
   transform: translateY(-0.5rem);
   cursor: default;
+  background-color: var(--color-light);
 }
 
 .service__icon {
