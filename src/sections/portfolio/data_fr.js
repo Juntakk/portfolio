@@ -24,7 +24,7 @@ const data = [
     image: Image7,
     title: "Knight Shyamalan",
     desc: "Maintenant plongé jusqu'aux genoux dans mon voyage en C++, je continue à pratiquer et à apprendre, un défi passionnant.",
-    demo: "https://youtu.be/Vxwvi6Iwy1A",
+    demo: "",
     github: "https://github.com/Juntakk/mini-game-3",
   },
   {
@@ -51,7 +51,7 @@ const data = [
     image: Image3,
     title: "Pew Pew",
     desc: "Je trempe mes orteils dans les eaux du C++, où j'apprends Raylib, en utilisant des vecteurs pour créer du mouvement. Travail en cours.",
-    demo: "https://youtu.be/aaH7IHPifcQ",
+    demo: "",
     github: "https://github.com/Juntakk/mini-game-1",
   },
   {
@@ -78,7 +78,7 @@ const data = [
     image: Image5,
     title: "Bob Jumps",
     desc: "Jusqu'aux chevilles dans les eaux du C++, j'implémente des animations et du gameplay, ajoutant des niveaux au fur et à mesure.",
-    demo: "https://youtu.be/s4NtbWSKATc",
+    demo: "",
     github: "https://github.com/Juntakk/mini-game-2",
   },
   {

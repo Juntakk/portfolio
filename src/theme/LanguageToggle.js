@@ -1,5 +1,4 @@
 import { useLanguage } from "./LanguageContext";
-import { IoEarth } from "react-icons/io5";
 import "./theme.css";
 
 const LanguageToggle = () => {
@@ -9,9 +8,8 @@ const LanguageToggle = () => {
   return (
     <>
       <span onClick={toggleLanguage} className="language__toggle">
-        <IoEarth />
+        <p>{language === "en" ? "FR" : "EN"}</p>
       </span>
-      <p>{language === "en" ? "FR" : "EN"}</p>
     </>
   );
 };

@@ -30,7 +30,6 @@ const Navbar = () => {
         </ul>
         <div className="nav__right">
           <button className="theme__icon" onClick={showModalHandler}>
-            {/* <span className="theme__text">Color</span> */}
             <IoIosColorPalette />
           </button>
           <span className="line">|</span>
