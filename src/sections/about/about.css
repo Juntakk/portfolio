@@ -17,7 +17,7 @@
 .about__portrait img {
   height: 28rem;
   margin-top: 1.4rem;
-  width: 122%;
+  width: 110%;
 }
 
 .about__cards {
@@ -61,7 +61,7 @@
 .about__left {
   text-align: right;
   width: 35rem;
-  margin-left: 7rem;
+  margin-left: 2rem;
 }
 
 .about__left h1 {
