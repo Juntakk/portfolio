@@ -7,6 +7,7 @@ import Image6 from "../../assets/seeflix.png";
 import Image7 from "../../assets/game_3.png";
 import Image8 from "../../assets/taskbro.png";
 import Image9 from "../../assets/steem.png";
+import Image10 from "../../assets/planetField.png";
 
 const data = [
   {
@@ -89,6 +90,15 @@ const data = [
     desc: "Application de réservation simple et efficace en Java, utilisant Android Studio et SQL pour créer et authentifier des utilisateurs.",
     demo: "",
     github: "https://github.com/Juntakk/Android-Camping-App",
+  },
+  {
+    id: 10,
+    category: "Mobile",
+    image: Image10,
+    title: "Planetfield",
+    desc: "Application d'apprentissage intuitif pour enfant et jeunes ados pour apprendre le nom des planètes de notre système solaire. Utilisation de Kotlin (POO).",
+    demo: "",
+    github: "https://github.com/Juntakk/planetField",
   },
 ];
 

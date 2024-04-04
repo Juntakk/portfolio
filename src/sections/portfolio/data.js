@@ -7,6 +7,7 @@ import Image6 from "../../assets/seeflix.png";
 import Image7 from "../../assets/game_3.png";
 import Image8 from "../../assets/taskbro.png";
 import Image9 from "../../assets/steem.png";
+import Image10 from "../../assets/planetField.png";
 
 const data = [
   {
@@ -86,9 +87,18 @@ const data = [
     category: "Mobile",
     image: Image1,
     title: "Reservation App",
-    desc: "Simple and efficient Java reservation app, using Android Studio and SQL creating and authenticating users.",
+    desc: "Simple and efficient Java reservation app, using Android Studio and SQL creating and authenticating users. Navigation from one activity to another, etc.",
     demo: "",
     github: "https://github.com/Juntakk/Android-Camping-App",
+  },
+  {
+    id: 10,
+    category: "Mobile",
+    image: Image10,
+    title: "Planetfield",
+    desc: "Intuitive learning application for children and young teens to learn the names of the planets in our solar system. Using Kotlin Object-Oriented Programming (OOP).",
+    demo: "",
+    github: "https://github.com/Juntakk/planetField",
   },
 ];
 
