@@ -1,5 +1,4 @@
 import Image1 from "../../assets/code.png";
-import Image2 from "../../assets/code2.png";
 import Image3 from "../../assets/game_1.png";
 import Image4 from "../../assets/market.png";
 import Image5 from "../../assets/game_2.png";
@@ -8,6 +7,7 @@ import Image7 from "../../assets/game_3.png";
 import Image8 from "../../assets/taskbro.png";
 import Image9 from "../../assets/steem.png";
 import Image10 from "../../assets/planetField.png";
+import Image11 from "../../assets/pizzeria.png";
 
 const data = [
   {
@@ -30,15 +30,6 @@ const data = [
   },
   {
     id: 3,
-    category: "Backend",
-    image: Image2,
-    title: "TecMap",
-    desc: "Projet back-end en Node.js construisant une API de framework pour la gestion de connexion, d'amis et le CRUD.",
-    demo: "",
-    github: "https://github.com/Juntakk/tec-map",
-  },
-  {
-    id: 4,
     category: "Web",
     image: Image9,
     title: "Steem",
@@ -47,7 +38,7 @@ const data = [
     github: "https://github.com/Juntakk/Steem",
   },
   {
-    id: 5,
+    id: 4,
     category: "Jeux",
     image: Image3,
     title: "Pew Pew",
@@ -56,7 +47,7 @@ const data = [
     github: "https://github.com/Juntakk/mini-game-1",
   },
   {
-    id: 6,
+    id: 5,
     category: "Web",
     image: Image8,
     title: "TaskBro",
@@ -65,7 +56,7 @@ const data = [
     github: "https://github.com/Juntakk/taskbro",
   },
   {
-    id: 7,
+    id: 6,
     category: "Web",
     image: Image4,
     title: "Mucho Foodo",
@@ -74,7 +65,7 @@ const data = [
     github: "https://github.com/Juntakk/ASP.NET-WebForm",
   },
   {
-    id: 8,
+    id: 7,
     category: "Jeux",
     image: Image5,
     title: "Bob Jumps",
@@ -83,7 +74,7 @@ const data = [
     github: "https://github.com/Juntakk/mini-game-2",
   },
   {
-    id: 9,
+    id: 8,
     category: "Mobile",
     image: Image1,
     title: "Reservation App",
@@ -92,13 +83,22 @@ const data = [
     github: "https://github.com/Juntakk/Android-Camping-App",
   },
   {
-    id: 10,
+    id: 9,
     category: "Mobile",
     image: Image10,
     title: "Planetfield",
     desc: "Application d'apprentissage intuitif pour enfant et jeunes ados pour apprendre le nom des planètes de notre système solaire. Utilisation de Kotlin (POO).",
     demo: "",
     github: "https://github.com/Juntakk/planetField",
+  },
+  {
+    id: 10,
+    category: "Web",
+    image: Image11,
+    title: "Napolitana Pizza",
+    desc: "Ceci est un système de commande et gestion d'une pizzeria. CRUD complet pour gérer les produits et les clients. C# Web Forms a été utilisé.",
+    demo: "",
+    github: "https://github.com/Juntakk/PizzeriaNapolitana",
   },
 ];
 

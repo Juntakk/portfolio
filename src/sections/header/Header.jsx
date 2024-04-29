@@ -15,7 +15,7 @@ const Header = () => {
     // Configure particles.js
     window.particlesJS("particles-js", {
       particles: {
-        number: { value: 125, density: { enable: true, value_area: 500 } },
+        number: { value: 50, density: { enable: true, value_area: 500 } },
         color: { value: "#87837c" },
         shape: {
           type: "circle",
@@ -28,12 +28,12 @@ const Header = () => {
           anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
         },
         size: {
-          value: 4,
+          value: 50,
           random: true,
-          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+          anim: { enable: false, speed: 40, size_min: 20, sync: false },
         },
         line_linked: {
-          enable: true,
+          enable: false,
           distance: 150,
           color: "#87837c",
           opacity: 0.4,

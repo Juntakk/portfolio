@@ -36,33 +36,13 @@ const data = [
     desc: "Python is fascinating. Learning in my free time, I've made small apps and can't wait to delve deeper into its scripting and automation possibilities.",
     level: 60,
   },
+
   {
     id: 5,
-    icon: <SiCsharp />,
-    title: "C#",
-    desc: "I have built websites and applications using C#, ASP.NET, and SQL. With C#, I've added dynamic features and made Visual Studio 2022 my playground.",
-    level: 60,
-  },
-  {
-    id: 6,
-    icon: <SiPhp />,
-    title: "PHP",
-    desc: "With PHP, I seamlessly integrate databases for dynamic functionality and smooth management, enhancing user experience and managing very complex databases.",
-    level: 60,
-  },
-  {
-    id: 7,
     icon: <BsAndroid2 />,
     title: "Java/Kotlin",
     desc: "Proficient in these beautiful languages, I create Android applications with a focus on simplicity, efficiency and user-experience. Mainly with Android Studio. ",
     level: 70,
-  },
-  {
-    id: 8,
-    icon: <SiCplusplus />,
-    title: "C++",
-    desc: "Currently learning C++ during my free time, I'm excited to explore its basics, OOP structure / architecture and use it for crafting interesting video games.",
-    level: 50,
   },
 ];
 
