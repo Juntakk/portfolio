@@ -18,6 +18,7 @@
   height: 28rem;
   margin-top: 1.4rem;
   width: 110%;
+  border-radius: 12px;
 }
 
 .about__cards {
@@ -84,13 +85,16 @@
 
 /*TABLETS*/
 @media screen and (max-width: 1444px) {
-  .about__right {
+  /* .about__right {
     display: none;
-  }
+  } */
 
+  .about__portrait img {
+    width: 90%;
+  }
   .about__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -101,15 +105,18 @@
     justify-content: center;
     align-items: center;
     margin-left: 0rem;
+    h1 {
+      line-height: 1.5;
+    }
   }
 
   .about__cards {
     display: none;
   }
 
-  .about__portrait {
+  /* .about__portrait {
     display: none;
-  }
+  } */
 
   .card.about__card {
     padding: 1rem;

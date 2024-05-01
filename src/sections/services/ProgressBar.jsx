@@ -4,7 +4,7 @@ const ProgressBar = (props) => {
   const { completed } = props;
 
   const style = {
-    height: "10px",
+    height: "15px",
     width: `${completed}%`,
     backgroundColor: "var(--color-primary)",
     borderRadius: "10px",

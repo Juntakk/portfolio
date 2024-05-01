@@ -21,9 +21,10 @@
 .service__icon {
   background: var(--color-white);
   padding: 0.6rem;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   border-radius: 150px;
   font-size: 1.4rem;
+  margin-top: 25px;
   color: var(--color-primary);
   transition: var(--transition);
   border-color: var(--color-primary);
@@ -39,6 +40,7 @@
   margin-bottom: 0.7rem;
   margin-top: 1rem;
   font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .progress__container {
@@ -47,6 +49,10 @@
   margin: 10;
 }
 
+.service__details {
+  padding: 10px;
+  width: 100%;
+}
 .percentage {
   margin-top: 10px;
   font-weight: bold;

@@ -14,11 +14,19 @@ const Project = ({ project, data }) => {
             <img src={data[project.id - 1].image} alt="Portfolio Project" />
           </a>
         ) : (
-          <img src={data[project.id - 1].image} alt="Portfolio Project" />
+          <>
+            <a
+              href={data[project.id - 1].github}
+              target="_blank"
+              rel="noopner noreferrer"
+            >
+              <img src={data[project.id - 1].image} alt="Portfolio Project" />
+            </a>
+          </>
         )}
       </div>
-      <h4>{data[project.id - 1].title}</h4>
-      <p>{data[project.id - 1].desc}</p>
+      <h4 className="project-title">{data[project.id - 1].title}</h4>
+      <p className="project-desc">{data[project.id - 1].desc}</p>
       <div className="portfolio__project-cta">
         <a
           href={data[project.id - 1].github}

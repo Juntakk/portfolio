@@ -19,11 +19,11 @@ const About = () => {
               : "Je suis Nick, un Développeur Full-Stack avec une soif d'apprentissage"}
           </h1>
 
-          <p>
+          {/* <p>
             {language === "en"
               ? "I've spent the last 2 years learning, practicing and honing my coding skills with various projects and hobbies and I am ready to use these skills to make a difference somewhere, somehow."
               : "J'ai passé les deux dernières années à apprendre, pratiquer et perfectionner mes compétences en programmation avec divers projets et hobbies, et je suis prêt à utiliser ces compétences pour faire une différence quelque part, de quelque manière que ce soit."}
-          </p>
+          </p> */}
         </div>
 
         <div className="about__right">

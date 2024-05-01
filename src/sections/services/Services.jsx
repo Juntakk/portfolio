@@ -1,5 +1,4 @@
-import data_en from "./data";
-import data_fr from "./data_fr";
+import data from "./data";
 import Card from "../../components/Card";
 import "./services.css";
 import ProgressBar from "./ProgressBar";
@@ -7,8 +6,6 @@ import { useLanguage } from "../../theme/LanguageContext";
 
 const Services = () => {
   const { language } = useLanguage();
-  const data = language === "en" ? data_en : data_fr;
-
   return (
     <section id="services">
       <h2>{language === "en" ? "My Knowledge" : "Mes Connaissances"}</h2>
@@ -24,7 +21,6 @@ const Services = () => {
             <div className="service__icon">{item.icon}</div>
             <div className="service__details">
               <h4>{item.title}</h4>
-              <p>{item.desc}</p>
               <ProgressBar completed={item.level} />
             </div>
           </Card>

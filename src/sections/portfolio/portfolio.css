@@ -2,12 +2,23 @@
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: -10px;
   flex-wrap: wrap;
+}
+h2 {
+  margin-bottom: 40px;
+}
+.project-title {
+  margin-left: 10px;
+  font-size: 25px;
+}
+.project-desc {
+  text-align: center;
 }
 
 .btn.cat__btn {
+  margin-top: 15px;
   text-transform: capitalize;
+  font-size: 19px;
   transition: var(--transition);
 }
 
@@ -20,12 +31,12 @@
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  align-items: start;
+  gap: 4.5rem;
 }
 
 .card.portfolio__project {
   padding: 0.75rem;
+  margin-bottom: -2.5rem;
   animation: animateProject 800ms ease-in forwards;
 }
 
@@ -56,6 +67,8 @@
 .portfolio__project p {
   margin: 0.5rem 0 2rem;
   text-align: left;
+  font-size: 19px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .portfolio__project-cta {
