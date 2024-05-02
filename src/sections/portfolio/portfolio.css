@@ -118,8 +118,10 @@ h2 {
   }
 
   .portfolio__projects {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 1rem;
   }
   .project-title {
@@ -138,12 +140,12 @@ h2 {
 
   .card.portfolio__project {
     text-align: center;
-    width: 240px;
+    width: 290px;
     height: 300px;
     margin-bottom: 30px;
   }
   .portfolio__project-image img {
-    width: 220px;
+    width: 270px;
     height: 150px;
     object-fit: fill;
   }
