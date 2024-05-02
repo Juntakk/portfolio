@@ -10,9 +10,11 @@ h2 {
 .project-title {
   margin-left: 10px;
   font-size: 25px;
+  margin-bottom: 20px;
 }
 .project-desc {
-  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 30px;
 }
 
 .btn.cat__btn {
@@ -64,16 +66,10 @@ h2 {
   object-fit: fill;
 }
 
-.portfolio__project p {
-  margin: 0.5rem 0 2rem;
-  text-align: left;
-  font-size: 19px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
 .portfolio__project-cta {
   display: flex;
   gap: 1rem;
+  margin-top: 30px;
 }
 
 .portfolio__project:hover .btn.sm {
@@ -87,13 +83,22 @@ h2 {
 }
 
 /* MEDIA QUERIES (tablets) */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1224px) {
   .portfolio__projects {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
   .btn.cat__btn {
     margin: -0rem;
+  }
+  .project-title {
+    font-size: 1.2rem;
+  }
+  .project-desc {
+    font-size: 0.8rem;
+  }
+  .card.portfolio__project {
+    margin-bottom: 2rem;
   }
 }
 
@@ -102,16 +107,44 @@ h2 {
   .portfolio__categories {
     gap: 0.6rem;
   }
+  .portfolio__project-cta {
+    font-size: 0.7rem;
+    justify-content: center;
+    margin-top: auto;
+  }
 
   .btn.cat__btn {
     padding: 0.7rem 0.8rem;
   }
 
   .portfolio__projects {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+  }
+  .project-title {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .project-desc {
+    display: none;
   }
   #portfolio h2 {
     margin-top: 3rem;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .card.portfolio__project {
+    text-align: center;
+    width: 240px;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .portfolio__project-image img {
+    width: 220px;
+    height: 150px;
+    object-fit: fill;
   }
 }

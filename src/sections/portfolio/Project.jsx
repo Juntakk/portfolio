@@ -26,7 +26,7 @@ const Project = ({ project, data }) => {
         )}
       </div>
       <h4 className="project-title">{data[project.id - 1].title}</h4>
-      <p className="project-desc">{data[project.id - 1].desc}</p>
+      <span className="project-desc">{data[project.id - 1].desc}</span>
       <div className="portfolio__project-cta">
         <a
           href={data[project.id - 1].github}
