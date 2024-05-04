@@ -34,7 +34,7 @@ const data = [
     image: Image9,
     title: "Steem",
     desc: "ReactJS | NodeJS | MongoDB | SASS",
-    demo: "https://stiim.netlify.app/",
+    demo: "https://steem-qpec.vercel.app/",
     github: "https://github.com/Juntakk/Steem",
   },
   {
