@@ -28,17 +28,17 @@ const data = [
     demo: "",
     github: "https://github.com/Juntakk/mini-game-3",
   },
+  // {
+  //   id: 3,
+  //   category: "Web",
+  //   image: Image9,
+  //   title: "Steem",
+  //   desc: "ReactJS | NodeJS | MongoDB | SASS",
+  //   demo: "https://steem-qpec.vercel.app/",
+  //   github: "https://github.com/Juntakk/Steem",
+  // },
   {
     id: 3,
-    category: "Web",
-    image: Image9,
-    title: "Steem",
-    desc: "ReactJS | NodeJS | MongoDB | SASS",
-    demo: "https://steem-qpec.vercel.app/",
-    github: "https://github.com/Juntakk/Steem",
-  },
-  {
-    id: 4,
     category: "Games",
     image: Image3,
     title: "Pew Pew",
@@ -47,7 +47,7 @@ const data = [
     github: "https://github.com/Juntakk/mini-game-1",
   },
   {
-    id: 5,
+    id: 4,
     category: "Web",
     image: Image8,
     title: "TaskBro",
@@ -56,7 +56,7 @@ const data = [
     github: "https://github.com/Juntakk/taskbro",
   },
   {
-    id: 6,
+    id: 5,
     category: "Web",
     image: Image4,
     title: "Mucho Foodo",
@@ -65,7 +65,7 @@ const data = [
     github: "https://github.com/Juntakk/ASP.NET-WebForm",
   },
   {
-    id: 7,
+    id: 6,
     category: "Games",
     image: Image5,
     title: "Bob Jumps",
@@ -74,7 +74,7 @@ const data = [
     github: "https://github.com/Juntakk/mini-game-2",
   },
   {
-    id: 8,
+    id: 7,
     category: "Mobile",
     image: Image1,
     title: "Irma's Camping",
@@ -83,7 +83,7 @@ const data = [
     github: "https://github.com/Juntakk/Android-Camping-App",
   },
   {
-    id: 9,
+    id: 8,
     category: "Mobile",
     image: Image10,
     title: "Planetfield",
@@ -92,7 +92,7 @@ const data = [
     github: "https://github.com/Juntakk/planetField",
   },
   {
-    id: 10,
+    id: 9,
     category: "Web",
     image: Image11,
     title: "Napolitana Pizza",
