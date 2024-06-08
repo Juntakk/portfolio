@@ -1,6 +1,6 @@
 import { BsAndroid2 } from "react-icons/bs";
 import { RiJavascriptFill } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
+import { SiFlutter } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
@@ -20,9 +20,9 @@ const data = [
   },
   {
     id: 3,
-    icon: <SiMongodb />,
-    title: "MongoDB",
-    level: 80,
+    icon: <SiFlutter />,
+    title: "Flutter",
+    level: 90,
   },
   {
     id: 4,

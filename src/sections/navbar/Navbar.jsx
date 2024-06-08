@@ -5,8 +5,8 @@ import "./navbar.css";
 import { useModalContext } from "../../context/modal-context";
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
-import CV from "../../assets/CV_EN_R.pdf";
-import CV_FR from "../../assets/CV_FR_R.pdf";
+import CV from "../../assets/CV_en.pdf";
+import CV_FR from "../../assets/CV_fr.pdf";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
 
 const Navbar = () => {

@@ -8,6 +8,9 @@ import Image8 from "../../assets/taskbro.png";
 import Image9 from "../../assets/steem.png";
 import Image10 from "../../assets/planetField.png";
 import Image11 from "../../assets/pizzeria.png";
+import Image12 from "../../assets/mealapp.png";
+import Image13 from "../../assets/chatapp.png";
+import Image14 from "../../assets/favplaces.png";
 
 const data = [
   {
@@ -99,6 +102,33 @@ const data = [
     desc: "C# | ASP.net | CSS",
     demo: "",
     github: "https://github.com/Juntakk/PizzeriaNapolitana",
+  },
+  {
+    id: 11,
+    category: "Mobile",
+    image: Image12,
+    title: "Food Is Us",
+    desc: "Flutter",
+    demo: "",
+    github: "https://github.com/Juntakk/meals",
+  },
+  {
+    id: 12,
+    category: "Mobile",
+    image: Image13,
+    title: "Chat Bro",
+    desc: "Flutter",
+    demo: "",
+    github: "https://github.com/Juntakk/chatApp",
+  },
+  {
+    id: 13,
+    category: "Mobile",
+    image: Image14,
+    title: "Fav Places",
+    desc: "Flutter",
+    demo: "",
+    github: "https://github.com/Juntakk/favoritePlaces",
   },
 ];
 
