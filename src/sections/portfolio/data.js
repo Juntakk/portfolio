@@ -113,7 +113,7 @@ const data = [
     github: "https://github.com/Juntakk/meals",
   },
   {
-    id: 12,
+    id: 13,
     category: "Mobile",
     image: Image13,
     title: "Chat Bro",
@@ -124,7 +124,7 @@ const data = [
   {
     id: 13,
     category: "Mobile",
-    image: Image13,
+    image: Image14,
     title: "Fav Places",
     desc: "Flutter",
     demo: "",
