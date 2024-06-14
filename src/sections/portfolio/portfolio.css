@@ -4,26 +4,41 @@
   gap: 1.5rem;
   flex-wrap: wrap;
 }
+h2 {
+  margin-bottom: 40px;
+}
+.project-title {
+  margin-left: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.project-desc {
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
 
 .btn.cat__btn {
+  margin-top: 15px;
   text-transform: capitalize;
+  font-size: 19px;
   transition: var(--transition);
 }
 
 .btn.cat__btn:hover {
   transform: translateY(-0.5rem);
+  color: var(--color-black);
 }
 
 .portfolio__projects {
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  align-items: start;
+  gap: 4.5rem;
 }
 
 .card.portfolio__project {
-  padding: 1rem;
+  padding: 0.75rem;
+  margin-bottom: -2.5rem;
   animation: animateProject 800ms ease-in forwards;
 }
 
@@ -48,16 +63,13 @@
 .portfolio__project-image img {
   width: 100%;
   height: 12rem;
-  object-fit: cover;
-}
-
-.portfolio__project p {
-  margin: 0.5rem 0 2rem;
+  object-fit: fill;
 }
 
 .portfolio__project-cta {
   display: flex;
   gap: 1rem;
+  margin-top: 30px;
 }
 
 .portfolio__project:hover .btn.sm {
@@ -71,13 +83,22 @@
 }
 
 /* MEDIA QUERIES (tablets) */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1224px) {
   .portfolio__projects {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
   .btn.cat__btn {
     margin: -0rem;
+  }
+  .project-title {
+    font-size: 1.2rem;
+  }
+  .project-desc {
+    font-size: 0.8rem;
+  }
+  .card.portfolio__project {
+    margin-bottom: 2rem;
   }
 }
 
@@ -86,13 +107,46 @@
   .portfolio__categories {
     gap: 0.6rem;
   }
+  .portfolio__project-cta {
+    font-size: 0.7rem;
+    justify-content: center;
+    margin-top: auto;
+  }
 
   .btn.cat__btn {
     padding: 0.7rem 0.8rem;
   }
 
   .portfolio__projects {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .project-title {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .project-desc {
+    display: none;
+  }
+  #portfolio h2 {
+    margin-top: 3rem;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .card.portfolio__project {
+    text-align: center;
+    width: 290px;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .portfolio__project-image img {
+    width: 270px;
+    height: 150px;
+    object-fit: fill;
   }
 }

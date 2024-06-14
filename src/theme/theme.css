@@ -18,6 +18,18 @@
   }
 }
 
+.language__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  p:hover {
+    color: var(--color-black);
+  }
+}
 .card.theme__modal:hover {
   background: #dedede;
 }
@@ -49,11 +61,11 @@
 }
 
 .theme__primary-colors .color-1 {
-  background: hsl(272, 70%, 46%);
+  background: hsl(272, 70%, 42%);
 }
 
 .theme__primary-colors .color-2 {
-  background: hsl(110, 70%, 46%);
+  background: hsl(130, 92%, 28%);
 }
 
 .theme__primary-colors .color-3 {
@@ -61,15 +73,15 @@
 }
 
 .theme__primary-colors .color-4 {
-  background: hsl(325, 70%, 46%);
+  background: hsl(325, 82%, 53%);
 }
 
 .theme__primary-colors .color-5 {
-  background: hsl(0, 70%, 46%);
+  background: hsl(0, 67%, 49%);
 }
 
 .theme__primary-colors .color-6 {
-  background: hsl(52, 70%, 46%);
+  background: hsl(32, 88%, 41%);
 }
 
 .theme__background-colors {

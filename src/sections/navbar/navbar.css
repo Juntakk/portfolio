@@ -8,20 +8,76 @@ nav {
   top: 0;
   left: 0;
   z-index: 9;
-  box-shadow: 0 1rem 1.5rem hsla(var(--primary-hue), 68%, 42%, 20%);
   transition: var(--transition);
+}
+
+.nav__right {
+  display: flex;
+}
+
+.nav__right .theme__icon:hover {
+  color: var(--color-black);
+  transform: scale(1.1);
+  transition: 0.7s all;
+}
+.nav__right .nav__logo:hover {
+  color: var(--color-black);
+  transform: scale(1.1);
+  transition: 0.7s all;
+}
+
+.theme__text {
+  margin-bottom: 20px;
 }
 
 .nav__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .nav__logo {
+  display: flex;
   font-size: 3rem;
-  /* overflow: hidden; */
+  overflow: hidden;
   color: var(--color-light);
+  cursor: pointer;
+}
+
+.nav__logo p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-white);
+  margin-right: 5px;
+  padding: 0;
+}
+
+.icon {
+  font-size: 40;
+  font-weight: bold;
+}
+
+.cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cv:hover {
+  color: var(--color-black);
+  transform: scale(1.05);
+  transition: 0.7s all;
+}
+.line {
+  color: var(--color-white);
+  font-size: 40px;
+}
+
+.line:hover {
+  cursor: default;
 }
 
 .nav__menu {
@@ -33,17 +89,50 @@ nav {
   color: var(--color-light);
   font-weight: bolder;
 }
+.nav__menu a:hover {
+  color: var(--color-black);
+  font-weight: bolder;
+}
 
-#theme__icon {
+.theme__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   color: var(--color-light);
   font-size: 3rem;
   cursor: pointer;
 }
 
+.theme__icon span {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+#lang__change {
+  background-color: transparent;
+  color: var(--color-light);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 /*HIDE NAV MENU ON TABLETS AND PHONES */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .nav__menu {
     display: none;
+  }
+  .nav__logo p {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+}
+@media screen and (max-width: 500px) {
+  .theme__text {
+    display: none;
+  }
+  .nav__logo p {
+    font-size: 1rem;
+    padding: 0;
   }
 }

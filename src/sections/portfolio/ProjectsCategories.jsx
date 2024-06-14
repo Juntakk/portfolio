@@ -1,8 +1,12 @@
 import { useState } from "react";
 import CategoryButton from "./CategoryButton";
+import { useLanguage } from "../../theme/LanguageContext";
 
 const ProjectsCategories = ({ categories, onFilterProjects }) => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const { language } = useLanguage();
+  const [activeCategory, setActiveCategory] = useState(
+    language === "en" ? "All" : "Tout"
+  );
 
   const changeCategoryHandler = (activeCat) => {
     setActiveCategory(activeCat);

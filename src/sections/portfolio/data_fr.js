@@ -24,7 +24,7 @@ const data = [
   },
   {
     id: 2,
-    category: "Games",
+    category: "Jeux",
     image: Image7,
     title: "Knight Shyamalan",
     desc: "C++ | Raylib",
@@ -42,7 +42,7 @@ const data = [
   },
   {
     id: 4,
-    category: "Games",
+    category: "Jeux",
     image: Image3,
     title: "Pew Pew",
     desc: "C++ | Raylib",
@@ -69,7 +69,7 @@ const data = [
   },
   {
     id: 7,
-    category: "Games",
+    category: "Jeux",
     image: Image5,
     title: "Bob Jumps",
     desc: "C++ | Raylib",
@@ -80,7 +80,7 @@ const data = [
     id: 8,
     category: "Mobile",
     image: Image1,
-    title: "Irma's Camping",
+    title: "Camping Chez Irma",
     desc: "Java | Android Studio | SQL",
     demo: "",
     github: "https://github.com/Juntakk/Android-Camping-App",
@@ -124,7 +124,7 @@ const data = [
   {
     id: 13,
     category: "Mobile",
-    image: Image13,
+    image: Image14,
     title: "Fav Places",
     desc: "Flutter",
     demo: "",
