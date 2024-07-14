@@ -45,27 +45,27 @@ body {
 
 /* THEME change using react */
 main.color-1 {
-  --color-primary: hsl(272, 70%, 42%);
+  --color-primary: hsl(272, 79%, 36%);
 }
 
 main.color-2 {
-  --color-primary: hsl(130, 92%, 28%);
+  --color-primary: hsl(134, 7%, 61%);
 }
 
 main.color-3 {
-  --color-primary: hsl(240, 70%, 46%);
+  --color-primary: hsl(240, 41%, 71%);
 }
 
 main.color-4 {
-  --color-primary: hsl(325, 82%, 53%);
+  --color-primary: hsl(325, 100%, 50%);
 }
 
 main.color-5 {
-  --color-primary: hsl(0, 67%, 49%);
+  --color-primary: hsl(0, 100%, 27%);
 }
 
 main.color-6 {
-  --color-primary: hsl(32, 88%, 41%);
+  --color-primary: hsl(32, 100%, 66%);
 }
 
 main.bg-2 {
