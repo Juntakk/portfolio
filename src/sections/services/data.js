@@ -39,7 +39,7 @@ const data = [
   {
     id: 6,
     icon: <RiJavascriptFill />,
-    title: "Vanilla Javascript",
+    title: "Javascript",
     level: 70,
   },
 ];
