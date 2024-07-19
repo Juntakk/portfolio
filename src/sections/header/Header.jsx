@@ -12,11 +12,10 @@ const Header = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
 
-    // Configure particles.js
     window.particlesJS("particles-js", {
       particles: {
-        number: { value: 50, density: { enable: true, value_area: 500 } },
-        color: { value: "#87837c" },
+        number: { value: 90, density: { enable: true, value_area: 800 } },
+        color: { value: "#88988E" },
         shape: {
           type: "circle",
           stroke: { width: 0, color: "#000000" },
@@ -24,16 +23,16 @@ const Header = () => {
         },
         opacity: {
           value: 0.8,
-          random: true,
+          random: false,
           anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
         },
         size: {
-          value: 50,
-          random: true,
+          value: 3,
+          random: false,
           anim: { enable: false, speed: 40, size_min: 20, sync: false },
         },
         line_linked: {
-          enable: false,
+          enable: true,
           distance: 150,
           color: "#87837c",
           opacity: 0.4,
@@ -41,7 +40,7 @@ const Header = () => {
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 4,
           direction: "none",
           random: true,
           straight: false,
@@ -71,7 +70,7 @@ const Header = () => {
           remove: { particles_nb: 2 },
         },
       },
-      retina_detect: true,
+      retina_detect: false,
     });
   }, []);
 
