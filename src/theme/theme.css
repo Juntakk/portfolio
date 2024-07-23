@@ -1,8 +1,9 @@
 .card.theme__modal {
+  height: 400px;
+  width: 400px;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  left: calc(50% - 200px);
   background: #dedede;
   z-index: 200;
   text-align: center;
@@ -106,11 +107,15 @@
 /*PHONES*/
 @media screen and (max-width: 600px) {
   .card.theme__modal {
-    width: var(--container-width-md);
-    padding: 3rem 1.5rem;
+    width: 300px;
+    height: 350px;
+    padding: 1.5rem 1.5rem;
+    left: calc(50% - 150px);
+
   }
 
   .theme__primary-colors {
     gap: 0.6rem;
   }
+
 }
