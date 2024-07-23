@@ -20,6 +20,7 @@
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
   --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
 
+
   /* GENERAL CONTAINER VARIABLES */
   --container-width-lg: 76%;
   --container-width-md: 90%;
@@ -185,12 +186,12 @@ img {
   cursor: pointer;
 }
 
-.btn:hover {
+/* .btn:hover {
   background-color: transparent;
   border-color: var(--color-dark);
   transform: translateY(-0.5rem);
   color: var(--color-dark);
-}
+} */
 
 .btn.white {
   background: var(--color-white);

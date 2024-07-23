@@ -140,10 +140,10 @@ const Header = () => {
           <br /> - Jiro Ono, "Jiro Dreams of Sushi"{" "}
         </p>
         <div className="header__cta" data-aos="fade-up">
-          <a href="#contact" className="btn primary">
+          <a href="#contact" className="btn primary letsTalkBtn">
             {language === "en" ? "Let's Talk" : "Discutons"}
           </a>
-          <a href="#portfolio" className="btn light">
+          <a href="#portfolio" className="btn light projectBtn">
             {language === "en" ? "My Projects" : "Mes Projets"}
           </a>
         </div>

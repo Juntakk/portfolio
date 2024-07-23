@@ -7,14 +7,14 @@ const data_fr = [
     id: 1,
     icon: <AiFillExperiment />,
     title: "Expérience",
-    desc: "2+ Années",
+    desc: "3+ Années",
   },
-  { id: 2, icon: <MdWork />, title: "Projets", desc: "15+ Complétés" },
+  { id: 2, icon: <MdWork />, title: "Projets", desc: "20+ Complétés" },
   {
     id: 3,
     icon: <FaBrain />,
     title: "Compétences",
-    desc: "8+ Technologies",
+    desc: "10+ Technologies",
   },
 ];
 

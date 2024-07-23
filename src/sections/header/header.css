@@ -36,6 +36,16 @@ header {
   gap: 1.2rem;
 }
 
+.projectBtn:hover{
+  transform: translateY(-0.5rem);
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+}
+
+.letsTalkBtn:hover{
+  transform: translateY(-0.5rem);
+}
+
 .header__socials {
   position: fixed;
   left: 1rem;
