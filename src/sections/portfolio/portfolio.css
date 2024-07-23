@@ -124,8 +124,7 @@ h2 {
     gap: 0.6rem;
   }
   .portfolio__project-cta {
-    font-size: 0.7rem;
-    justify-content: center;
+    font-size: 0.8rem;
     margin-top: auto;
   }
 
@@ -141,14 +140,11 @@ h2 {
     gap: 1rem;
   }
   .project-title {
-    font-size: 1rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    margin-top: 1rem;
   }
   .project-desc {
     display: none;
-  }
-  #portfolio h2 {
-    margin-top: 3rem;
   }
   .card {
     margin-bottom: 30px;
@@ -158,7 +154,6 @@ h2 {
     text-align: center;
     width: 290px;
     height: 300px;
-    margin-bottom: 30px;
   }
   .portfolio__project-image img {
     width: 270px;

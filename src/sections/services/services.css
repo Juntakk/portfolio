@@ -5,6 +5,11 @@
   padding: 1rem;
 }
 
+.service{
+  display: flex;
+  flex-direction: row;
+}
+
 .card.service {
   display: flex;
   align-items: flex-start;
@@ -29,6 +34,7 @@
   transition: var(--transition);
   border-color: var(--color-primary);
   border: 3px solid;
+  display: flex;
 }
 
 .service:hover .service__icon {
@@ -63,7 +69,6 @@
 @media screen and (max-width: 1445px) {
   .service__details p {
     text-align: left;
-    padding: 5px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -78,13 +83,14 @@
   .services__container {
     grid-template-columns: 1fr;
     gap: 1.2rem;
+    padding: auto;
   }
 
   .card.service {
     gap: 1.2 rem;
+    padding: 0;
   }
   .service__icon {
     font-size: 2rem;
-    padding: 0.5rem;
   }
 }
