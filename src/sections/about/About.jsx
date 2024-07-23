@@ -1,14 +1,14 @@
 import AboutImage from "../../assets/header.jpg";
 
-import data_en from "./data";
-import data_fr from "./data_fr";
-import Card from "../../components/Card";
+// import data_en from "./data";
+// import data_fr from "./data_fr";
+// import Card from "../../components/Card";
 import "./about.css";
 import { useLanguage } from "../../theme/LanguageContext";
 
 const About = () => {
   const { language } = useLanguage();
-  const data = language === "en" ? data_en : data_fr;
+  // const data = language === "en" ? data_en : data_fr;
   return (
     <section id="about">
       <div className="container about__container" data-aos="fade-up">
