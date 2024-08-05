@@ -34,6 +34,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
+  padding: 1rem;
 }
 
 .card.portfolio__project {
@@ -103,6 +104,7 @@ h2 {
   .portfolio__projects {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    padding: 2rem;
   }
   .btn.cat__btn {
     margin: -0rem;

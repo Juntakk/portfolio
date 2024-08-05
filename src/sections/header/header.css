@@ -64,8 +64,8 @@ header {
 }
 
 .header__socials a {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3.8rem;
+  height: 3.8rem;
   background: var(--color-primary);
   color: var(--color-light);
   display: grid;
@@ -82,7 +82,7 @@ header {
 }
 
 .header__socials .social-icon {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* MEDIA QUERIES (tablets) */
@@ -92,9 +92,9 @@ header {
     height: 100vh;
   }
 
-  .header__socials {
+  /* .header__socials {
     display: none;
-  }
+  } */
 }
 
 /* MEDIA QUERIES (phones) */
@@ -114,8 +114,17 @@ header {
     gap: 1rem;
   }
 
-  .header__socials {
-    display: none;
+  .header__socials{
+    left: 0rem;
+  }
+
+  .header__socials a{
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .header__socials .social-icon {
+    font-size: 0.8rem;
   }
 
   .header__container h1 {
