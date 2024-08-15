@@ -1,13 +1,11 @@
 import Image1 from "../../assets/code.png";
 import Image3 from "../../assets/game_1.png";
-import Image4 from "../../assets/market.png";
 import Image5 from "../../assets/game_2.png";
 import Image6 from "../../assets/seeflix.png";
 import Image7 from "../../assets/game_3.png";
 import Image8 from "../../assets/taskbro.png";
 import Image9 from "../../assets/steem.png";
 import Image10 from "../../assets/planetField.png";
-import Image11 from "../../assets/pizzeria.png";
 import Image12 from "../../assets/mealapp.png";
 import Image13 from "../../assets/chatapp.png";
 import Image14 from "../../assets/favplaces.png";
@@ -60,15 +58,6 @@ const data = [
   },
   {
     id: 6,
-    category: "Web",
-    image: Image4,
-    title: "Mucho Foodo",
-    desc: "C# | ASP.net | SQL",
-    demo: "",
-    github: "https://github.com/Juntakk/ASP.NET-WebForm",
-  },
-  {
-    id: 7,
     category: "Games",
     image: Image5,
     title: "Bob Jumps",
@@ -77,7 +66,7 @@ const data = [
     github: "https://github.com/Juntakk/mini-game-2",
   },
   {
-    id: 8,
+    id: 7,
     category: "Mobile",
     image: Image1,
     title: "Irma's Camping",
@@ -86,7 +75,7 @@ const data = [
     github: "https://github.com/Juntakk/Android-Camping-App",
   },
   {
-    id: 9,
+    id: 8,
     category: "Mobile",
     image: Image10,
     title: "Planetfield",
@@ -95,16 +84,7 @@ const data = [
     github: "https://github.com/Juntakk/planetField",
   },
   {
-    id: 10,
-    category: "Web",
-    image: Image11,
-    title: "Napolitana Pizza",
-    desc: "C# | ASP.net | CSS",
-    demo: "",
-    github: "https://github.com/Juntakk/PizzeriaNapolitana",
-  },
-  {
-    id: 11,
+    id: 9,
     category: "Mobile",
     image: Image12,
     title: "Food Is Us",
@@ -113,7 +93,7 @@ const data = [
     github: "https://github.com/Juntakk/meals",
   },
   {
-    id: 13,
+    id: 10,
     category: "Mobile",
     image: Image13,
     title: "Chat Bro",
@@ -122,7 +102,7 @@ const data = [
     github: "https://github.com/Juntakk/chatApp",
   },
   {
-    id: 13,
+    id: 11,
     category: "Mobile",
     image: Image14,
     title: "Fav Places",
