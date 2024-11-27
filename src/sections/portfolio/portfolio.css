@@ -114,6 +114,9 @@ h2 {
   .btn.cat__btn {
     margin: -0rem;
   }
+  .portfolio__project-cta{
+    margin-bottom: -2rem;
+  }
   .project-title {
     font-size: 1.2rem;
   }
@@ -126,13 +129,12 @@ h2 {
 }
 
 /* MEDIA QUERIES (phones) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .portfolio__categories {
     gap: 0.6rem;
   }
   .portfolio__project-cta {
     font-size: 0.8rem;
-    margin-top: auto;
   }
 
   .btn.cat__btn {

@@ -43,29 +43,29 @@ const Project = ({ project, data }) => {
             <h4 className="project-title">{data[project.id - 1].title}</h4>
             <span className="project-desc">{data[project.id - 1].desc}</span>
           </div>
-        </Card>
-        <div className="portfolio__project-cta">
-          <a
-            href={data[project.id - 1].github}
-            className="btn sm primary"
-            target="_blank"
-            rel="noopner noreferrer"
-          >
-            Github
-          </a>
-          {data[project.id - 1].demo.startsWith("http") ? (
+          <div className="portfolio__project-cta">
             <a
-              href={data[project.id - 1].demo}
+              href={data[project.id - 1].github}
               className="btn sm primary"
               target="_blank"
               rel="noopner noreferrer"
             >
-              Demo
+              Github
             </a>
-          ) : (
-            ""
-          )}
-        </div>
+            {data[project.id - 1].demo.startsWith("http") ? (
+              <a
+                href={data[project.id - 1].demo}
+                className="btn sm primary"
+                target="_blank"
+                rel="noopner noreferrer"
+              >
+                Demo
+              </a>
+            ) : (
+              ""
+            )}
+          </div>
+        </Card>
       </div>
     </>
   );

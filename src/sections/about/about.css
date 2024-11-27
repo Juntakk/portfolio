@@ -1,176 +1,72 @@
+.about {
+  padding: 10rem 6rem;
+  background: var(--color-light); /* Changeable with your theme */
+}
+
 .about__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-.myimage {
-  width: 290px;
-  height: 290px;
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+}
+
+.about__portrait {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about__image {
+  width: 100%;
+  max-width: 300px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
+  border: 4px solid var(--accent-color, var(--color-primary));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about__portrait{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about__image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.about__cards {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+.about__text {
+  flex: 2 1 600px;
   text-align: center;
-  padding-inline: 1rem;
-  margin-right: 2rem;
 }
 
-.about__card-icon {
-  font-size: 1.8rem;
-  color: var(--color-primary);
-  border-radius: 150px;
-  width: fit-content;
-  margin-inline: auto;
-  margin-top: -0.4rem;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  transition: var(--transition);
+.about__headline {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--color-black);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.card.about__card:hover .about__card-icon {
-  background: var(--color-primary);
-  color: var(--color-white);
-}
-
-.card.about__card h5 {
-  margin: 0.5rem 0;
-}
-
-.about__card {
-  background: var(--color-white);
-}
-.about__card:hover {
-  border-color: var(--color-primary);
-  transform: translateY(-0.5rem);
-}
-.about__left {
-  text-align: center;
-  width: 30rem;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about__left h1 {
-  font-size: 60;
-  margin-top: 1.8rem;
-  margin-bottom: 1.8rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-.headline__container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about__left p {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 0.8rem;
-  font-size: 1.4rem;
-  line-height: 1.4;
-}
-
-.about__left .btn {
-  margin-top: 2.5rem;
-}
-
-/*TABLETS*/
-@media screen and (max-width: 1444px) {
-  /* .about__right {
-    display: none;
-  } */
-
-  .about__portrait img {
-    width: 190px;
-    height: 190px;
-  }
-  .about__container {
-    display: flex;
+@media screen and (max-width: 1275px) {
+  .about__content {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }
 
-  .about__left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0rem;
-    width: 20rem;
-    h1 {
-      line-height: 1.5;
-      font-size: 40;
-    }
+  .about__headline {
+    font-size: 2rem;
+    text-align: left;
   }
 
-  .about__cards {
+  .about {
     display: none;
   }
 
-  /* .about__portrait {
-    display: none;
-  } */
-
-  .card.about__card {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .about__left h1,
-  p {
-    text-align: center;
-    padding: 1rem;
-  }
-  .about__left a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-/*PHONES*/
-@media screen and (max-width: 800px) {
-  .about__cards {
-    display: none;
-  }
-  .about__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about__portrait {
-    display: none;
-  }
-
-  .about__container p {
-    text-align: center;
-    max-width: 25rem;
-  }
-
-  .about__left h1 {
-    max-width: 20rem;
-    font-size: 2.5rem;
-  }
-
-  .about__left {
-    max-width: 20rem;
+  .about__text {
+    text-align: left;
   }
 }
