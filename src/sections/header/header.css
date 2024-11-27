@@ -1,5 +1,4 @@
 header {
-  margin-top: 5rem;
   height: calc(100vh - 5rem);
   display: grid;
   place-items: center;

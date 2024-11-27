@@ -46,7 +46,7 @@ body {
 
 /* THEME change using react */
 main.color-1 {
-  --color-primary: hsl(272, 70%, 42%);
+  --color-primary: hsl(272, 83%, 65%);
 }
 
 main.color-2 {
@@ -54,7 +54,7 @@ main.color-2 {
 }
 
 main.color-3 {
-  --color-primary: hsl(240, 70%, 46%);
+  --color-primary: hsl(219, 80%, 61%);
 }
 
 main.color-4 {

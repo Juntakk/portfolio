@@ -1,6 +1,7 @@
 import data_en from "./data";
 import data_fr from "./data_fr";
-import { IoIosColorPalette } from "react-icons/io";
+import { MdDarkMode } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
 import "./navbar.css";
 import { useModalContext } from "../../context/modal-context";
 import { useLanguage } from "../../theme/LanguageContext";
@@ -8,11 +9,15 @@ import LanguageToggle from "../../theme/LanguageToggle";
 import CV from "../../assets/Nicolas_Gauthier_Dev_en.pdf";
 import CV_FR from "../../assets/Nicolas_Gauthier_Dev_en.pdf";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
+import { useThemeContext } from "../../context/theme-context";
 
 const Navbar = () => {
   const { showModalHandler } = useModalContext();
   const { language } = useLanguage();
+  const { themeState } = useThemeContext();
   const data = language === "en" ? data_en : data_fr;
+
+  const isDarkMode = themeState.background === "bg-2";
 
   return (
     <nav>
@@ -30,7 +35,11 @@ const Navbar = () => {
         </ul>
         <div className="nav__right">
           <button className="theme__icon" onClick={showModalHandler}>
-            <IoIosColorPalette />
+            {isDarkMode ? (
+              <MdOutlineDarkMode style={{ fontWeight: 55 }} />
+            ) : (
+              <MdDarkMode style={{ fontWeight: 55 }} />
+            )}
           </button>
           <span className="line">|</span>
           <i className="nav__logo">

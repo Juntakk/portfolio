@@ -1,138 +1,120 @@
+/* General Navbar Styling */
 nav {
-  width: 100vw;
-  height: 5rem;
-  display: grid;
-  place-items: center;
-  background: var(--color-primary);
-  position: fixed;
+  background-color: var(--color-primary); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: sticky;
   top: 0;
-  left: 0;
-  z-index: 9;
-  transition: var(--transition);
-}
-
-.nav__right {
-  display: flex;
-}
-
-.nav__right .theme__icon:hover {
-  color: var(--color-black);
-  transform: scale(1.1);
-  transition: 0.7s all;
-}
-.nav__right .nav__logo:hover {
-  color: var(--color-black);
-  transform: scale(1.1);
-  transition: 0.7s all;
-}
-
-.theme__text {
-  margin-bottom: 20px;
+  z-index: 1000;
 }
 
 .nav__container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.nav__logo {
-  display: flex;
-  font-size: 3rem;
-  overflow: hidden;
-  color: var(--color-light);
-  cursor: pointer;
-}
-
-.nav__logo p {
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--color-white);
-  margin-right: 5px;
-  padding: 0;
-}
-
-.icon {
-  font-size: 40;
-  font-weight: bold;
-}
-
+/* CV Link Styling */
 .cv {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--color-light);
-  font-size: 25px;
-  font-weight: bold;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cv:hover {
+  background-color: var(--color-primary-hover);
   color: var(--color-black);
-  transform: scale(1.05);
-  transition: 0.7s all;
-}
-.line {
-  color: var(--color-white);
-  font-size: 40px;
 }
 
-.line:hover {
-  cursor: default;
+.icon {
+  font-size: 1.5rem;
 }
 
+/* Menu List */
 .nav__menu {
   display: flex;
-  gap: 3.5rem;
+  list-style: none;
+  gap: 1.5rem;
 }
 
-.nav__menu a {
-  color: var(--color-light);
-  font-weight: bolder;
+.nav__menu li a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
-.nav__menu a:hover {
+
+.nav__menu li a:hover {
   color: var(--color-black);
-  font-weight: bolder;
+}
+
+/* Right Section */
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .theme__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  color: var(--color-light);
-  font-size: 3rem;
+  background: none;
+  border: none;
   cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  transition: color 0.3s ease;
 }
 
-.theme__icon span {
-  font-size: 1.3rem;
-  font-weight: bolder;
+.theme__icon:focus{
+  border: none  ;
 }
 
-#lang__change {
-  background-color: transparent;
-  color: var(--color-light);
-  font-size: 1rem;
-  cursor: pointer;
+.theme__icon:hover {
+  color: var(--color-black);
+  background-color: var(--color-primary);
 }
 
-/*HIDE NAV MENU ON TABLETS AND PHONES */
-@media screen and (max-width: 1100px) {
+.line {
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+.nav__logo {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  font-weight: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav__menu {
-    display: none;
+    display: none; /* Hide menu for smaller screens */
   }
-  .nav__logo p {
-    padding: 0;
+
+  .nav__right {
+    gap: 0.5rem;
   }
 }
-@media screen and (max-width: 800px) {
-}
-@media screen and (max-width: 500px) {
-  .theme__text {
-    display: none;
+
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem;
   }
-  .nav__logo p {
+
+  .cv {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .icon {
     font-size: 1rem;
-    padding: 0;
   }
 }

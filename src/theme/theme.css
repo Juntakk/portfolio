@@ -25,10 +25,10 @@
   align-items: center;
   p {
     font-size: 1.5rem;
-    font-weight: bold;
   }
   p:hover {
     color: var(--color-black);
+    cursor: pointer;
   }
 }
 .card.theme__modal:hover {
@@ -62,7 +62,7 @@
 }
 
 .theme__primary-colors .color-1 {
-  background: hsl(272, 70%, 42%);
+  background: hsl(272, 83%, 65%);
 }
 
 .theme__primary-colors .color-2 {
@@ -70,7 +70,7 @@
 }
 
 .theme__primary-colors .color-3 {
-  background: hsl(240, 70%, 46%);
+  background: hsl(219, 80%, 61%);
 }
 
 .theme__primary-colors .color-4 {

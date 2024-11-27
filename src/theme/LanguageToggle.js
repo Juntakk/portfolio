@@ -1,5 +1,7 @@
 import { useLanguage } from "./LanguageContext";
 import "./theme.css";
+import enImg from "../assets/uk.png";
+import frImg from "../assets/france.png";
 
 const LanguageToggle = () => {
   const { toggleLanguage } = useLanguage();
@@ -8,7 +10,17 @@ const LanguageToggle = () => {
   return (
     <>
       <span onClick={toggleLanguage} className="language__toggle">
-        <p>{language === "en" ? "FR" : "EN"}</p>
+        <p>
+          {language === "en" ? (
+            <img src={frImg} alt="Switch to French" className="language-icon" />
+          ) : (
+            <img
+              src={enImg}
+              alt="Switch to English"
+              className="language-icon"
+            />
+          )}
+        </p>
       </span>
     </>
   );
