@@ -1,29 +1,22 @@
-import contacts from "./data";
 import "./contact.css";
 import { useLanguage } from "../../theme/LanguageContext";
+import ContactForm from "../../components/ContactForm";
 
 const Contact = () => {
   const { language } = useLanguage();
   return (
     <section id="contact">
-      <h2>{language === "en" ? "Get in Touch" : "Contactez moi"}</h2>
-      <p>
+      <h2 className="first_h2">
         {language === "en"
-          ? "Shoot me a message via any of the links below"
-          : "Envoyez-moi un message via l'un des liens ci-dessous"}
+          ? "Ready to Join Your Team – Get in Touch !"
+          : "Prêt à Rejoindre Votre Équipe – Contactez-moi !"}
+      </h2>
+      <p className="second_p">
+        {language === "en"
+          ? "Shoot me an email via this form"
+          : "Envoyez-moi un courriel via ce formulaire"}
       </p>
-      <div className="container contact__container">
-        {contacts.map((contact) => (
-          <a
-            key={contact.id}
-            href={contact.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {contact.icon}
-          </a>
-        ))}
-      </div>
+      <ContactForm />
     </section>
   );
 };

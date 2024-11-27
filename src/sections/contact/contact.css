@@ -1,5 +1,5 @@
 .contact__container {
-  padding: 5rem;
+  padding: 1rem;
   width: fit-content;
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 .contact__container a {
-  width: 5rem;
+  width: 15rem;
   height: 5rem;
   color: white;
   background: var(--color-primary);
@@ -23,6 +23,15 @@
   border-color: var(--color-primary);
   color: var(--color-primary);
   transform: translateY(-0.5rem);
+}
+
+.second_p{
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+.first_h2{
+  margin-top: -10px;
 }
 
 /*PHONES*/

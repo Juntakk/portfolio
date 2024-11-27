@@ -1,0 +1,128 @@
+ /* Main container */
+  .contact_container {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form container */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Input fields and textarea styling */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    resize: none; /* Disable resize */
+    overflow: auto;
+    padding: 8px;
+    font-size: 1rem;
+    background-color: rgb(213, 211, 211);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Focus styles for input fields */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: black;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Button styling */
+  .contact_form_btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: black;
+    color:rgb(213, 211, 211);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Hover effect on button */
+  button:hover {
+    background-color: rgb(213, 211, 211);
+    color:black ;
+    transform: scale(1.05);
+  }
+  
+  /* Focus effect for button */
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  }
+  
+  /* Status message */
+  .status_msg {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: black  ;
+  }
+  @media screen and (max-width: 1444px) {
+
+    .contact_container div {
+      padding: 5px;
+    }
+    .contact_container{
+      width: 75%;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
+  /* Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .contact_container div {
+      padding: 5px;
+    }
+    .contact_container{
+      width: 75%;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
+  

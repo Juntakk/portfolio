@@ -134,10 +134,9 @@ const Header = () => {
         <h1 data-aos="fade-up">Nicolas Habashi Gauthier</h1>
         <p data-aos="fade-up">
           {language === "en"
-            ? "Immerse yourself in your work, fall in love with it, and dedicate your life to mastering your skill. That's the secret of success."
-            : "Plongez-vous dans votre travail, tombez amoureux de lui et consacrez votre vie à maîtriser votre compétence. C'est le secret du succès."}
+            ? "Proficient in Web and Mobile Development, Ready to Contribute to Innovative Teams and Challenging Projects."
+            : "Compétent en développement web et mobile, prêt à contribuer à des équipes innovantes et à des projets stimulants."}
           <br />
-          <br /> - Jiro Ono, "Jiro Dreams of Sushi"{" "}
         </p>
         <div className="header__cta" data-aos="fade-up">
           <a href="#contact" className="btn primary letsTalkBtn">
