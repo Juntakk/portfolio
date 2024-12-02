@@ -81,7 +81,7 @@ const Header = () => {
 
     const handleScroll = () => {
       const socialsContainer = document.querySelector(".header__socials");
-      const scrollThreshold = 20; // Adjust the threshold as needed
+      const scrollThreshold = 1; // Adjust the threshold as needed
 
       if (window.scrollY > scrollThreshold || isHovered) {
         socialsContainer.classList.add("show");
@@ -93,7 +93,6 @@ const Header = () => {
 
     const handleHover = () => {
       setIsHovered(true);
-      clearTimeout(timeoutId);
     };
 
     const handleHoverEnd = () => {
@@ -103,7 +102,7 @@ const Header = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         handleScroll();
-      }, 300); // Adjust the delay as needed (in milliseconds)
+      }, 30); // Adjust the delay as needed (in milliseconds)
     };
 
     // Attach the event listeners when the component mounts
