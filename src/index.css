@@ -42,6 +42,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   font-size: 0.9rem;
+  cursor: default;
 }
 
 /* THEME change using react */
