@@ -15,7 +15,7 @@ const data = [
     category: "Web",
     image: Image6,
     title: "SeeFlix",
-    desc: "ReactJS | NodeJS | MongoDB | API ",
+    desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
     github: "https://github.com/Juntakk/SeeFlix",
     info: "Plateforme de films en temps réel, recherchez et trouvez vos films préférés avec toutes leurs informations.",
