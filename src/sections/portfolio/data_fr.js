@@ -1,14 +1,13 @@
-import Image1 from "../../assets/code.png";
-import Image3 from "../../assets/game_1.png";
-import Image5 from "../../assets/game_2.png";
-import Image6 from "../../assets/seeflix.png";
-import Image7 from "../../assets/game_3.png";
-import Image8 from "../../assets/taskbro.png";
-import Image9 from "../../assets/steem.png";
-import Image10 from "../../assets/planetField.png";
-import Image12 from "../../assets/mealapp.png";
-import Image13 from "../../assets/chatapp.png";
-import Image14 from "../../assets/favplaces.png";
+import Image1 from "../../assets/view-7173963_1280.jpg";
+import Image3 from "../../assets/wJuniVvYNheC28AnXWmFfZ.jpg";
+import Image6 from "../../assets/cinema-4153289_1280.jpg";
+import Image7 from "../../assets/diamond-5724650_1280.jpg";
+import Image8 from "../../assets/notes-6399119_1280.jpg";
+import Image9 from "../../assets/xbox-5046923_1280.jpg";
+import Image10 from "../../assets/solar-system-8261803_1280.png";
+import Image12 from "../../assets/grilled-pineapple-pork-burrito-2944562_1280.jpg";
+import Image13 from "../../assets/chat-7767693_1280.jpg";
+import Image14 from "../../assets/camera-1130731_1280.jpg";
 
 const data = [
   {
@@ -19,6 +18,7 @@ const data = [
     desc: "ReactJS | NodeJS | MongoDB | API ",
     demo: "https://seeflix.netlify.app/",
     github: "https://github.com/Juntakk/SeeFlix",
+    info: "Plateforme de films en temps réel, recherchez et trouvez vos films préférés avec toutes leurs informations.",
   },
   {
     id: 2,
@@ -28,15 +28,17 @@ const data = [
     desc: "C++ | Raylib",
     demo: "",
     github: "https://github.com/Juntakk/mini-game-3",
+    info: "RPG en 2D vu de dessus en cours de développement, avec des objets et un inventaire à venir.",
   },
   {
     id: 3,
     category: "Web",
     image: Image9,
     title: "Steem",
-    desc: "ReactJS | NodeJS | MongoDB | SASS",
+    desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
     github: "https://github.com/Juntakk/Steem",
+    info: "Plateforme de commerce et gestion de jeux vidéo, ajoutez, modifiez, supprimez et achetez vos jeux préférés.",
   },
   {
     id: 4,
@@ -46,6 +48,7 @@ const data = [
     desc: "C++ | Raylib",
     demo: "",
     github: "https://github.com/Juntakk/mini-game-1",
+    info: "Jeu de type bullet-hell en 2D, combattez des hordes d'ennemis. D'autres niveaux à venir.",
   },
   {
     id: 5,
@@ -55,60 +58,57 @@ const data = [
     desc: "ReactJS | CSS",
     demo: "https://taskbro.netlify.app/",
     github: "https://github.com/Juntakk/taskbro",
+    info: "Planificateur de tâches et d'événements avec personnalisation des thèmes. Fonctionnalités CRUD de base.",
   },
   {
     id: 6,
-    category: "Jeux",
-    image: Image5,
-    title: "Bob Jumps",
-    desc: "C++ | Raylib",
-    demo: "",
-    github: "https://github.com/Juntakk/mini-game-2",
-  },
-  {
-    id: 7,
     category: "Mobile",
     image: Image1,
     title: "Camping Chez Irma",
     desc: "Java | Android Studio | SQL",
     demo: "",
     github: "https://github.com/Juntakk/Android-Camping-App",
+    info: "Simulation d'application pour une entreprise de camping, choisissez et réservez différentes activités.",
   },
   {
-    id: 8,
+    id: 7,
     category: "Mobile",
     image: Image10,
     title: "Planetfield",
     desc: "Kotlin | Android Studio | SQL",
     demo: "",
     github: "https://github.com/Juntakk/planetField",
+    info: "Application éducative sur le système solaire, découvrez et apprenez sur les planètes de notre galaxie.",
   },
   {
-    id: 9,
+    id: 8,
     category: "Mobile",
     image: Image12,
     title: "Food Is Us",
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/meals",
+    info: "Planificateur de repas, explorez et filtrez différents ingrédients et types de repas.",
   },
   {
-    id: 10,
+    id: 9,
     category: "Mobile",
     image: Image13,
     title: "Chat Bro",
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/chatApp",
+    info: "Prototype d'application de chat mobile, connectez-vous et discutez avec d'autres utilisateurs en temps réel.",
   },
   {
-    id: 11,
+    id: 10,
     category: "Mobile",
     image: Image14,
     title: "Fav Places",
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/favoritePlaces",
+    info: "Application de voyage pour prendre des photos de lieux mémorables, sauvegarder des photos et leurs emplacements.",
   },
 ];
 

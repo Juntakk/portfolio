@@ -1,72 +1,45 @@
 import Card from "../../components/Card";
 
 const Project = ({ project, data }) => {
-
-  let url = data[project.id - 1].demo.startsWith("http")
-    ? data[project.id - 1].demo
-    : data[project.id - 1].github;
-
-  let handleDivClick = () => {
-    window.open(url, "_blank");
-  };
+  const projectData = data[project.id - 1];
 
   return (
     <>
-      <div>
-        <Card className="portfolio__project" onClick={handleDivClick}>
-          <div className="portfolio__project-image">
-            {data[project.id - 1].demo.startsWith("http") ? (
-              <a
-                href={data[project.id - 1].demo}
-                target="_blank"
-                rel="noopner noreferrer"
-              >
-                {" "}
-                <img src={data[project.id - 1].image} alt="Portfolio Project" />
-              </a>
-            ) : (
-              <>
+      <Card className="portfolio__project">
+        <div className="inner_card">
+          <div className="front">
+            <img src={projectData.image} alt="" />
+          </div>
+          <div className="back">
+            <p className="title">{projectData.title}</p>
+            <p className="info">{projectData.info}</p>
+            <p className="desc">{projectData.desc}</p>
+            <div className="btn_div">
+              {projectData.demo.startsWith("http") ? (
                 <a
-                  href={data[project.id - 1].github}
+                  className="btn primary"
+                  href={projectData.demo}
                   target="_blank"
                   rel="noopner noreferrer"
                 >
-                  <img
-                    src={data[project.id - 1].image}
-                    alt="Portfolio Project"
-                  />
+                  Demo
                 </a>
-              </>
-            )}
-          </div>
-          <div className="titleAndDesc">
-            <h4 className="project-title">{data[project.id - 1].title}</h4>
-            <span className="project-desc">{data[project.id - 1].desc}</span>
-          </div>
-          <div className="portfolio__project-cta">
-            <a
-              href={data[project.id - 1].github}
-              className="btn sm primary"
-              target="_blank"
-              rel="noopner noreferrer"
-            >
-              Github
-            </a>
-            {data[project.id - 1].demo.startsWith("http") ? (
+              ) : (
+                ""
+              )}
+
               <a
-                href={data[project.id - 1].demo}
-                className="btn sm primary"
+                className="btn primary"
+                href={projectData.github}
                 target="_blank"
                 rel="noopner noreferrer"
               >
-                Demo
+                GitHub
               </a>
-            ) : (
-              ""
-            )}
+            </div>
           </div>
-        </Card>
-      </div>
+        </div>
+      </Card>
     </>
   );
 };

@@ -138,7 +138,7 @@ const Header = () => {
           <br />
         </p>
         <div className="header__cta" data-aos="fade-up">
-          <a href="#contact" className="btn primary letsTalkBtn">
+          <a href="#contact" className="btn primary">
             {language === "en" ? "Let's Talk" : "Discutons"}
           </a>
           <a href="#portfolio" className="btn light projectBtn">

@@ -43,6 +43,7 @@ header {
 
 .letsTalkBtn:hover{
   transform: translateY(-0.5rem);
+  background: transparent;
 }
 
 .header__socials {

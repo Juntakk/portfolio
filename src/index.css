@@ -186,12 +186,12 @@ img {
   cursor: pointer;
 }
 
-/* .btn:hover {
+.btn:hover {
   background-color: transparent;
   border-color: var(--color-dark);
   transform: translateY(-0.5rem);
   color: var(--color-dark);
-} */
+}
 
 .btn.white {
   background: var(--color-white);
@@ -199,7 +199,8 @@ img {
 
 .btn.white:hover {
   background: transparent;
-  border-color: var(--color-white);
+  border-color: var(--color-primary);
+  transition: all 0.7s ease-in-out;
 }
 
 .btn.primary {
@@ -207,6 +208,8 @@ img {
   /* text color always white that's why i didn't use a variable color */
   color: var(--color-light);
   font-weight: bolder;
+  transition: all 0.7s ease-in-out;
+
 }
 
 .btn-primary a {
@@ -216,7 +219,9 @@ img {
 .btn.primary:hover {
   background: transparent;
   border-color: var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-black);
+  transition: all 0.7s ease-in-out;
+
 }
 
 .btn.sm {
