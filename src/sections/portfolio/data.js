@@ -108,7 +108,7 @@ const data = [
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/favoritePlaces",
-    info: "Travel app for taking pictures of memorable places, save pictures, locations and memories",
+    info: "Travel app for taking pictures of memorable places, save pictures, locations and memories.",
   },
 ];
 

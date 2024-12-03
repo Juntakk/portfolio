@@ -17,7 +17,7 @@ const Project = ({ project, data }) => {
             <div className="btn_div">
               {projectData.demo.startsWith("http") ? (
                 <a
-                  className="btn primary"
+                  className="btn_demo"
                   href={projectData.demo}
                   target="_blank"
                   rel="noopner noreferrer"
@@ -29,7 +29,7 @@ const Project = ({ project, data }) => {
               )}
 
               <a
-                className="btn primary"
+                className="btn_git"
                 href={projectData.github}
                 target="_blank"
                 rel="noopner noreferrer"
