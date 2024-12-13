@@ -20,7 +20,6 @@
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
   --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
 
-
   /* GENERAL CONTAINER VARIABLES */
   --container-width-lg: 76%;
   --container-width-md: 90%;
@@ -47,27 +46,27 @@ body {
 
 /* THEME change using react */
 main.color-1 {
-  --color-primary: hsl(272, 83%, 65%);
+  --color-primary: #7a35ab;
 }
 
 main.color-2 {
-  --color-primary: hsl(130, 92%, 28%);
+  --color-primary: #00a8e8;
 }
 
 main.color-3 {
-  --color-primary: hsl(219, 80%, 61%);
+  --color-primary: #00d084;
 }
 
 main.color-4 {
-  --color-primary: hsl(325, 82%, 53%);
+  --color-primary: #ffc914;
 }
 
 main.color-5 {
-  --color-primary: hsl(0, 67%, 49%);
+  --color-primary: #ff4d5a;
 }
 
 main.color-6 {
-  --color-primary: hsl(32, 88%, 41%);
+  --color-primary: #95a5a6;
 }
 
 main.bg-2 {
@@ -210,7 +209,6 @@ img {
   color: var(--color-light);
   font-weight: bolder;
   transition: all 0.7s ease-in-out;
-
 }
 
 .btn-primary a {
@@ -222,7 +220,6 @@ img {
   border-color: var(--color-primary);
   color: var(--color-black);
   transition: all 0.7s ease-in-out;
-
 }
 
 .btn.sm {

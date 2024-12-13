@@ -5,7 +5,7 @@ import Image7 from "../../assets/diamond-5724650_1280.jpg";
 import Image8 from "../../assets/notes-6399119_1280.jpg";
 import Image9 from "../../assets/xbox-5046923_1280.jpg";
 import Image10 from "../../assets/solar-system-8261803_1280.png";
-import Image12 from "../../assets/grilled-pineapple-pork-burrito-2944562_1280.jpg";
+import Image12 from "../../assets/ai-generated-8028228_1920.jpg";
 import Image13 from "../../assets/chat-7767693_1280.jpg";
 import Image14 from "../../assets/camera-1130731_1280.jpg";
 
@@ -14,7 +14,7 @@ const data = [
     id: 1,
     category: "Web",
     image: Image6,
-    title: "SeeFlix",
+    title: "Movies",
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
     github: "https://github.com/Juntakk/SeeFlix",
@@ -24,7 +24,7 @@ const data = [
     id: 2,
     category: "Mobile",
     image: Image1,
-    title: "Irma's Camping",
+    title: "Camping",
     desc: "Java | Android Studio | SQL",
     demo: "",
     github: "https://github.com/Juntakk/Android-Camping-App",
@@ -34,7 +34,7 @@ const data = [
     id: 3,
     category: "Web",
     image: Image9,
-    title: "Steem",
+    title: "Video Games",
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
     github: "https://github.com/Juntakk/Steem",
@@ -44,7 +44,7 @@ const data = [
     id: 4,
     category: "Games",
     image: Image3,
-    title: "Pew Pew",
+    title: "Bullet-hell Game",
     desc: "C++ | Raylib",
     demo: "",
     github: "https://github.com/Juntakk/mini-game-1",
@@ -54,7 +54,7 @@ const data = [
     id: 5,
     category: "Web",
     image: Image8,
-    title: "TaskBro",
+    title: "Task App",
     desc: "ReactJS | CSS",
     demo: "https://taskbro.netlify.app/",
     github: "https://github.com/Juntakk/taskbro",
@@ -64,7 +64,7 @@ const data = [
     id: 6,
     category: "Games",
     image: Image7,
-    title: "Knight Shyamalan",
+    title: "RPG game",
     desc: "C++ | Raylib",
     demo: "",
     github: "https://github.com/Juntakk/mini-game-3",
@@ -74,7 +74,7 @@ const data = [
     id: 7,
     category: "Mobile",
     image: Image10,
-    title: "Planetfield",
+    title: "Solar System App",
     desc: "Kotlin | Android Studio | SQL",
     demo: "",
     github: "https://github.com/Juntakk/planetField",
@@ -84,7 +84,7 @@ const data = [
     id: 8,
     category: "Mobile",
     image: Image12,
-    title: "Food Is Us",
+    title: "Recipe App",
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/meals",
@@ -94,7 +94,7 @@ const data = [
     id: 9,
     category: "Mobile",
     image: Image13,
-    title: "Chat Bro",
+    title: "Chat App",
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/chatApp",
@@ -104,7 +104,7 @@ const data = [
     id: 10,
     category: "Mobile",
     image: Image14,
-    title: "Fav Places",
+    title: "Travel App",
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/favoritePlaces",
