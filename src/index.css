@@ -46,27 +46,27 @@ body {
 
 /* THEME change using react */
 main.color-1 {
-  --color-primary: #7a35ab;
+  --color-primary: #5f7281;
 }
 
 main.color-2 {
-  --color-primary: #00a8e8;
+  --color-primary: #556b2f;
 }
 
 main.color-3 {
-  --color-primary: #00d084;
+  --color-primary: #b77b8d;
 }
 
 main.color-4 {
-  --color-primary: #ffc914;
+  --color-primary: #d0c4ab;
 }
 
 main.color-5 {
-  --color-primary: #ff4d5a;
+  --color-primary: #6a7ba2;
 }
 
 main.color-6 {
-  --color-primary: #95a5a6;
+  --color-primary: #c9aa71;
 }
 
 main.bg-2 {

@@ -62,27 +62,27 @@
 }
 
 .theme__primary-colors .color-1 {
-  background: hsl(272, 83%, 65%);
+  background: #3b3f42;
 }
 
 .theme__primary-colors .color-2 {
-  background: hsl(130, 92%, 28%);
+  background: #556b2f;
 }
 
 .theme__primary-colors .color-3 {
-  background: hsl(219, 80%, 61%);
+  background: #b77b8d;
 }
 
 .theme__primary-colors .color-4 {
-  background: hsl(325, 82%, 53%);
+  background: #d0c4ab;
 }
 
 .theme__primary-colors .color-5 {
-  background: hsl(0, 67%, 49%);
+  background: #6a7ba2;
 }
 
 .theme__primary-colors .color-6 {
-  background: hsl(32, 88%, 41%);
+  background: #c9aa71;
 }
 
 .theme__background-colors {
@@ -119,11 +119,9 @@
     height: 350px;
     padding: 1.5rem 1.5rem;
     left: calc(50% - 150px);
-
   }
 
   .theme__primary-colors {
     gap: 0.6rem;
   }
-
 }
