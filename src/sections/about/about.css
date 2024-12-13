@@ -1,33 +1,53 @@
 .about {
-  padding: 10rem 6rem;
+  padding: 8rem 6rem;
   background: var(--color-light); /* Changeable with your theme */
 }
-
-.about__container {
+.about_title {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about__content {
   display: flex;
-  flex-wrap: wrap;
+  padding: 3rem;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
   max-width: 1200px;
+  margin-left: 4rem;
+}
+.about__text {
+  position: relative;
+}
+.circle-background2 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 250px; /* Adjust the size of the circle */
+  height: 250px;
+  background-color: var(--color-primary); /* Adjust the color of the circle */
+  border-radius: 50%;
+  z-index: -1; /* Make sure the circle stays behind the text */
 }
 
-.about__portrait {
-  flex: 1 1 300px;
-  text-align: center;
+.circle-background {
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 500px; /* Adjust the size of the circle */
+  height: 500px;
+  background-color: var(--color-primary); /* Adjust the color of the circle */
+  border-radius: 50%;
+  z-index: -1; /* Make sure the circle stays behind the text */
 }
 
 .about__image {
   width: 100%;
   max-width: 300px;
-  border-radius: 50%;
+  min-width: 300px;
   border: 4px solid var(--accent-color, var(--color-primary));
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -38,21 +58,19 @@
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.about__text {
-  flex: 2 1 600px;
-  text-align: center;
-}
-
 .about__headline {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.6;
-  margin: 0;
+  margin-left: 2rem;
+  max-width: 600px;
   color: var(--color-black);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-style: italic;
 }
 
-@media screen and (max-width: 1275px) {
+@media screen and (max-width: 1080px) {
   .about__content {
     flex-direction: row;
   }
@@ -61,12 +79,10 @@
     font-size: 2rem;
     text-align: left;
   }
-
+  .about__headline {
+    font-size: 1.5rem;
+  }
   .about {
     display: none;
-  }
-
-  .about__text {
-    text-align: left;
   }
 }
