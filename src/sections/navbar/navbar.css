@@ -1,7 +1,6 @@
 /* General Navbar Styling */
 nav {
-  background-color: var(--color-primary); 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-primary);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -73,8 +72,8 @@ nav {
   transition: color 0.3s ease;
 }
 
-.theme__icon:focus{
-  border: none  ;
+.theme__icon:focus {
+  border: none;
 }
 
 .theme__icon:hover {

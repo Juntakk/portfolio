@@ -20,28 +20,44 @@
 .about__text {
   position: relative;
 }
+/* Circle 2 Animation */
 .circle-background2 {
   position: absolute;
   top: 20%;
   left: 20%;
-  transform: translate(-50%, -50%);
-  width: 250px; /* Adjust the size of the circle */
+  width: 250px;
   height: 250px;
-  background-color: var(--color-primary); /* Adjust the color of the circle */
+  background-color: var(--color-primary);
   border-radius: 50%;
-  z-index: -1; /* Make sure the circle stays behind the text */
+  z-index: -1;
+  transform: translate(-150%, -50%); /* Initial state (off-screen) */
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
 
+.circle-background2.animate {
+  transform: translate(-50%, -50%); /* Final state (on-screen) */
+  opacity: 1;
+}
+
+/* Circle 1 Animation */
 .circle-background {
   position: absolute;
   top: 65%;
   left: 60%;
-  transform: translate(-50%, -50%);
-  width: 500px; /* Adjust the size of the circle */
-  height: 500px;
-  background-color: var(--color-primary); /* Adjust the color of the circle */
+  width: 450px;
+  height: 450px;
+  background-color: var(--color-primary);
   border-radius: 50%;
-  z-index: -1; /* Make sure the circle stays behind the text */
+  z-index: -1;
+  transform: translate(-50%, -25%); /* Initial state (off-screen) */
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.circle-background.animate {
+  transform: translate(-20%, -75%); /* Final state (on-screen) */
+  opacity: 1;
 }
 
 .about__image {
@@ -64,10 +80,11 @@
   line-height: 1.6;
   margin-left: 2rem;
   max-width: 600px;
-  color: var(--color-black);
+  color: var(--color-primary);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-style: italic;
+  mix-blend-mode: color-burn;
 }
 
 @media screen and (max-width: 1080px) {

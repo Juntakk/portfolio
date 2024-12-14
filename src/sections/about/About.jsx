@@ -4,6 +4,27 @@ import { useLanguage } from "../../theme/LanguageContext";
 
 const About = () => {
   const { language } = useLanguage();
+  // Function to add the animation class
+  function animateOnScroll(entries, _observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      } else {
+        entry.target.classList.remove("animate"); // Remove for re-trigger
+      }
+    });
+  }
+
+  // Create the Intersection Observer
+  const observer = new IntersectionObserver(animateOnScroll, {
+    threshold: 0.5, // Trigger when 10% of the element is visible
+  });
+
+  // Target the circles
+  const circles = document.querySelectorAll(
+    ".circle-background, .circle-background2"
+  );
+  circles.forEach((circle) => observer.observe(circle));
 
   return (
     <section id="about" className="about">
@@ -16,30 +37,27 @@ const About = () => {
           <div className="about__portrait">
             <img src={AboutImage} alt="About Nick" className="about__image" />
           </div>
-          <div className="about__text">
-            <div className="circle-background"></div>
-            <h1 className="about__headline">
-              {language === "en" ? (
-                <>
-                  I'm Nick, a full-stack developer passionate about building
-                  impactful web and mobile applications. <br />
-                  I excel at crafting user-friendly designs, solving complex
-                  problems, and collaborating. <br />
-                  Ready to bring my skills to your team and create extraordinary
-                  stuff!
-                </>
-              ) : (
-                <>
-                  Je suis Nick, développeur full-stack passionné par la création
-                  d'applications web et mobiles. <br />
-                  Je conçois des expériences intuitives, résous des problèmes
-                  techniques complexes et adore travailler en équipe. <br />
-                  Prêt à rejoindre votre équipe pour construire des projets
-                  exceptionnels !
-                </>
-              )}
-            </h1>
-          </div>
+          <div className="circle-background"></div>
+          <h1 className="about__headline">
+            {language === "en" ? (
+              <>
+                I'm Nick, a full-stack developer passionate about building
+                impactful web and mobile applications. <br />
+                I excel at crafting user-friendly designs, solving complex
+                problems, and collaborating. <br />
+                Ready to bring my skills to your team and create amazing stuff!
+              </>
+            ) : (
+              <>
+                Je suis Nick, développeur full-stack passionné par la création
+                d'applications web et mobiles. <br />
+                Je conçois des expériences intuitives, résous des problèmes
+                techniques complexes et adore travailler en équipe. <br />
+                Prêt à rejoindre votre équipe pour construire des projets
+                exceptionnels!
+              </>
+            )}
+          </h1>
         </div>
       </div>
     </section>
