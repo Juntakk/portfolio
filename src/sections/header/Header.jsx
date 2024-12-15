@@ -130,7 +130,9 @@ const Header = () => {
     <header id="header">
       <div id="particles-js" className="particles__container"></div>
       <div className="container header__container">
-        <h1 data-aos="fade-up">Nicolas Habashi Gauthier</h1>
+        <h1 className="myName">
+          <span className="typing">Nicolas Habashi Gauthier</span>
+        </h1>
         <p data-aos="fade-up">
           {language === "en"
             ? "Proficient in Web and Mobile Development, Ready to Contribute to Innovative Teams and Challenging Projects."

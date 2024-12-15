@@ -1,19 +1,10 @@
-import Image1 from "../../assets/view-7173963_1280.jpg";
-import Image3 from "../../assets/wJuniVvYNheC28AnXWmFfZ.jpg";
-import Image6 from "../../assets/cinema-4153289_1280.jpg";
-import Image7 from "../../assets/diamond-5724650_1280.jpg";
-import Image8 from "../../assets/notes-6399119_1280.jpg";
-import Image9 from "../../assets/xbox-5046923_1280.jpg";
-import Image10 from "../../assets/solar-system-8261803_1280.png";
-import Image12 from "../../assets/ai-generated-8028228_1920.jpg";
-import Image13 from "../../assets/chat-7767693_1280.jpg";
-import Image14 from "../../assets/camera-1130731_1280.jpg";
+import images from "./images";
 
 const data = [
   {
     id: 1,
     category: "Web",
-    image: Image6,
+    image: images.Image6,
     title: "Films",
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
@@ -23,7 +14,7 @@ const data = [
   {
     id: 2,
     category: "Mobile",
-    image: Image1,
+    image: images.Image1,
     title: "Camping",
     desc: "Java | Android Studio | SQL",
     demo: "",
@@ -33,7 +24,7 @@ const data = [
   {
     id: 3,
     category: "Web",
-    image: Image9,
+    image: images.Image9,
     title: "Gestion de jeux vidéo",
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
@@ -43,7 +34,7 @@ const data = [
   {
     id: 4,
     category: "Jeux",
-    image: Image3,
+    image: images.Image3,
     title: "Jeu de Combat",
     desc: "C++ | Raylib",
     demo: "",
@@ -53,7 +44,7 @@ const data = [
   {
     id: 5,
     category: "Web",
-    image: Image8,
+    image: images.Image8,
     title: "Gestions de tâches",
     desc: "ReactJS | CSS",
     demo: "https://taskbro.netlify.app/",
@@ -63,7 +54,7 @@ const data = [
   {
     id: 6,
     category: "Jeux",
-    image: Image7,
+    image: images.Image7,
     title: "Mini RPG",
     desc: "C++ | Raylib",
     demo: "",
@@ -73,7 +64,7 @@ const data = [
   {
     id: 7,
     category: "Mobile",
-    image: Image10,
+    image: images.Image10,
     title: "Système Solaire",
     desc: "Kotlin | Android Studio | SQL",
     demo: "",
@@ -83,7 +74,7 @@ const data = [
   {
     id: 8,
     category: "Mobile",
-    image: Image12,
+    image: images.Image12,
     title: "Gestion de Recettes",
     desc: "Flutter",
     demo: "",
@@ -93,7 +84,7 @@ const data = [
   {
     id: 9,
     category: "Mobile",
-    image: Image13,
+    image: images.Image13,
     title: "Clône Messenger",
     desc: "Flutter",
     demo: "",
@@ -103,12 +94,22 @@ const data = [
   {
     id: 10,
     category: "Mobile",
-    image: Image14,
+    image: images.Image14,
     title: "Souvenirs de Voyages",
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/favoritePlaces",
     info: "Application de voyage pour prendre des photos de lieux mémorables, sauvegarder des photos et lieux.",
+  },
+  {
+    id: 11,
+    category: "Mobile",
+    image: images.BlogImage,
+    title: "Blog App",
+    desc: "Flutter",
+    demo: "",
+    github: "https://github.com/Juntakk/blog_app",
+    info: "Application pour création et visionnage de blogs, Architecture Clean et Bloc state management.",
   },
 ];
 

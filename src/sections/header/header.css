@@ -5,6 +5,41 @@ header {
   background: var(--color-white);
   transition: var(--transition);
 }
+.myName {
+  font-family: "Courier New", monospace; /* Typewriter feel */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Ensures hidden text is not visible */
+  display: inline-block; /* Required for inline animation */
+}
+
+.typing {
+  border-right: 3.5px solid yellowgreen; /* Typing cursor effect */
+  display: inline-block; /* Allows inline animation */
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden; /* Hides overflowing text */
+  width: 0; /* Initial width is 0 */
+  animation: typing 3s steps(24, end) forwards, blink 1s step-end infinite;
+}
+
+/* Typing effect: reveal letters by increasing width */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Reveal entire text */
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-right-color: transparent; /* Cursor becomes invisible */
+  }
+  100% {
+    border-right-color: orange; /* Cursor reappears */
+  }
+}
 
 .particles__container {
   position: absolute;
@@ -35,13 +70,13 @@ header {
   gap: 1.2rem;
 }
 
-.projectBtn:hover{
+.projectBtn:hover {
   transform: translateY(-0.5rem);
   background-color: transparent;
   border: 1px solid var(--color-black);
 }
 
-.letsTalkBtn:hover{
+.letsTalkBtn:hover {
   transform: translateY(-0.5rem);
   background: transparent;
 }
@@ -114,11 +149,11 @@ header {
     gap: 1rem;
   }
 
-  .header__socials{
+  .header__socials {
     left: 0rem;
   }
 
-  .header__socials a{
+  .header__socials a {
     height: 2rem;
     width: 2rem;
   }

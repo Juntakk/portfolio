@@ -46,11 +46,11 @@ body {
 
 /* THEME change using react */
 main.color-1 {
-  --color-primary: linear-gradient(135deg, #5f7281, #314c65);
+  --color-primary: linear-gradient(135deg, #485563, #29323c);
 }
 
 main.color-2 {
-  --color-primary: linear-gradient(135deg, #556b2f, #37471e);
+  --color-primary: linear-gradient(135deg, #414d0b, #727a17);
 }
 
 main.color-3 {
@@ -58,11 +58,11 @@ main.color-3 {
 }
 
 main.color-4 {
-  --color-primary: linear-gradient(135deg, #9c7c37, #6e581e);
+  --color-primary: linear-gradient(135deg, #a73737, #7a2828);
 }
 
 main.color-5 {
-  --color-primary: linear-gradient(135deg, #6a7ba2, #45506b);
+  --color-primary: linear-gradient(135deg, #4b79a1, #283e51);
 }
 
 main.color-6 {
@@ -78,6 +78,7 @@ main.bg-2 {
   --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
   --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
+  --color-tertiary: hsl(var(--primary-hue), 55%, var(--dark-lightness));
 }
 main.bg-1 {
   --black-lightness: 10%;
@@ -87,7 +88,7 @@ main.bg-1 {
   --color-white: hsl(0, 5%, var(--white-lightness));
   --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
-  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
+  --color-tertiary: hsl(var(--primary-hue), 55%, var(--dark-lightness));
 }
 
 main {
@@ -203,6 +204,7 @@ img {
 }
 
 .btn.primary {
+  border: none;
   background: var(--color-primary);
   /* text color always white that's why i didn't use a variable color */
   color: var(--color-light);
@@ -215,6 +217,7 @@ img {
 
 .btn.primary:hover {
   background: transparent;
+  border: 1px solid;
   border-color: var(--color-primary);
   color: var(--color-black);
 }
@@ -242,9 +245,9 @@ img {
     margin-bottom: 3rem;
   }
 
-  h1 {
+  /* h1 {
     font-size: 2rem;
-  }
+  } */
 }
 
 /* MEDIA QUERIES (phones) */
