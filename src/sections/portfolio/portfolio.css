@@ -17,11 +17,14 @@
 .btn.cat__btn {
   padding: 1rem 3rem;
   font-size: 1rem;
+  transition: transform 0.75s ease-in-out;
+}
+.btn.cat__btn::before {
+  background: var(--color-primary) !important;
+  transition: opacity 0.5s ease-in-out;
 }
 .btn.cat__btn:hover {
-  transform: scale(1.05);
-  transition: 0.5s ease;
-  background-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
   color: var(--color-white);
 }
 
@@ -100,8 +103,8 @@
   width: 100%;
 }
 .btn_div a {
-  color: var(--color-black);
-  background-color: var(--color-primary);
+  color: var(--color-white);
+  background: var(--color-primary);
   padding: 0.5rem 1.5rem;
   width: 100%;
   border-radius: 0px;
@@ -109,8 +112,8 @@
   font-weight: 600;
 }
 .btn_div a:hover {
-  color: var(--color-primary);
-  border-top: 2px solid var(--color-primary);
+  color: var(--color-black);
+  border-color: 2px solid var(--color-primary);
 }
 .btn_demo {
   border-bottom-right-radius: 0px !important;
@@ -121,7 +124,7 @@
 }
 .btn_demo:hover,
 .btn_git:hover {
-  background-color: var(--color-light);
+  background: var(--color-light);
   border: 1px solid var(--color-primary);
 }
 .btn_git:hover {

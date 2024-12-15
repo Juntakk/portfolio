@@ -46,27 +46,27 @@ body {
 
 /* THEME change using react */
 main.color-1 {
-  --color-primary: #5f7281;
+  --color-primary: linear-gradient(135deg, #5f7281, #314c65);
 }
 
 main.color-2 {
-  --color-primary: #556b2f;
+  --color-primary: linear-gradient(135deg, #556b2f, #37471e);
 }
 
 main.color-3 {
-  --color-primary: #b77b8d;
+  --color-primary: linear-gradient(135deg, #b77b8d, #804b5b);
 }
 
 main.color-4 {
-  --color-primary: #9c7c37;
+  --color-primary: linear-gradient(135deg, #9c7c37, #6e581e);
 }
 
 main.color-5 {
-  --color-primary: #6a7ba2;
+  --color-primary: linear-gradient(135deg, #6a7ba2, #45506b);
 }
 
 main.color-6 {
-  --color-primary: #116658;
+  --color-primary: linear-gradient(135deg, #116658, #0b453c);
 }
 
 main.bg-2 {
@@ -200,7 +200,6 @@ img {
 .btn.white:hover {
   background: transparent;
   border-color: var(--color-primary);
-  transition: all 0.7s ease-in-out;
 }
 
 .btn.primary {
@@ -208,7 +207,6 @@ img {
   /* text color always white that's why i didn't use a variable color */
   color: var(--color-light);
   font-weight: bolder;
-  transition: all 0.7s ease-in-out;
 }
 
 .btn-primary a {
@@ -219,7 +217,6 @@ img {
   background: transparent;
   border-color: var(--color-primary);
   color: var(--color-black);
-  transition: all 0.7s ease-in-out;
 }
 
 .btn.sm {

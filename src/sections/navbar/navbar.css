@@ -1,6 +1,6 @@
 /* General Navbar Styling */
 nav {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
