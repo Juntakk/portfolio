@@ -18,7 +18,7 @@ header {
   white-space: nowrap; /* Prevents wrapping */
   overflow: hidden; /* Hides overflowing text */
   width: 0; /* Initial width is 0 */
-  animation: typing 3s steps(24, end) forwards, blink 1s step-end infinite;
+  animation: typing 3s steps(16, end) forwards, blink 1s step-end infinite;
 }
 
 /* Typing effect: reveal letters by increasing width */
@@ -141,16 +141,28 @@ header {
     max-height: 35vh;
   }
 
+  .myName {
+    font-size: 2rem;
+  }
+
   .header__container p {
-    width: 100%;
+    font-size: 0.8rem;
+    width: 85%;
+    height: 75%;
   }
 
   .header__cta {
-    gap: 1rem;
+    gap: 0.7rem;
+  }
+
+  .header__cta a {
+    font-size: 0.7rem;
+    padding: 0.75rem;
   }
 
   .header__socials {
-    left: 0rem;
+    left: 0.2rem;
+    gap: 0.5rem;
   }
 
   .header__socials a {
@@ -159,7 +171,7 @@ header {
   }
 
   .header__socials .social-icon {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .header__container h1 {

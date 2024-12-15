@@ -1,8 +1,26 @@
 import Card from "../../components/Card";
+import React, { useEffect } from "react";
 
 const Project = ({ project, data }) => {
   const projectData = data[project.id - 1];
+  useEffect(() => {
+    // Add tap functionality for touch devices
+    const projects = document.querySelectorAll(".portfolio__project");
 
+    projects.forEach((project) => {
+      project.addEventListener("click", () => {
+        const innerCard = project.querySelector(".inner_card");
+        innerCard.classList.toggle("flipped");
+      });
+    });
+
+    // Cleanup event listeners on unmount
+    return () => {
+      projects.forEach((project) => {
+        project.removeEventListener("click", () => {});
+      });
+    };
+  }, []);
   return (
     <>
       <Card className="portfolio__project">

@@ -9,7 +9,7 @@ const data = [
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
     github: "https://github.com/Juntakk/SeeFlix",
-    info: "Plateforme de films en temps réel, recherchez et trouvez vos films préférés avec toutes leurs informations.",
+    info: "Plateforme de films en temps réel, recherchez et trouvez vos films préférés avec leurs infos.",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const data = [
     desc: "Java | Android Studio | SQL",
     demo: "",
     github: "https://github.com/Juntakk/Android-Camping-App",
-    info: "Simulation d'application pour une entreprise de camping, choisissez et réservez différentes activités.",
+    info: "Application pour une entreprise de camping, choisissez et réservez des activités.",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const data = [
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
     github: "https://github.com/Juntakk/Steem",
-    info: "Plateforme de commerce et gestion de jeux vidéo, ajoutez, modifiez, supprimez et achetez vos jeux préférés.",
+    info: "Plateforme de commerce et gestion, ajoutez, modifiez, supprimez et achetez des jeux.",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const data = [
     desc: "ReactJS | CSS",
     demo: "https://taskbro.netlify.app/",
     github: "https://github.com/Juntakk/taskbro",
-    info: "Planificateur de tâches et d'événements avec personnalisation des thèmes. Fonctionnalités CRUD de base.",
+    info: "Planificateur de tâches et d'événements. Fonctionnalités CRUD de base.",
   },
   {
     id: 6,
@@ -59,17 +59,17 @@ const data = [
     desc: "C++ | Raylib",
     demo: "",
     github: "https://github.com/Juntakk/mini-game-3",
-    info: "RPG en 2D vu de dessus en cours de développement, avec des objets et un inventaire à venir.",
+    info: "RPG en 2D vu de dessus, avec des objets et un inventaire à venir.",
   },
   {
     id: 7,
     category: "Mobile",
     image: images.Image10,
     title: "Système Solaire",
-    desc: "Kotlin | Android Studio | SQL",
+    desc: "Kotlin | SQL",
     demo: "",
     github: "https://github.com/Juntakk/planetField",
-    info: "Application éducative sur le système solaire, découvrez et apprenez sur les planètes de notre galaxie.",
+    info: "Application éducative sur le système solaire, découvrez et apprenez sur nos planètes.",
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ const data = [
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/chatApp",
-    info: "Prototype d'application de chat mobile, connectez-vous et discutez avec d'autres utilisateurs en temps réel.",
+    info: "Application de chat mobile, connectez-vous et discutez avec d'autres utilisateurs.",
   },
   {
     id: 10,
@@ -99,7 +99,7 @@ const data = [
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/favoritePlaces",
-    info: "Application de voyage pour prendre des photos de lieux mémorables, sauvegarder des photos et lieux.",
+    info: "Application de voyage pour photos de lieux mémorables, sauvegarder des photos et lieux.",
   },
   {
     id: 11,
@@ -109,7 +109,7 @@ const data = [
     desc: "Flutter",
     demo: "",
     github: "https://github.com/Juntakk/blog_app",
-    info: "Application pour création et visionnage de blogs, Architecture Clean et Bloc state management.",
+    info: "Application de blogs, Architecture Clean et Bloc state management.",
   },
 ];
 

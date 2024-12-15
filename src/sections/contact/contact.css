@@ -35,15 +35,46 @@
 }
 
 /*PHONES*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 955px) {
   .contact__container {
     gap: 1.5rem;
   }
   .contact__container a {
-    width: rem;
+    width: 2rem;
     height: 5rem;
   }
   .contact__container {
     padding: 1rem;
+  }
+  .first_h2 {
+    font-size: 1.5rem;
+  }
+  .second_p {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 725px) {
+  .contact__container {
+    gap: 1.5rem;
+  }
+  .contact__container a {
+    width: 2rem;
+    height: 5rem;
+  }
+  .contact__container {
+    padding: 1rem;
+  }
+  .first_h2 {
+    font-size: 1.25rem;
+  }
+  .second_p {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .first_h2 {
+    margin-top: 3rem;
+    font-size: 1rem;
   }
 }

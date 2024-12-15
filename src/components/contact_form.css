@@ -110,7 +110,7 @@ button:focus {
   }
 }
 /* Responsive design for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 955px) {
   .contact_container div {
     padding: 5px;
   }
@@ -130,5 +130,11 @@ button:focus {
 
   button {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact_container {
+    padding: 0.75rem;
   }
 }

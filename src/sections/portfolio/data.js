@@ -9,7 +9,7 @@ const data = [
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
     github: "https://github.com/Juntakk/SeeFlix",
-    info: "Real-time movie platform, search and find your favorite movies with all their useful information.",
+    info: "Real-time movie platform, search and find your favorite movies with all their info.",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const data = [
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
     github: "https://github.com/Juntakk/Steem",
-    info: "Video Game E-Commerce and management platform, add, update, remove and buy your favorite games.",
+    info: "Video Game E-Commerce platform, add, update, remove and buy games.",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const data = [
     desc: "C++ | Raylib",
     demo: "",
     github: "https://github.com/Juntakk/mini-game-1",
-    info: "Survivors-like bullet-hell 2D game, fight through hordes of enemies. More levels to come.",
+    info: "Survivors-like bullet-hell 2D game, fight through hordes of enemies.",
   },
   {
     id: 5,

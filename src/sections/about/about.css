@@ -1,6 +1,6 @@
 .about {
   padding: 8rem 6rem;
-  background: var(--color-light); /* Changeable with your theme */
+  background: var(--color-light);
 }
 .about_title {
   display: flex;
@@ -8,7 +8,6 @@
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .about__content {
   display: flex;
   padding: 3rem;
@@ -20,7 +19,6 @@
 .about__text {
   position: relative;
 }
-/* Circle 2 Animation */
 .circle-background2 {
   position: absolute;
   top: 20%;
@@ -34,13 +32,10 @@
   opacity: 0;
   transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
-
 .circle-background2.animate {
-  transform: translate(-50%, -50%); /* Final state (on-screen) */
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
-
-/* Circle 1 Animation */
 .circle-background {
   position: absolute;
   top: 65%;
@@ -50,16 +45,14 @@
   background: var(--color-primary);
   border-radius: 50%;
   z-index: -1;
-  transform: translate(-50%, -25%); /* Initial state (off-screen) */
+  transform: translate(-50%, -25%);
   opacity: 0;
   transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
-
 .circle-background.animate {
-  transform: translate(-20%, -75%); /* Final state (on-screen) */
+  transform: translate(-20%, -75%);
   opacity: 1;
 }
-
 .about__image {
   width: 100%;
   max-width: 300px;
@@ -68,12 +61,10 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .about__image:hover {
   transform: scale(1.05);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
-
 .about__headline {
   font-size: 1.6rem;
   font-weight: 600;
@@ -86,7 +77,6 @@
   font-style: italic;
   mix-blend-mode: color-burn;
 }
-
 @media screen and (max-width: 1080px) {
   .about__content {
     flex-direction: row;
