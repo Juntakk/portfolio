@@ -6,8 +6,8 @@ import "./navbar.css";
 import { useModalContext } from "../../context/modal-context";
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
-import CV from "../../assets/NicolasGauthier_Dev.pdf";
-import CV_FR from "../../assets/NicolasGauthier_Dev.pdf";
+import CV from "../../assets/Nicolas_Gauthier_DEV.pdf";
+import CV_FR from "../../assets/Nicolas_Gauthier_DEV_fr.pdf";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
 import { useThemeContext } from "../../context/theme-context";
 
