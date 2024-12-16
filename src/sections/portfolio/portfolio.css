@@ -193,8 +193,7 @@
   }
   .swipeMsg {
     color: var(--color-dark) !important;
-    font-style: italic;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: "Courier New", Courier, monospace;
     font-size: 2rem;
   }
 }
