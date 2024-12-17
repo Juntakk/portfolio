@@ -22,7 +22,15 @@ const Navbar = () => {
   return (
     <nav>
       <div className="container nav__container">
-        <a href={language === "en" ? CV : CV_FR} download className="cv">
+        <a
+          href={language === "en" ? CV : CV_FR}
+          download={
+            language === "en"
+              ? "Nicolas_Gauthier_DEV.pdf"
+              : "Nicolas_Gauthier_DEV_fr.pdf"
+          }
+          className="cv"
+        >
           <span className="cv__text">{language === "en" ? "CV" : "CV"}</span>{" "}
           <LiaCloudDownloadAltSolid className="icon" />
         </a>
