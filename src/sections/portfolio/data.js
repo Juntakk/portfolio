@@ -4,7 +4,7 @@ const data = [
   {
     id: 1,
     category: "Web",
-    image: images.Image6,
+    image: images.seeFlix,
     title: "Movies",
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",

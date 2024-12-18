@@ -27,6 +27,7 @@ const App = () => {
 
   // check if floating nav should be shown or hidden
   const floatingNavToggleHandler = () => {
+    if (!mainRef.current) return;
     // check if we scrolled up or down at least 20px
     if (
       siteYPostion < mainRef?.current?.getBoundingClientRect().y - 5 ||
@@ -42,11 +43,9 @@ const App = () => {
 
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 1000);
-
-    // cleanup function
     return () => clearInterval(checkYPosition);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [siteYPostion]);
+  }, []);
 
   return (
     <LanguageProvider>
@@ -57,8 +56,8 @@ const App = () => {
         <Navbar />
         <Header />
         <About />
-        <Services />
         <Portfolio />
+        <Services />
         <Contact />
         <Footer />
         <Themes />

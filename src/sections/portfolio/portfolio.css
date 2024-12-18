@@ -1,7 +1,8 @@
 .portfolio__projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2rem;
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
@@ -19,6 +20,7 @@
   padding: 1rem 3rem;
   font-size: 1rem;
   transition: transform 0.75s ease-in-out;
+  border-color: 1px solid var(--color-primary);
 }
 .btn.cat__btn::before {
   background: var(--color-primary) !important;
@@ -31,9 +33,9 @@
 
 .portfolio__project {
   background-color: transparent;
-  width: 22rem;
-  height: 15rem;
-  perspective: 1000px;
+  width: 50%;
+  height: 20rem;
+  perspective: 5000px;
 }
 .inner_card {
   display: flex;
@@ -78,20 +80,21 @@
   transform: rotateY(180deg);
 }
 .title {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   font-weight: bold;
   text-decoration: underline;
   margin-bottom: 0.5rem;
+}
+.info {
+  font-size: 1.2rem;
+  padding: 0rem 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .desc {
   font-family: "Courier New", Courier, monospace;
   margin-top: auto;
   margin-bottom: 0.5rem;
-}
-.info {
-  font-size: 0.9rem;
-  padding: 0rem 1.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.25rem;
 }
 .title,
 .desc,
@@ -134,25 +137,34 @@
 
 /* Media Query for Tablets (max-width: 1224px) */
 @media screen and (max-width: 1224px) {
-  .portfolio__projects {
+  /* .portfolio__projects {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-evenly;
     align-content: space-evenly;
+  } */
+  .portfolio__project {
+    background-color: transparent;
+    width: 60%;
+    height: 20rem;
+    perspective: 5000px;
   }
 }
 
 /* Media Query for Tablets (max-width: 975px) */
 @media screen and (max-width: 975px) {
-  .portfolio__projects {
+  /* .portfolio__projects {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-evenly;
     align-content: space-evenly;
-  }
-  .portfolio__project {
+  } */
+  /* .portfolio__project {
     width: 15rem;
     height: 11rem;
+  } */
+  #portfolio h2 {
+    margin-top: 2.5rem;
   }
 }
 
@@ -169,6 +181,15 @@
     height: 16rem;
     margin-left: 1rem;
   }
+  .title {
+    font-size: 1.5rem;
+  }
+  .desc {
+    font-size: 1.75rem;
+  }
+  .info {
+    display: none;
+  }
   .swiper {
     width: 22rem;
     height: 16rem;
@@ -181,7 +202,7 @@
     padding: 0.85rem 0.85rem;
   }
   #portfolio h2 {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
   .slideNumber {
     color: var(--color-dark) !important;
@@ -194,6 +215,8 @@
   .swipeMsg {
     color: var(--color-dark) !important;
     font-family: "Courier New", Courier, monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
   }
 }

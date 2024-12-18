@@ -106,23 +106,21 @@ const Header = () => {
     };
 
     // Attach the event listeners when the component mounts
+    const socialsContainer = document.querySelector(".header__socials");
+
+    if (socialsContainer) {
+      socialsContainer.addEventListener("mouseover", handleHover);
+      socialsContainer.addEventListener("mouseout", handleHoverEnd);
+    }
     window.addEventListener("scroll", handleScroll);
-    document
-      .querySelector(".header__socials")
-      .addEventListener("mouseover", handleHover);
-    document
-      .querySelector(".header__socials")
-      .addEventListener("mouseout", handleHoverEnd);
 
     // Clean up the event listeners when the component unmounts
     return () => {
+      if (socialsContainer) {
+        socialsContainer.removeEventListener("mouseover", handleHover);
+        socialsContainer.removeEventListener("mouseout", handleHoverEnd);
+      }
       window.removeEventListener("scroll", handleScroll);
-      document
-        .querySelector(".header__socials")
-        .removeEventListener("mouseover", handleHover);
-      document
-        .querySelector(".header__socials")
-        .removeEventListener("mouseout", handleHoverEnd);
     };
   }, [isHovered]);
 

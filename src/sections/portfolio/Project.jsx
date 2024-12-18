@@ -1,26 +1,36 @@
+// import { NavLink } from "react-router-dom";
 import Card from "../../components/Card";
 import React, { useEffect } from "react";
+// import { useLanguage } from "../../theme/LanguageContext";
 
 const Project = ({ project, data }) => {
   const projectData = data[project.id - 1];
-  useEffect(() => {
-    // Add tap functionality for touch devices
-    const projects = document.querySelectorAll(".portfolio__project");
+  // const language = useLanguage();
 
-    projects.forEach((project) => {
-      project.addEventListener("click", () => {
-        const innerCard = project.querySelector(".inner_card");
+  useEffect(() => {
+    // Define a reusable function for the event listener
+    const toggleCardFlip = (event) => {
+      const project = event.currentTarget;
+      const innerCard = project.querySelector(".inner_card");
+      if (innerCard) {
         innerCard.classList.toggle("flipped");
-      });
+      }
+    };
+
+    // Add event listener to all projects
+    const projects = document.querySelectorAll(".portfolio__project");
+    projects.forEach((project) => {
+      project.addEventListener("click", toggleCardFlip);
     });
 
-    // Cleanup event listeners on unmount
+    // Cleanup function to remove event listeners
     return () => {
       projects.forEach((project) => {
-        project.removeEventListener("click", () => {});
+        project.removeEventListener("click", toggleCardFlip);
       });
     };
   }, []);
+
   return (
     <>
       <Card className="portfolio__project">
@@ -32,7 +42,11 @@ const Project = ({ project, data }) => {
             <p className="title">{projectData.title}</p>
             <p className="info">{projectData.info}</p>
             <p className="desc">{projectData.desc}</p>
+            <p></p>
             <div className="btn_div">
+              {/* <NavLink to={"/project-details"} state={{ projectData }}>
+                {language === "en" ? "View Details" : "Voir Détails"}
+              </NavLink> */}
               {projectData.demo.startsWith("http") ? (
                 <a
                   className="btn_demo"
