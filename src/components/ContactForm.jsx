@@ -63,7 +63,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="email">
             {" "}
-            {language === "fr" ? "Votre courriel:" : "Your email"}
+            {language === "fr" ? "Votre courriel" : "Your email"}
           </label>
           <input
             type="email"
@@ -76,7 +76,7 @@ const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="subject">
-            {language === "en" ? "Company:" : "Compagnie"}
+            {language === "en" ? "Company" : "Compagnie"}
           </label>
           <input
             type="text"
@@ -88,7 +88,7 @@ const ContactForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
@@ -99,7 +99,7 @@ const ContactForm = () => {
           ></textarea>
         </div>
         <button className="contact_form_btn" type="submit">
-          {language === "en" ? "Send email:" : "Envoyer courriel"}
+          {language === "en" ? "Send email" : "Envoyer courriel"}
         </button>
       </form>
       {status && <p className="status_msg">{status}</p>}
