@@ -5,6 +5,9 @@ header {
   background: var(--color-white);
   transition: var(--transition);
 }
+.desc_p {
+  mix-blend-mode: exclusion;
+}
 .myName {
   font-family: "Courier New", monospace; /* Typewriter feel */
   white-space: nowrap; /* Prevent text wrapping */
@@ -64,7 +67,7 @@ header {
 }
 
 .header__cta {
-  margin-top: -1rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   gap: 1.2rem;
