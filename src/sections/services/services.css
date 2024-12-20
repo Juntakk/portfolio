@@ -74,8 +74,6 @@
     flex-direction: row;
     width: 400px;
   }
-  .card.service {
-  }
 }
 @media screen and (max-width: 1024px) {
   .services__container {
