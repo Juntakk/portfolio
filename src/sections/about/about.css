@@ -77,7 +77,7 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-style: italic;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: difference;
 }
 @media screen and (max-width: 1080px) {
   .about__content {

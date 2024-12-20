@@ -4,7 +4,7 @@ import themeReducer from "./themeReducer";
 export const ThemeContext = createContext();
 
 const initialThemeState = JSON.parse(localStorage.getItem("themeSettings")) || {
-  primary: "color-1",
+  primary: "color-4",
   background: "bg-2",
   // language: "en",
 };
@@ -22,7 +22,7 @@ export const ThemeProvider = ({ children }) => {
   //Save theme settings to local storage
   useEffect(() => {
     localStorage.setItem("themeSettings", JSON.stringify(themeState));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [themeState.primary, themeState.background /*, themeState.language*/]);
 
   return (
