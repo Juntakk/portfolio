@@ -1,5 +1,6 @@
 .about {
-  padding: 10rem 6rem 8rem 6rem;
+  /* padding: 10rem 6rem 8rem 6rem; */
+  padding-bottom: 10rem;
   background: var(--color-light);
 }
 .about_title {
@@ -38,7 +39,7 @@
 }
 .circle-background {
   position: absolute;
-  top: 95%;
+  top: 105%;
   left: 60%;
   width: 450px;
   height: 450px;

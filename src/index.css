@@ -129,7 +129,7 @@ main {
 
 /* GENERAL SECTION STYLES */
 section {
-  padding: 8.5rem 0;
+  padding: 4rem 0;
   background: var(--color-light);
   transition: var(--transition);
 }
@@ -260,10 +260,6 @@ img {
     width: var(--container-width-md);
   }
 
-  section {
-    padding: 8rem 0;
-  }
-
   section > p {
     width: 72%;
     margin-bottom: 3rem;
@@ -302,8 +298,5 @@ img {
 
   section > p {
     width: var(--container-width-md);
-  }
-  section {
-    padding-top: 4rem;
   }
 }

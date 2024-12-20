@@ -1,13 +1,16 @@
 .services__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
+  gap: 2rem;
 }
 
 .service {
   display: flex;
   flex-direction: row;
+  width: 500px;
 }
 
 .card.service {
@@ -65,9 +68,13 @@
 }
 
 /*TABLETS*/
-@media screen and (max-width: 1445px) {
-  .service__details p {
-    text-align: left;
+@media screen and (max-width: 1400px) {
+  .service {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+  }
+  .card.service {
   }
 }
 @media screen and (max-width: 1024px) {
@@ -86,7 +93,6 @@
   }
   .card.service {
     gap: 1.2 rem;
-    padding: 0;
   }
   .service__icon {
     font-size: 2rem;

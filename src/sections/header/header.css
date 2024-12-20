@@ -4,10 +4,7 @@ header {
   display: grid;
   place-items: center;
   background: var(--color-white);
-  transition: var(--transition);
-}
-.desc_p {
-  mix-blend-mode: exclusion;
+  /* transition: var(--transition); */
 }
 .myName {
   font-family: "Courier New", monospace; /* Typewriter feel */
@@ -327,5 +324,8 @@ header {
 
   .header__container h1 {
     text-align: center;
+  }
+  .ui-btn {
+    padding: 0 !important;
   }
 }

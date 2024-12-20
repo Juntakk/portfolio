@@ -172,7 +172,7 @@
     font-family: "Times New Roman", Times, serif;
   }
   #portfolio h2 {
-    margin-top: 2.5rem;
+    margin-top: 1.2rem;
   }
 }
 
@@ -183,6 +183,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    gap: 0rem;
   }
   .portfolio__project {
     width: 20rem;
@@ -193,7 +195,7 @@
     font-size: 1.85rem;
   }
   .desc {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .info {
     display: none;
@@ -210,7 +212,7 @@
     padding: 0.85rem 0.85rem;
   }
   #portfolio h2 {
-    margin-top: 4rem;
+    margin-top: 0.25rem;
   }
   .slideNumber {
     color: var(--color-dark) !important;
@@ -225,6 +227,5 @@
     font-family: "Courier New", Courier, monospace;
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 1rem;
   }
 }

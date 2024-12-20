@@ -22,6 +22,8 @@ input:-webkit-autofill {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding-bottom: 5rem; */
+  margin-bottom: 5rem;
 }
 
 /* Form container */
@@ -227,5 +229,10 @@ input:-webkit-autofill {
 @media (max-width: 500px) {
   .contact_container {
     max-width: 350px;
+  }
+}
+@media (max-width: 420px) {
+  .contact_container {
+    max-width: 300px;
   }
 }

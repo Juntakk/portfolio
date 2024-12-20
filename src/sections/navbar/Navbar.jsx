@@ -53,25 +53,6 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav__container">
-        <a
-          href={CV}
-          download={
-            language === "en"
-              ? "NicolasGauthier_Dev.pdf"
-              : "NicolasGauthier_Dev_fr.pdf"
-          }
-          className="cv"
-        >
-          <span className="cv__text">{language === "en" ? "CV" : "CV"}</span>{" "}
-          <LiaCloudDownloadAltSolid className="icon" />
-        </a>
-        <ul className="nav__menu">
-          {data.map((item) => (
-            <li key={item.id}>
-              <a href={item.link}>{item.title}</a>
-            </li>
-          ))}
-        </ul>
         <div className="nav__right">
           <button className="theme__icon" onClick={showModalHandler}>
             {isDarkMode ? (
@@ -85,6 +66,26 @@ const Navbar = () => {
             <LanguageToggle />
           </i>
         </div>
+        <ul className="nav__menu">
+          {data.map((item) => (
+            <li key={item.id}>
+              <a href={item.link}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href={CV}
+          download={
+            language === "en"
+              ? "NicolasGauthier_Dev.pdf"
+              : "NicolasGauthier_Dev_fr.pdf"
+          }
+          className="cv"
+        >
+          <span className="cv__text">{language === "en" ? "CV" : "CV"}</span>{" "}
+          <LiaCloudDownloadAltSolid className="icon" />
+        </a>
       </div>
     </nav>
   );
