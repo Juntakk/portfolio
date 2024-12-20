@@ -59,13 +59,11 @@ const ContactForm = () => {
 
   return (
     <div className="contact_container">
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div>
-          <label htmlFor="email">
-            {" "}
-            {language === "fr" ? "Votre courriel" : "Your email"}
-          </label>
+      <form onSubmit={handleSubmit} className="form__group">
+        <div class="form__group field">
           <input
+            className="form__field"
+            placeholder={language === "fr" ? "Votre courriel" : "Your email"}
             type="email"
             id="email"
             name="email"
@@ -73,33 +71,50 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
-          <label htmlFor="subject">
-            {language === "en" ? "Company" : "Compagnie"}
+          <label htmlFor="email" className="form__label">
+            {" "}
+            {language === "fr" ? "Votre courriel" : "Your email"}
           </label>
+        </div>
+        <div class="form__group field">
           <input
-            type="text"
+            className="form__field"
+            placeholder={language === "fr" ? "Compagnie" : "Company"}
             id="subject"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
             required
           />
+          <label htmlFor="subject" className="form__label">
+            {" "}
+            {language === "fr" ? "Compagnie" : "Company"}
+          </label>
         </div>
-        <div>
-          <label htmlFor="message">Message</label>
+        <div class="form__group field">
           <textarea
+            className="form__field"
+            placeholder="Message"
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            rows="4"
+            rows="5"
             required
-          ></textarea>
+          />
+          <label htmlFor="message" className="form__label">
+            Message
+          </label>
         </div>
-        <button className="contact_form_btn" type="submit">
+        {/* <button className="contact_form_btn" type="submit">
           {language === "en" ? "Send email" : "Envoyer courriel"}
+        </button> */}
+        <button class="cta" type="submit">
+          <span>{language === "en" ? "Send email" : "Envoyer courriel"}</span>
+          <svg width="15px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
         </button>
       </form>
       {status && <p className="status_msg">{status}</p>}

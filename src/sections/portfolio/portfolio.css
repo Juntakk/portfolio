@@ -82,8 +82,9 @@
 .title {
   font-size: 2.25rem;
   font-weight: bold;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   margin-bottom: 0.5rem;
+  font-family: "Times New Roman", Times, serif;
 }
 .info {
   font-size: 1.2rem;
@@ -163,6 +164,13 @@
     width: 15rem;
     height: 11rem;
   } */
+  .title {
+    font-size: 1.85rem;
+    font-weight: bold;
+    /* text-decoration: underline; */
+    margin-bottom: 1.2rem;
+    font-family: "Times New Roman", Times, serif;
+  }
   #portfolio h2 {
     margin-top: 2.5rem;
   }
@@ -182,10 +190,10 @@
     margin-left: 1rem;
   }
   .title {
-    font-size: 1.5rem;
+    font-size: 1.85rem;
   }
   .desc {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .info {
     display: none;

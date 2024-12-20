@@ -1,18 +1,26 @@
-/* General Navbar Styling */
-nav {
-  background: var(--color-primary);
-  padding: 1rem 2rem;
-  position: sticky;
+.nav__container {
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  right: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease-in, transform 1s ease-in-out,
+    background-color 1s ease-in-out;
+  height: 100vh;
+  width: 6.5rem;
 }
 
-.nav__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+.nav__container.show {
+  background-color: var(--color-primary);
+  z-index: 100;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* CV Link Styling */
@@ -23,14 +31,13 @@ nav {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--color-white);
-  background-color: var(--color-primary);
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: auto;
+  margin-top: 1rem;
 }
 
 .cv:hover {
-  background-color: var(--color-primary-hover);
   color: var(--color-black);
 }
 
@@ -41,8 +48,11 @@ nav {
 /* Menu List */
 .nav__menu {
   display: flex;
+  flex-direction: column;
   list-style: none;
   gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__menu li a {
@@ -57,10 +67,14 @@ nav {
 }
 
 /* Right Section */
+
 .nav__right {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 .theme__icon {
@@ -79,17 +93,35 @@ nav {
 .theme__icon:hover {
   color: var(--color-black);
   background-color: var(--color-primary);
+  transform: scale(1.15);
 }
 
 .line {
   color: var(--color-white);
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .nav__logo {
   font-size: 1.2rem;
   color: var(--color-white);
   font-weight: normal;
+}
+.nav__logo:hover {
+  transform: scale(1.15);
+  border-radius: 50%;
+  border: 2px solid var(--color-black);
+}
+
+@media (max-width: 1080px) {
+  .nav__menu li:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav__container {
+    display: none;
+  }
 }
 
 /* Responsive Design */

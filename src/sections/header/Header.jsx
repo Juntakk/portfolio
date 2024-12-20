@@ -164,12 +164,16 @@ const Header = () => {
           <br />
         </p> */}
         <div className="header__cta" data-aos="fade-up">
-          <a href="#contact" className="btn primary">
-            {language === "en" ? "Let's Talk" : "Discutons"}
-          </a>
-          <a href="#portfolio" className="btn light projectBtn">
-            {language === "en" ? "My Projects" : "Mes Projets"}
-          </a>
+          <button className="ui-btn">
+            <a href="#contact" className="">
+              Contact
+            </a>
+          </button>
+          <button className="ui-btn">
+            <a href="#portfolio" className="">
+              {language === "en" ? "Projects" : "Projets"}
+            </a>
+          </button>
         </div>
         <div className="header__socials">
           {data.map((item) => (

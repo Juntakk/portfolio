@@ -1,5 +1,6 @@
 header {
-  height: calc(100vh - 5rem);
+  /* height: calc(100vh - 5rem); */
+  height: 100vh;
   display: grid;
   place-items: center;
   background: var(--color-white);
@@ -16,7 +17,7 @@ header {
 }
 
 .typing {
-  border-right: 3.5px solid yellowgreen; /* Typing cursor effect */
+  border-right: 3.5px solid var(--color-primary); /* Typing cursor effect */
   display: inline-block; /* Allows inline animation */
   white-space: nowrap; /* Prevents wrapping */
   overflow: hidden; /* Hides overflowing text */
@@ -73,15 +74,156 @@ header {
   gap: 1.2rem;
 }
 
-.projectBtn:hover {
-  transform: translateY(-0.5rem);
-  background-color: transparent;
-  border: 1px solid var(--color-black);
+.ui-btn {
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --font-size: 16px;
+  --font-weight: 400;
+  --font-family: Menlo, Roboto Mono, monospace;
 }
 
-.letsTalkBtn:hover {
-  transform: translateY(-0.5rem);
-  background: transparent;
+.ui-btn {
+  box-sizing: border-box;
+  padding: 0.9rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn a {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+  color: var(--color-white);
+}
+
+.ui-btn a::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover,
+.ui-btn:focus {
+  background: var(--color-primary);
+  transform: translateY(-5px);
+}
+
+.ui-btn:hover a,
+.ui-btn:focus a {
+  color: var(--color-black);
+}
+
+.ui-btn:hover a::before,
+.ui-btn:focus a::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";}35%{content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+.button-wrapper {
+  display: inline-block;
+  position: relative;
 }
 
 .header__socials {
@@ -133,6 +275,12 @@ header {
   /* .header__socials {
     display: none;
   } */
+  .header__cta {
+    margin-bottom: 4rem;
+  }
+  .ui-btn {
+    padding: 0.75rem !important;
+  }
 }
 
 /* MEDIA QUERIES (phones) */

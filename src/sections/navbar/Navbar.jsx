@@ -6,10 +6,10 @@ import "./navbar.css";
 import { useModalContext } from "../../context/modal-context";
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
-import CV from "../../assets/Nicolas_Gauthier_DEV.pdf";
-import CV_FR from "../../assets/Nicolas_Gauthier_DEV_fr.pdf";
+import CV from "../../assets/NicolasGauthier_Dev.pdf";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
 import { useThemeContext } from "../../context/theme-context";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const { showModalHandler } = useModalContext();
@@ -19,15 +19,46 @@ const Navbar = () => {
 
   const isDarkMode = themeState.background === "bg-2";
 
+  useEffect(() => {
+    let timeoutId;
+
+    const handleScroll = () => {
+      const navBar = document.querySelector(".nav__container");
+      const scrollThreshold = 1; // Adjust the threshold as needed
+
+      if (window.scrollY > scrollThreshold) {
+        navBar.classList.add("show");
+      } else {
+        navBar.classList.remove("show");
+      }
+    };
+
+    // Debounce the scroll handler
+    const debouncedScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        handleScroll();
+      }, 30); // Adjust the debounce time as needed
+    };
+
+    window.addEventListener("scroll", debouncedScroll);
+
+    // Clean up the event listeners and timeout
+    return () => {
+      window.removeEventListener("scroll", debouncedScroll);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   return (
     <nav>
-      <div className="container nav__container">
+      <div className="nav__container">
         <a
-          href={language === "en" ? CV : CV_FR}
+          href={CV}
           download={
             language === "en"
-              ? "Nicolas_Gauthier_DEV.pdf"
-              : "Nicolas_Gauthier_DEV_fr.pdf"
+              ? "NicolasGauthier_Dev.pdf"
+              : "NicolasGauthier_Dev_fr.pdf"
           }
           className="cv"
         >
