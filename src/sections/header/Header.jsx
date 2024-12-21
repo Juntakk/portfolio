@@ -40,22 +40,22 @@ const Header = () => {
 
     window.particlesJS("particles-js", {
       particles: {
-        number: { value: 10, density: { enable: true, value_area: 700 } },
-        color: { value: particleColor },
+        number: { value: 150, density: { enable: true, value_area: 700 } },
+        color: { value: "#FFFFFF" },
         shape: {
-          type: "circle",
-          stroke: { width: 0, color: "#000000" },
-          polygon: { nb_sides: 3 },
+          type: "polygon",
+          stroke: { width: 1, color: "#545454FF" },
+          polygon: { nb_sides: 7 },
         },
         opacity: {
           value: 0.8,
-          random: true,
+          random: false,
           anim: { enable: true, speed: 0.1, opacity_min: 0.1, sync: false },
         },
         size: {
-          value: 105,
-          random: false,
-          anim: { enable: false, speed: 40, size_min: 10, sync: false },
+          value: 3,
+          random: true,
+          anim: { enable: false, speed: 80, size_min: 10, sync: false },
         },
         line_linked: {
           enable: false,
@@ -67,9 +67,9 @@ const Header = () => {
         move: {
           enable: true,
           speed: 1,
-          direction: "none",
+          direction: "bottom",
           random: true,
-          straight: false,
+          straight: true,
           out_mode: "out",
           bounce: false,
           attract: { enable: false, rotateX: 600, rotateY: 1200 },

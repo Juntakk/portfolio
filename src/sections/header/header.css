@@ -329,4 +329,7 @@ header {
   .ui-btn {
     padding: 0 !important;
   }
+  .ui-btn a {
+    color: var(--color-black);
+  }
 }

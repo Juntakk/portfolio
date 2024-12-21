@@ -52,8 +52,8 @@ const About = () => {
                 Je suis Nick, développeur full-stack passionné par la création
                 d'applications web et mobiles. <br />
                 Je conçois des expériences intuitives, résous des problèmes
-                techniques complexes et adore travailler en équipe. <br />
-                Prêt à rejoindre votre équipe pour construire des projets
+                techniques complexes et travaille en équipe. <br />
+                Prêt à rejoindre la vôtre pour construire des projets
                 exceptionnels!
               </>
             )}

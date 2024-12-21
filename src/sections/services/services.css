@@ -43,6 +43,7 @@
 .service:hover .service__icon {
   background: var(--color-primary);
   color: var(--color-white);
+  transform: rotate(360deg);
 }
 
 .service h4 {

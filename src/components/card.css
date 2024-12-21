@@ -1,9 +1,9 @@
 .card {
   background: var(--color-white);
-  padding: 0.77rem;
+  padding: 0rem;
   padding-inline: 0rem;
   border: 2px solid transparent;
-  border-radius: var(--border-radius-1);
+  /* border-radius: var(--border-radius-1); */
   transition: var(--transition);
   display: flex;
   flex-direction: column;
