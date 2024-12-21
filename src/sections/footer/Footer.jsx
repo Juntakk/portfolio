@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <div className="footer__copyright">
         <small>
-          2024 Nicolas Habashi Gauthier &copy;{" "}
+          2024 Nicolas H. Gauthier &copy;{" "}
           {language === "en" ? "All Rights Reserved" : "Tous droits réservés"}
         </small>
       </div>

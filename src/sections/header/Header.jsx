@@ -43,9 +43,9 @@ const Header = () => {
         number: { value: 150, density: { enable: true, value_area: 700 } },
         color: { value: "#FFFFFF" },
         shape: {
-          type: "polygon",
+          type: "star",
           stroke: { width: 1, color: "#545454FF" },
-          polygon: { nb_sides: 7 },
+          polygon: { nb_sides: 5 },
         },
         opacity: {
           value: 0.8,
@@ -66,7 +66,7 @@ const Header = () => {
         },
         move: {
           enable: true,
-          speed: 1,
+          speed: 6,
           direction: "bottom",
           random: true,
           straight: true,
@@ -155,7 +155,7 @@ const Header = () => {
       <div id="particles-js" className="particles__container"></div>
       <div className="container header__container">
         <h1 className="myName">
-          <span className="typing">Nicolas Gauthier</span>
+          <span className="typing">Nicolas H. Gauthier</span>
         </h1>
         {/* <p data-aos="fade-up" className="desc_p">
           {language === "en"

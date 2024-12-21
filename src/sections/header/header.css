@@ -7,7 +7,8 @@ header {
   /* transition: var(--transition); */
 }
 .myName {
-  font-family: "Courier New", monospace; /* Typewriter feel */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+    monospace; /* Typewriter feel */
   white-space: nowrap; /* Prevent text wrapping */
   overflow: hidden; /* Ensures hidden text is not visible */
   display: inline-block; /* Required for inline animation */
