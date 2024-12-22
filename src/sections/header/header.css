@@ -76,7 +76,6 @@ header {
 }
 .iceland-regular {
   font-family: "Iceland", serif;
-  font-size: 5rem;
   font-weight: 400;
   font-style: normal;
 }
@@ -306,7 +305,7 @@ header {
   }
 
   .myName {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .header__container p {
@@ -337,7 +336,9 @@ header {
   .header__socials .social-icon {
     font-size: 0.85rem;
   }
-
+  .desc_p {
+    font-size: 1.5rem !important;
+  }
   .header__container h1 {
     text-align: center;
   }
