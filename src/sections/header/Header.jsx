@@ -57,7 +57,7 @@ const Header = () => {
           polygon: { nb_sides: 5 },
         },
         opacity: {
-          value: 0.8,
+          value: 0.4,
           random: true,
           anim: { enable: false, speed: 0.08, opacity_min: 0, sync: false },
         },
