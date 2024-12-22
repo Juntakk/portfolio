@@ -13,17 +13,27 @@ header {
   overflow: hidden; /* Ensures hidden text is not visible */
   display: inline-block; /* Required for inline animation */
   font-size: 3.5rem;
+  margin-bottom: -1rem;
 }
 
 .typing {
-  border-right: 3.5px solid var(--color-primary); /* Typing cursor effect */
+  /* border-right: 3.5px solid var(--color-primary); */
   display: inline-block; /* Allows inline animation */
   white-space: nowrap; /* Prevents wrapping */
   overflow: hidden; /* Hides overflowing text */
-  width: 0; /* Initial width is 0 */
-  animation: typing 3s steps(16, end) forwards, blink 1s step-end infinite;
+  width: 100%; /* Initial width is 0 */
+  /* animation: typing 2s steps(60, end) forwards, blink 0.8s step-end infinite; */
 }
 
+.desc_p {
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", "Gill Sans",
+    "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Times New Roman",
+    Times, serif;
+  height: 2rem;
+  color: rgb(218, 183, 139);
+  mix-blend-mode: difference;
+}
 /* Typing effect: reveal letters by increasing width */
 @keyframes typing {
   from {
@@ -63,11 +73,16 @@ header {
 .header__container p {
   width: 35rem;
   text-align: center;
-  margin: 0.6rem 0 2rem;
+  margin: 0rem 0 1.5rem;
+}
+.iceland-regular {
+  font-family: "Iceland", serif;
+  font-size: 5rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header__cta {
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   gap: 1.2rem;

@@ -11,7 +11,16 @@ import { useThemeContext } from "../../context/theme-context";
 const Header = () => {
   const { language } = useLanguage();
   const themeContext = useThemeContext();
-  const [particleColor, setParticleColor] = useState(null); // Initialize as null
+  const [particleColor, setParticleColor] = useState(null);
+  const texts =
+    language === "en"
+      ? ["Web", "Mobile", "Video Game"]
+      : ["Web", "Mobile", "de Jeux Vidéo"];
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(10);
+  const [isPaused, setIsPaused] = useState(false);
 
   const colorMap = {
     "color-1": "#ffab91", // Soft coral to contrast the grayish tones
@@ -40,22 +49,22 @@ const Header = () => {
 
     window.particlesJS("particles-js", {
       particles: {
-        number: { value: 150, density: { enable: true, value_area: 700 } },
-        color: { value: "#FFFFFF" },
+        number: { value: 13, density: { enable: false, value_area: 2000 } },
+        color: { value: particleColor },
         shape: {
-          type: "star",
-          stroke: { width: 1, color: "#545454FF" },
+          type: "circle",
+          stroke: { width: 0, color: "#545454FF" },
           polygon: { nb_sides: 5 },
         },
         opacity: {
           value: 0.8,
-          random: false,
-          anim: { enable: true, speed: 0.1, opacity_min: 0.1, sync: false },
+          random: true,
+          anim: { enable: false, speed: 0.08, opacity_min: 0, sync: false },
         },
         size: {
-          value: 3,
-          random: true,
-          anim: { enable: false, speed: 80, size_min: 10, sync: false },
+          value: 90,
+          random: false,
+          anim: { enable: false, speed: 15, size_min: 60, sync: false },
         },
         line_linked: {
           enable: false,
@@ -66,13 +75,13 @@ const Header = () => {
         },
         move: {
           enable: true,
-          speed: 6,
+          speed: 1.5,
           direction: "bottom",
           random: true,
           straight: true,
           out_mode: "out",
           bounce: false,
-          attract: { enable: false, rotateX: 600, rotateY: 1200 },
+          attract: { enable: true, rotateX: 600, rotateY: 1200 },
         },
       },
       interactivity: {
@@ -150,12 +159,40 @@ const Header = () => {
     };
   }, [isHovered]);
 
+  useEffect(() => {
+    const handleTyping = () => {
+      if (isPaused) {
+        return;
+      }
+      const fullText = texts[currentIndex];
+      if (!isDeleting) {
+        setCurrentText(fullText.substring(0, currentText.length + 1));
+        if (currentText === fullText) {
+          setIsPaused(true);
+          setTimeout(() => setIsPaused(false), 1500);
+          setIsDeleting(true);
+          setTypingSpeed(100); // Pause before deleting
+        }
+      } else {
+        setCurrentText(fullText.substring(0, currentText.length - 1));
+        if (currentText === "") {
+          setIsDeleting(false);
+          setTypingSpeed(175); // Reset typing speed
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length); // Move to next text
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, typingSpeed, texts, currentIndex, isPaused]);
+
   return (
     <header id="header">
       <div id="particles-js" className="particles__container"></div>
       <div className="container header__container">
         <h1 className="myName">
-          <span className="typing">Nicolas H. Gauthier</span>
+          <span className="typing iceland-regular">Nicolas H. Gauthier</span>
         </h1>
         {/* <p data-aos="fade-up" className="desc_p">
           {language === "en"
@@ -163,6 +200,12 @@ const Header = () => {
             : "Compétent en développement web et mobile, prêt à contribuer à des équipes innovantes et à des projets stimulants."}
           <br />
         </p> */}
+        <p className="desc_p typing-effect">
+          {" "}
+          {language === "en"
+            ? currentText + " Developer"
+            : "Développeur " + currentText}
+        </p>
         <div className="header__cta" data-aos="fade-up">
           <button className="ui-btn">
             <a href="#contact" className="">
