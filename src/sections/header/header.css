@@ -31,8 +31,7 @@ header {
     "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Times New Roman",
     Times, serif;
   height: 2rem;
-  color: rgb(218, 183, 139);
-  mix-blend-mode: difference;
+  mix-blend-mode: screen;
 }
 /* Typing effect: reveal letters by increasing width */
 @keyframes typing {

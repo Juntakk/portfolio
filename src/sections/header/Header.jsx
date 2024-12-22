@@ -200,7 +200,7 @@ const Header = () => {
             : "Compétent en développement web et mobile, prêt à contribuer à des équipes innovantes et à des projets stimulants."}
           <br />
         </p> */}
-        <p className="desc_p typing-effect">
+        <p className="desc_p typing-effect" style={{ color: particleColor }}>
           {" "}
           {language === "en"
             ? currentText + " Developer"
