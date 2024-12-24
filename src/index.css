@@ -129,7 +129,8 @@ main {
 
 /* GENERAL SECTION STYLES */
 section {
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
+  height: 100vh;
   background: var(--color-light);
   transition: var(--transition);
 }

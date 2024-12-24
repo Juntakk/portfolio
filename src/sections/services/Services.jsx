@@ -8,7 +8,7 @@ const Services = () => {
   const { language } = useLanguage();
   return (
     <section id="services">
-      <h2>{language === "en" ? "My Knowledge" : "Mes Connaissances"}</h2>
+      <h2>{language === "en" ? "Knowledge" : "Connaissances"}</h2>
       <p>
         {language === "en"
           ? "Here are the Languages / Frameworks for which I can offer my services with their respective level of skill"

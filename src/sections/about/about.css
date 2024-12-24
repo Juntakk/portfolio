@@ -1,17 +1,20 @@
 .about {
   /* padding: 10rem 6rem 8rem 6rem; */
-  padding-bottom: 10rem;
   background: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
 .about_title {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .about__content {
   display: flex;
-  padding: 3rem;
   justify-content: center;
   align-items: center;
   max-width: 1200px;

@@ -28,9 +28,9 @@ const About = () => {
 
   return (
     <section id="about" className="about">
-      <h2 className="about_title">
+      {/* <h2 className="about_title">
         {language === "en" ? "About Me" : "À propos de moi"}
-      </h2>
+      </h2> */}
       <div className="container about__container" data-aos="fade-up">
         <div className="about__content">
           <div className="circle-background2"></div>

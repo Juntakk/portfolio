@@ -32,7 +32,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio">
+    <div id="portfolio">
       <h2>{language === "en" ? "Recent Projects" : "Projets Récents"}</h2>
       <div className="container portfolio__container">
         <ProjectsCategories
@@ -41,7 +41,7 @@ const Portfolio = () => {
         />
         <Projects projects={projects} data={data} />
       </div>
-    </section>
+    </div>
   );
 };
 
