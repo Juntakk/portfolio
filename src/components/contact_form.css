@@ -208,10 +208,13 @@ input:-webkit-autofill {
   .contact_container {
     max-width: 400px;
   }
+  .cta span {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 500px) {
   .contact_container {
-    width: 290px;
+    width: fit-content;
   }
 }
 @media (max-width: 420px) {

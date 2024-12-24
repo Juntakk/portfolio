@@ -38,7 +38,7 @@
 @media screen and (max-width: 1024px) {
   #contact {
     height: 100vh;
-    padding: 5rem;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +91,7 @@
   .first_h2 {
     font-size: 1.5rem;
     text-align: center;
-    width: 85%;
+    /* width: 85%; */
     margin-top: -2rem;
   }
 }
