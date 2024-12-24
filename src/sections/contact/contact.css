@@ -35,7 +35,15 @@
 }
 
 /*PHONES*/
-@media screen and (max-width: 955px) {
+@media screen and (max-width: 1024px) {
+  #contact {
+    height: 100vh;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .contact__container {
     gap: 1.5rem;
   }
@@ -73,8 +81,17 @@
 }
 
 @media screen and (max-width: 600px) {
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   .first_h2 {
-    margin-top: 0.4rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 85%;
+    margin-top: -2rem;
   }
 }

@@ -300,4 +300,7 @@ img {
   section > p {
     width: var(--container-width-md);
   }
+  section {
+    width: 100vw;
+  }
 }

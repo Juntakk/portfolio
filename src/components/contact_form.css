@@ -193,27 +193,10 @@ input:-webkit-autofill {
   } */
 }
 /* Responsive design for smaller screens */
-@media (max-width: 955px) {
-  /* .contact_container div {
-    padding: 5px;
-  }
+@media (max-width: 1024px) {
   .contact_container {
     width: 75%;
   }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    font-size: 0.9rem;
-  }
-
-  button {
-    font-size: 1rem;
-  } */
 }
 
 @media (max-width: 800px) {
@@ -228,11 +211,14 @@ input:-webkit-autofill {
 }
 @media (max-width: 500px) {
   .contact_container {
-    max-width: 350px;
+    width: 290px;
   }
 }
 @media (max-width: 420px) {
   .contact_container {
-    max-width: 300px;
+    max-width: 350px;
+  }
+  .cta span {
+    font-size: 0.8rem;
   }
 }

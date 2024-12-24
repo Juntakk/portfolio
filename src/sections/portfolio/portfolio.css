@@ -54,7 +54,7 @@
   transform-style: preserve-3d;
 }
 .portfolio__project:hover .inner_card {
-  /* transform: rotateY(180deg); */
+  transform: rotateY(180deg);
 }
 .front,
 .back {
@@ -82,7 +82,7 @@
   padding: 0.75rem 0rem 0rem;
   border: 1px solid;
   border-color: var(--color-primary);
-  /* transform: rotateY(180deg); */
+  transform: rotateY(180deg);
 }
 .title {
   font-size: 2.25rem;
@@ -197,12 +197,12 @@
     gap: 0rem;
   }
   .portfolio__project {
-    width: 20rem;
+    width: 18rem;
     height: 16rem;
     margin-left: 1rem;
   }
   .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .desc {
     font-size: 1.5rem;
@@ -212,7 +212,7 @@
     display: none;
   }
   .swiper {
-    width: 22rem;
+    width: 20rem;
     height: 16rem;
   }
   .portfolio__categories {
@@ -223,14 +223,13 @@
     padding: 0.85rem 0.85rem;
   }
   #portfolio h2 {
-    margin-top: 0.25rem;
+    margin-top: 1.55rem;
   }
   .slideNumber {
     color: var(--color-dark) !important;
     font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 2rem;
-
     padding: 1px 5px;
   }
   .swipeMsg {

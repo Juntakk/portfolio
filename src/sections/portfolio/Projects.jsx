@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { useLanguage } from "../../theme/LanguageContext";
+// import { useLanguage } from "../../theme/LanguageContext";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -11,7 +11,7 @@ const Projects = ({ projects, data }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const { language } = useLanguage();
+  // const { language } = useLanguage();
 
   const handleSlideChange = (swiper) => {
     setActiveSlide(swiper.activeIndex);
@@ -31,9 +31,9 @@ const Projects = ({ projects, data }) => {
     <div className="portfolio__projects" data-aos="fade-up">
       {isMobile ? (
         <>
-          <p className="swipeMsg">
+          {/* <p className="swipeMsg">
             {language === "en" ? "Swipe to explore" : "Glissez pour explorer"}
-          </p>
+          </p> */}
           <Swiper
             modules={[Navigation]}
             navigation={{

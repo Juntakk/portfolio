@@ -297,15 +297,16 @@ header {
 
 /* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
-  .header__profile {
+  /* .header__profile {
     width: 14rem;
     height: 17rem;
     max-width: 60%;
     max-height: 35vh;
-  }
+  } */
 
   .myName {
-    font-size: 3rem;
+    font-size: 2rem;
+    width: 75%;
   }
 
   .header__container p {
@@ -337,7 +338,8 @@ header {
     font-size: 0.85rem;
   }
   .desc_p {
-    font-size: 1.5rem !important;
+    margin-top: 5px !important;
+    font-size: 1.2rem !important;
   }
   .header__container h1 {
     text-align: center;

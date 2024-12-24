@@ -128,18 +128,35 @@
 }
 
 @media (max-width: 1024px) {
-  .nav__container {
-    display: none;
-  }
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+  .nav__container {
+    height: 3rem;
+    left: 0;
+    width: auto;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0.25rem;
+  }
   .nav__menu {
-    display: none; /* Hide menu for smaller screens */
+    display: none;
   }
 
   .nav__right {
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: 1rem;
+  }
+  .cv {
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 1rem;
   }
 }

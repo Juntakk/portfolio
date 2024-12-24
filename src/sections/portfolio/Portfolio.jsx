@@ -4,39 +4,42 @@ import ProjectsCategories from "./ProjectsCategories";
 import data_en from "./data";
 import data_fr from "./data_fr";
 
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { useLanguage } from "../../theme/LanguageContext";
 
 const Portfolio = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
 
-  const [projects, setProjects] = useState(data);
+  const [projects, setProjects] = useState(() =>
+    data.filter((project) => project.category === "Web")
+  );
 
-  const categories = data.map((item) => item.category);
-  const uniqueCategories = [
-    language === "en" ? "All" : "Tout",
-    ...new Set(categories),
-  ];
+  const categories = useMemo(() => {
+    const allCategories = data.map((item) => item.category);
+    return [language === "en" ? "All" : "Tout", ...new Set(allCategories)];
+  }, [data, language]);
 
-  const filterProjectsHandler = (category) => {
-    if (category === "All" || category === "Tout") {
-      setProjects(data);
-      return;
-    }
-
-    const filterProjects = data.filter(
-      (project) => project.category === category
-    );
-    setProjects(filterProjects);
-  };
+  const filterProjectsHandler = useCallback(
+    (category) => {
+      if (category === "All" || category === "Tout") {
+        setProjects(data);
+      } else {
+        const filteredProjects = data.filter(
+          (project) => project.category === category
+        );
+        setProjects(filteredProjects);
+      }
+    },
+    [data]
+  );
 
   return (
     <div id="portfolio">
       <h2>{language === "en" ? "Recent Projects" : "Projets Récents"}</h2>
       <div className="container portfolio__container">
         <ProjectsCategories
-          categories={uniqueCategories}
+          categories={categories}
           onFilterProjects={filterProjectsHandler}
         />
         <Projects projects={projects} data={data} />

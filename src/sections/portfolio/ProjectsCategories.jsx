@@ -10,7 +10,7 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
 
   const changeCategoryHandler = (activeCat) => {
     setActiveCategory(activeCat);
-    onFilterProjects(activeCat);
+    // onFilterProjects(activeCat);
   };
 
   return (
