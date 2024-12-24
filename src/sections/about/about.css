@@ -75,7 +75,7 @@
   font-weight: 600;
   line-height: 1.6;
   margin-left: 2rem;
-  max-width: 600px;
+  max-width: 500px;
   color: var(--color-dark);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -113,6 +113,19 @@
   }
   .about__headline {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .about__headline {
+    font-size: 1.3rem;
+    width: 300px;
+    margin-right: 5rem;
+  }
+  .about__image {
+    width: 80%;
+    max-width: 140px;
+    min-width: 140px;
+    height: 18rem;
   }
 }
 @media screen and (max-width: 600px) {
