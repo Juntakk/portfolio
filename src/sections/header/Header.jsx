@@ -23,7 +23,7 @@ const Header = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   const colorMap = {
-    "color-1": "#ffab91", // Soft coral to contrast the grayish tones
+    "color-1": "#2E8B57", // Soft coral to contrast the grayish tones
     "color-2": "#d4e157", // Bright lime to pop against the greens
     "color-3": "#f48fb1", // Light pink to complement the warm pinkish tones
     "color-4": "#ff8a65", // Warm orange for a vibrant contrast to the reds
@@ -57,7 +57,7 @@ const Header = () => {
           polygon: { nb_sides: 5 },
         },
         opacity: {
-          value: 0.4,
+          value: 0.6,
           random: true,
           anim: { enable: false, speed: 0.08, opacity_min: 0, sync: false },
         },
@@ -200,7 +200,7 @@ const Header = () => {
             : "Compétent en développement web et mobile, prêt à contribuer à des équipes innovantes et à des projets stimulants."}
           <br />
         </p> */}
-        <p className="desc_p typing-effect" style={{ color: particleColor }}>
+        <p className="desc_p typing-effect">
           {" "}
           {language === "en"
             ? currentText + " Developer"

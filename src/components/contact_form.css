@@ -45,7 +45,7 @@ input:-webkit-autofill {
   font-family: inherit;
   width: 100%;
   border: none;
-  border-bottom: 2px solid #9b9b9b;
+  border-bottom: 2px solid var(--color-light);
   outline: 0;
   font-size: 17px;
   color: #fff;
@@ -70,7 +70,7 @@ input:-webkit-autofill {
   display: block;
   transition: 0.2s;
   font-size: 17px;
-  color: #9b9b9b;
+  color: var(--color-light);
   pointer-events: none;
 }
 
@@ -122,7 +122,7 @@ input:-webkit-autofill {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: var(--color-dark);
+  color: var(--color-black);
 }
 
 .cta svg {

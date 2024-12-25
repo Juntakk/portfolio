@@ -71,16 +71,15 @@
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 .about__headline {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 600;
   line-height: 1.6;
   margin-left: 2rem;
   max-width: 500px;
-  color: var(--color-dark);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  color: var(--color-black);
+  font-family: "Iceland", serif;
+
   font-style: italic;
-  mix-blend-mode: color-dodge;
 }
 @media screen and (max-width: 1024px) {
   .about {
