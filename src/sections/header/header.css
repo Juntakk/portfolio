@@ -118,6 +118,7 @@ header {
   position: relative;
   background: inherit;
   color: var(--color-white);
+  font-weight: bold;
 }
 
 .ui-btn a::before {
@@ -135,7 +136,7 @@ header {
 
 .ui-btn:hover a,
 .ui-btn:focus a {
-  color: var(--color-black);
+  color: var(--color-secondary);
 }
 
 .ui-btn:hover a::before,

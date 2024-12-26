@@ -33,7 +33,7 @@
   border-radius: 150px;
   font-size: 1.4rem;
   margin-top: 25px;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   transition: var(--transition);
   border-color: var(--color-primary);
   border: 3px solid;
@@ -41,7 +41,7 @@
 }
 
 .service:hover .service__icon {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   color: var(--color-white);
   transform: rotate(360deg);
   transition: all 1s ease-in-out;

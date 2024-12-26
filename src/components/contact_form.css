@@ -110,7 +110,7 @@ input:-webkit-autofill {
   left: 0;
   display: block;
   border-radius: 50px;
-  background: var(--color-light);
+  background: var(--color-secondary);
   width: 45px;
   height: 45px;
   transition: all 0.3s ease;
@@ -144,7 +144,6 @@ input:-webkit-autofill {
 
 .cta:hover span {
   transform: translateX(0);
-  color: var(--color-dark);
 }
 
 .cta:hover svg {

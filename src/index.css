@@ -44,53 +44,34 @@ body {
   cursor: default;
 }
 
-/* THEME change using react */
-/* main.color-1 {
-  --color-primary: linear-gradient(135deg, #485563, #29323c);
-}
-
-main.color-2 {
-  --color-primary: linear-gradient(135deg, #414d0b, #727a17);
-}
-
-main.color-3 {
-  --color-primary: linear-gradient(135deg, #b77b8d, #804b5b);
-}
-
-main.color-4 {
-  --color-primary: linear-gradient(135deg, #a73737, #7a2828);
-}
-
-main.color-5 {
-  --color-primary: linear-gradient(135deg, #4b79a1, #283e51);
-}
-
-main.color-6 {
-  --color-primary: linear-gradient(135deg, #116658, #0b453c);
-} */
-
 main.color-1 {
   --color-primary: #ab8e30; /* Midpoint of #485563 and #29323c */
+  --color-secondary: #0e512c;
 }
 
 main.color-2 {
   --color-primary: #5b670e; /* Midpoint of #414d0b and #727a17 */
+  --color-secondary: #d4e157;
 }
 
 main.color-3 {
   --color-primary: #9e6370; /* Midpoint of #b77b8d and #804b5b */
+  --color-secondary: #f48fb1;
 }
 
 main.color-4 {
   --color-primary: #933131; /* Midpoint of #a73737 and #7a2828 */
+  --color-secondary: #ff8a65;
 }
 
 main.color-5 {
   --color-primary: #385577; /* Midpoint of #4b79a1 and #283e51 */
+  --color-secondary: #81d4fa;
 }
 
 main.color-6 {
   --color-primary: #0d5247; /* Midpoint of #116658 and #0b453c */
+  --color-secondary: #aed581;
 }
 
 main.bg-2 {
@@ -118,6 +99,7 @@ main.bg-1 {
 main {
   color: var(--color-dark);
   --color-primary: hsl(var(--primary-hue), 89%, 41%);
+  --color-secondary: hsl(var(--primary-hue), 89%, 41%);
 }
 
 /* GENERAL CONTAINER CLASS */

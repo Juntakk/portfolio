@@ -29,7 +29,7 @@
   left: 20%;
   width: 223px;
   height: 223px;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   border-radius: 50%;
   z-index: -1;
   transform: translate(-150%, -50%); /* Initial state (off-screen) */
