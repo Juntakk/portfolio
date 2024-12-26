@@ -48,7 +48,7 @@
 }
 
 .cv:hover {
-  color: var(--color-black);
+  color: var(--color-secondary);
 }
 
 .icon {
@@ -68,12 +68,13 @@
 .nav__menu li a {
   text-decoration: none;
   color: var(--color-white);
+  font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .nav__menu li a:hover {
-  color: var(--color-black);
+  color: var(--color-secondary);
 }
 
 /* Right Section */
@@ -93,7 +94,7 @@
   cursor: pointer;
   font-size: 1.75rem;
   color: var(--color-white);
-  transition: color 0.3s ease;
+  transition: 0.75s all ease;
 }
 
 .theme__icon:focus {
@@ -101,8 +102,7 @@
 }
 
 .theme__icon:hover {
-  color: var(--color-black);
-  background-color: var(--color-primary);
+  color: var(--color-secondary);
   transform: scale(1.15);
 }
 
@@ -118,10 +118,10 @@
 .nav__logo:hover {
   transform: scale(1.15);
   border-radius: 50%;
-  border: 2px solid var(--color-black);
+  border: 2px solid var(--color-secondary);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 700px) {
   .nav__menu li:nth-child(2) {
     display: none;
   }

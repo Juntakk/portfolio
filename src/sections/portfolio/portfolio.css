@@ -25,7 +25,8 @@
   padding: 1rem 3rem;
   font-size: 1rem;
   transition: transform 0.75s ease-in-out;
-  border-color: 1px solid var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary) !important;
 }
 .btn.cat__btn::before {
   background: var(--color-primary) !important;
@@ -33,9 +34,8 @@
 }
 .btn.cat__btn:hover {
   background: var(--color-primary) !important;
-  color: var(--color-white);
+  color: var(--color-secondary);
 }
-
 .portfolio__project {
   background-color: transparent;
   width: 50%;
@@ -65,16 +65,14 @@
   overflow: hidden;
   border-radius: 3px;
 }
-.front {
-  background-color: var(--color-white);
-}
+
 .portfolio__project img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 .back {
-  background-color: var(--color-dark);
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -122,12 +120,12 @@
   font-weight: 600;
 }
 .btn_div a:hover {
-  color: var(--color-black);
-  /* border-color: 2px solid var(--color-primary); */
+  color: var(--color-secondary);
+  border-top: 1px solid var(--color-secondary);
 }
 .btn_demo {
   border-bottom-right-radius: 0px !important;
-  border-right: 2px solid var(--color-white) !important;
+  border-right: 2px solid var(--color-primary) !important;
 }
 .btn_git {
   border-bottom-left-radius: 0px !important;

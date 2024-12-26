@@ -62,27 +62,27 @@
 }
 
 .theme__primary-colors .color-1 {
-  background: #ab8e30;
+  background: linear-gradient(90deg, #2f4f3f, #e0975e);
 }
 
 .theme__primary-colors .color-2 {
-  background: #5b670e;
+  background: linear-gradient(90deg, #2b5a77, #d4a55a);
 }
 
 .theme__primary-colors .color-3 {
-  background: #9e6370;
+  background: linear-gradient(90deg, #5c4034, #9a520b);
 }
 
 .theme__primary-colors .color-4 {
-  background: #933131;
+  background: linear-gradient(90deg, #23694d, #ff986c);
 }
 
 .theme__primary-colors .color-5 {
-  background: #385577;
+  background: linear-gradient(90deg, #314c41, #89c2ad);
 }
 
 .theme__primary-colors .color-6 {
-  background: #0d5247;
+  background: linear-gradient(90deg, #483e5a, #d1a483);
 }
 
 .theme__background-colors {

@@ -38,7 +38,6 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setStatus(
             language === "en"
               ? "Message sent successfully, talk to you soon!"

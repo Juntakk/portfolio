@@ -45,33 +45,33 @@ body {
 }
 
 main.color-1 {
-  --color-primary: #ab8e30; /* Midpoint of #485563 and #29323c */
-  --color-secondary: #0e512c;
+  --color-primary: #2f4f3f; /* Dark forest green for strong contrast */
+  --color-secondary: #e0975e; /* Rich, warm tan like burnt orange */
 }
 
 main.color-2 {
-  --color-primary: #5b670e; /* Midpoint of #414d0b and #727a17 */
-  --color-secondary: #d4e157;
+  --color-primary: #2b5a77; /* Deep ocean blue for prominence */
+  --color-secondary: #d4a55a; /* Vibrant golden-taupe */
 }
 
 main.color-3 {
-  --color-primary: #9e6370; /* Midpoint of #b77b8d and #804b5b */
-  --color-secondary: #f48fb1;
+  --color-primary: #5c4034; /* Strong earthy brown */
+  --color-secondary: #9a520b; /* Rich sandstone beige */
 }
 
 main.color-4 {
-  --color-primary: #933131; /* Midpoint of #a73737 and #7a2828 */
-  --color-secondary: #ff8a65;
+  --color-primary: #23694d; /* Bold sea green */
+  --color-secondary: #ff986c; /* Bright peach for standout contrast */
 }
 
 main.color-5 {
-  --color-primary: #385577; /* Midpoint of #4b79a1 and #283e51 */
-  --color-secondary: #81d4fa;
+  --color-primary: #314c41; /* Strong sage green */
+  --color-secondary: #89c2ad; /* Vibrant mint green */
 }
 
 main.color-6 {
-  --color-primary: #0d5247; /* Midpoint of #116658 and #0b453c */
-  --color-secondary: #aed581;
+  --color-primary: #483e5a; /* Bold dusty lavender */
+  --color-secondary: #d1a483; /* Warm beige with more saturation */
 }
 
 main.bg-2 {
@@ -214,7 +214,7 @@ img {
   border: none;
   background: var(--color-primary);
   /* text color always white that's why i didn't use a variable color */
-  color: var(--color-light);
+  color: var(--color-secondary);
   font-weight: bolder;
 }
 
@@ -226,7 +226,7 @@ img {
   background: transparent;
   border: 1px solid;
   border-color: var(--color-primary);
-  color: var(--color-black);
+  color: var(--color-secondary);
 }
 
 .btn.sm {

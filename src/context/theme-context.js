@@ -4,7 +4,7 @@ import themeReducer from "./themeReducer";
 export const ThemeContext = createContext();
 
 const initialThemeState = JSON.parse(localStorage.getItem("themeSettings")) || {
-  primary: "color-5",
+  primary: "color-1",
   background: "bg-1",
 };
 

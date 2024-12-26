@@ -23,12 +23,12 @@ const Header = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   const colorMap = {
-    "color-1": "#2E8B57", // Soft coral to contrast the grayish tones
-    "color-2": "#d4e157", // Bright lime to pop against the greens
-    "color-3": "#f48fb1", // Light pink to complement the warm pinkish tones
-    "color-4": "#ff8a65", // Warm orange for a vibrant contrast to the reds
-    "color-5": "#81d4fa", // Light cyan to contrast the blue-gray tones
-    "color-6": "#aed581", // Fresh green to offset the teal-green tones
+    "color-1": "#f4a261", // Soft coral to contrast the grayish tones
+    "color-2": "#e76f51", // Bright lime to pop against the greens
+    "color-3": "#ffb4a2", // Light pink to complement the warm pinkish tones
+    "color-4": "#ffcb69", // Warm orange for a vibrant contrast to the reds
+    "color-5": "#a8dadc", // Light cyan to contrast the blue-gray tones
+    "color-6": "#e9c46a", // Fresh green to offset the teal-green tones
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "#CCCCCC"; // Default color

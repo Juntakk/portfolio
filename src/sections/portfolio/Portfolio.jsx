@@ -36,7 +36,7 @@ const Portfolio = () => {
 
   return (
     <div id="portfolio">
-      <h2>{language === "en" ? "Recent Projects" : "Projets Récents"}</h2>
+      <h2>{language === "en" ? "Projects" : "Projets"}</h2>
       <div className="container portfolio__container">
         <ProjectsCategories
           categories={categories}

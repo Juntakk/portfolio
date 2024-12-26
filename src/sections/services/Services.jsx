@@ -9,11 +9,11 @@ const Services = () => {
   return (
     <section id="services">
       <h2>{language === "en" ? "Knowledge" : "Connaissances"}</h2>
-      <p>
+      {/* <p>
         {language === "en"
           ? "Here are the Languages / Frameworks for which I can offer my services with their respective level of skill"
           : "Voici les langages / frameworks pour lesquels je peux offrir mes services, avec leur niveau de compétence respectif "}
-      </p>
+      </p> */}
 
       <div className="container services__container" data-aos="fade-up">
         {data.map((item) => (

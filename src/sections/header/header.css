@@ -1,46 +1,24 @@
 header {
-  /* height: calc(100vh - 5rem); */
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--color-white);
-  /* transition: var(--transition); */
 }
 .myName {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
-    monospace; /* Typewriter feel */
-  white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Ensures hidden text is not visible */
-  display: inline-block; /* Required for inline animation */
   font-size: 3.5rem;
-  margin-bottom: -1rem;
-}
-
-.typing {
-  /* border-right: 3.5px solid var(--color-primary); */
-  display: inline-block; /* Allows inline animation */
-  white-space: nowrap; /* Prevents wrapping */
-  overflow: hidden; /* Hides overflowing text */
-  width: 100%; /* Initial width is 0 */
-  /* animation: typing 2s steps(60, end) forwards, blink 0.8s step-end infinite; */
 }
 
 .desc_p {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", "Gill Sans",
     "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Times New Roman",
     Times, serif;
-  height: 2rem;
-  color: var(--color-primary);
-}
-/* Typing effect: reveal letters by increasing width */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%; /* Reveal entire text */
-  }
+  color: var(--color-secondary);
+  display: inline-block;
+  border-right: 1px solid var(--color-secondary);
+  animation: blink 1s step-end infinite;
+  margin-bottom: 1rem;
 }
 
 /* Blinking cursor effect */
@@ -69,11 +47,6 @@ header {
   position: relative;
 }
 
-.header__container p {
-  width: 35rem;
-  text-align: center;
-  margin: 0rem 0 1.5rem;
-}
 .iceland-regular {
   font-family: "Iceland", serif;
   font-weight: 400;
@@ -98,17 +71,17 @@ header {
 
 .ui-btn {
   box-sizing: border-box;
-  padding: 0.9rem 0.75rem;
+  padding: 0.6rem 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font: var(--font-weight) var(--font-size) var(--font-family);
   background-color: var(--color-primary) !important;
-  border: 2px solid var(--color-primary);
   cursor: pointer;
   transition: var(--btn-transition);
   overflow: hidden;
   box-shadow: var(--btn-shadow);
+  border-radius: 5px;
 }
 
 .ui-btn a {
@@ -132,6 +105,7 @@ header {
 .ui-btn:focus {
   background: var(--color-primary);
   transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
 }
 
 .ui-btn:hover a,
@@ -260,14 +234,14 @@ header {
   width: 3.8rem;
   height: 3.8rem;
   background: var(--color-primary);
-  color: var(--color-light);
+  color: var(--color-secondary);
   display: grid;
   place-items: center;
   border-radius: var(--border-radius-3);
 }
 
 .header__socials a:hover {
-  background: var(--color-light);
+  background: var(--color-secondary);
   color: var(--color-primary);
   transform: translateX(0.5rem);
   border: 2px solid;
