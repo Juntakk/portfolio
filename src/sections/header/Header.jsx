@@ -21,6 +21,7 @@ const Header = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(10);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const colorMap = {
     "color-1": "#f4a261", // Soft coral to contrast the grayish tones
@@ -31,6 +32,13 @@ const Header = () => {
     "color-6": "#e9c46a", // Fresh green to offset the teal-green tones
   };
 
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [isMobile]);
   const handleParticleColor = (theme) => colorMap[theme] || "#CCCCCC"; // Default color
 
   // Update particle color when the theme changes
@@ -62,7 +70,7 @@ const Header = () => {
           anim: { enable: false, speed: 0.08, opacity_min: 0, sync: false },
         },
         size: {
-          value: 90,
+          value: isMobile ? 15 : 90,
           random: false,
           anim: { enable: false, speed: 15, size_min: 60, sync: false },
         },

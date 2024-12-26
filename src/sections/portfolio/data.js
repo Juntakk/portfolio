@@ -36,9 +36,9 @@ const data = [
     category: "Games",
     image: images.Image3,
     title: "Bullet-hell Game",
-    desc: "C++ | Raylib | Unreal Engine",
+    desc: "C++ | Godot | GDscript",
     demo: "",
-    github: "https://github.com/Juntakk/mini-game-1",
+    github: "https://github.com/Juntakk/survivors",
     info: "2D bullet-hell game where the player can choose their character and battlefield. With automatic attacks, they fight hordes of enemies, level up, and improve their skills.",
   },
   {

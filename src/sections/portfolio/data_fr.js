@@ -36,9 +36,9 @@ const data = [
     category: "Jeux",
     image: images.Image3,
     title: "Jeu de Combat",
-    desc: "C++ | Raylib | Unreal Engine",
+    desc: "C++ | Godot | GDscript",
     demo: "",
-    github: "https://github.com/Juntakk/mini-game-1",
+    github: "https://github.com/Juntakk/survivors",
     info: "Jeu de type bullet-hell en 2D, le joueur peut choisir son personnage et le terrain de combat. Avec des attaques automatiques, il combat des hordes d'ennemis, gagne des niveaux et améliore ses compétences.",
   },
   {
