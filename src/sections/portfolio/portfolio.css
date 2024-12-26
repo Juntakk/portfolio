@@ -103,7 +103,7 @@
 .desc,
 .info {
   cursor: default;
-  color: var(--color-white);
+  color: wheat;
   font-family: "Iceland", serif;
 }
 .btn_div {
