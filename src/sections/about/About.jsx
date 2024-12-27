@@ -1,4 +1,4 @@
-import AboutImage from "../../assets/header.jpg";
+import AboutImage from "../../assets/header2.jpg";
 import "./about.css";
 import { useLanguage } from "../../theme/LanguageContext";
 
