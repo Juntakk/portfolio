@@ -10,48 +10,46 @@ import Themes from "./theme/Themes";
 import { useThemeContext } from "./context/theme-context";
 import { useRef, useState, useEffect } from "react";
 import { LanguageProvider } from "./theme/LanguageContext";
+import Loader from "./components/Loader";
 
 const App = () => {
   const { themeState } = useThemeContext();
   const mainRef = useRef();
-  const [showFloatingNav, setShowFloatingNav] = useState(true);
-  const [siteYPostion, setSiteYPosition] = useState(0);
-
-  const showFloatingNavHandler = () => {
-    setShowFloatingNav(true);
-  };
-
-  const hideFloatingNavHandler = () => {
-    setShowFloatingNav(false);
-  };
-
-  // check if floating nav should be shown or hidden
-  const floatingNavToggleHandler = () => {
-    if (!mainRef.current) return;
-    // check if we scrolled up or down at least 20px
-    if (
-      siteYPostion < mainRef?.current?.getBoundingClientRect().y - 5 ||
-      siteYPostion > mainRef?.current?.getBoundingClientRect().y + 5
-    ) {
-      showFloatingNavHandler();
-    } else {
-      hideFloatingNavHandler();
-    }
-
-    setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
-  };
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const checkYPosition = setInterval(floatingNavToggleHandler, 1000);
-    return () => clearInterval(checkYPosition);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const loadingElement = document.querySelector(".loading-screen");
+    if (loadingElement) {
+      setTimeout(() => {
+        loadingElement.classList.add("fade-in");
+        setTimeout(() => setIsLoading(false), 2000); // Matches transition time
+      }, 2000);
+    } else {
+      setIsLoading(false); // Fallback if element doesn't exist
+    }
   }, []);
 
   return (
     <LanguageProvider>
+      {isLoading && <Loader />}
       <main
         className={`${themeState.primary} ${themeState.background}`}
         ref={mainRef}
+        style={{
+          backgroundColor: isLoading ? "#111" : "inherit", // Dark background when loading
+          opacity: isLoading ? 0.25 : 1,
+          visibility: isLoading ? "hidden" : "visible",
+          transition: "opacity 2s ease-out, background-color 1s ease-out", // Smooth transition
+          width: "100%", // Ensure it covers the entire screen
+          height: "100%", // Ensure it covers the entire screen
+        }}
       >
         <Navbar />
         <Header />
@@ -61,7 +59,7 @@ const App = () => {
         <Contact />
         <Footer />
         <Themes />
-        {showFloatingNav && <FloatingNav />}
+        <FloatingNav />
       </main>
     </LanguageProvider>
   );

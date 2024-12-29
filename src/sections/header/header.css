@@ -104,8 +104,8 @@ header {
 .ui-btn:hover,
 .ui-btn:focus {
   background: var(--color-primary);
-  transform: translateY(-5px);
-  border: 1px solid var(--color-secondary);
+  transform: translateY(5px);
+  /* border: 1px solid var(--color-secondary); */
 }
 
 .ui-btn:hover a,

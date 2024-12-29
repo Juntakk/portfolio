@@ -1,30 +1,37 @@
-import AboutImage from "../../assets/header2.jpg";
+import AboutImage from "../../assets/header2-removebg.png";
 import "./about.css";
 import { useLanguage } from "../../theme/LanguageContext";
+import { useEffect } from "react";
 
 const About = () => {
   const { language } = useLanguage();
-  // Function to add the animation class
-  function animateOnScroll(entries, _observer) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate");
-      } else {
-        entry.target.classList.remove("animate"); // Remove for re-trigger
-      }
+
+  useEffect(() => {
+    // Function to add the animation class
+    function animateOnScroll(entries, _observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          entry.target.classList.remove("animate"); // Optional: Remove for re-trigger
+        }
+      });
+    }
+
+    // Create the Intersection Observer
+    const observer = new IntersectionObserver(animateOnScroll, {
+      threshold: 0.5, // Trigger when 50% of the element is visible
     });
-  }
 
-  // Create the Intersection Observer
-  const observer = new IntersectionObserver(animateOnScroll, {
-    threshold: 0.5, // Trigger when 10% of the element is visible
-  });
+    // Target the circles
+    const circles = document.querySelectorAll(
+      ".circle-background, .circle-background2"
+    );
+    circles.forEach((circle) => observer.observe(circle));
 
-  // Target the circles
-  const circles = document.querySelectorAll(
-    ".circle-background, .circle-background2"
-  );
-  circles.forEach((circle) => observer.observe(circle));
+    // Cleanup observer on unmount
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="about" className="about">

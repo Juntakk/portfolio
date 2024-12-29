@@ -14,7 +14,8 @@
   --dark-lightness: 20%;
   --light-lightness: 94%;
   --white-lightness: 100%;
-  --color-primary: hsl(var(--primary-hue), 100%, 20%);
+  --color-primary: #2f4f3f;
+  --color-secondary: #e0975e;
   --color-white: hsl(0, 5%, var(--white-lightness));
   --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
@@ -42,6 +43,8 @@ body {
   line-height: 1.6;
   font-size: 0.9rem;
   cursor: default;
+  background-color: #111;
+  margin: 0;
 }
 
 main.color-1 {
@@ -213,7 +216,6 @@ img {
 .btn.primary {
   border: none;
   background: var(--color-primary);
-  /* text color always white that's why i didn't use a variable color */
   color: var(--color-secondary);
   font-weight: bolder;
 }
