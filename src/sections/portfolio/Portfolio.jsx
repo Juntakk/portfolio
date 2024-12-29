@@ -36,8 +36,8 @@ const Portfolio = () => {
 
   return (
     <div id="portfolio">
-      <h2>{language === "en" ? "Projects" : "Projets"}</h2>
       <div className="container portfolio__container">
+        <h2>{language === "en" ? "Projects" : "Projets"}</h2>
         <ProjectsCategories
           categories={categories}
           onFilterProjects={filterProjectsHandler}
