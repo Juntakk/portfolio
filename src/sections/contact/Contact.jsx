@@ -8,8 +8,8 @@ const Contact = () => {
     <section id="contact">
       <h2 className="first_h2">
         {language === "en"
-          ? "Ready to Join Your Team – Get in Touch !"
-          : "Prêt à Rejoindre Votre Équipe – Contactez-moi !"}
+          ? "Ready to join your project – Get in Touch !"
+          : "Prêt à rejoindre votre projet – Contactez-moi !"}
       </h2>
       <p className="second_p">
         {language === "en"

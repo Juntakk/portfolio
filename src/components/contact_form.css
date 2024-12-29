@@ -169,9 +169,10 @@ input:-webkit-autofill {
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
-  margin-top: 20px;
-  color: black;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
 }
+
 @media screen and (max-width: 1444px) {
   /* .contact_container div {
     padding: 5px;
@@ -198,6 +199,12 @@ input:-webkit-autofill {
 @media (max-width: 1024px) {
   .contact_container {
     width: 75%;
+    height: 500px;
+  }
+  .form__group {
+  }
+  .form__field {
+    margin-top: 2rem;
   }
 }
 

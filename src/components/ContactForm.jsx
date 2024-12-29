@@ -105,9 +105,6 @@ const ContactForm = () => {
             Message
           </label>
         </div>
-        {/* <button className="contact_form_btn" type="submit">
-          {language === "en" ? "Send email" : "Envoyer courriel"}
-        </button> */}
         <button class="cta" type="submit">
           <span>{language === "en" ? "Send email" : "Envoyer courriel"}</span>
           <svg width="15px" height="10px" viewBox="0 0 13 10">

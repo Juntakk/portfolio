@@ -15,8 +15,8 @@
   transform: rotateZ(45deg);
   color: var(--color-primary);
   perspective: 1000px;
-  width: 296px;
-  height: 296px;
+  width: 196px;
+  height: 196px;
   border-radius: 50%;
   position: relative;
 }

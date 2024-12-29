@@ -133,7 +133,7 @@
 /* Responsive Design */
 @media (max-width: 700px) {
   .nav__container {
-    height: 3rem;
+    height: 4rem;
     left: 0;
     width: auto;
     flex-direction: row;
@@ -149,7 +149,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin-bottom: 1rem;
     margin-right: auto;
     margin-left: 1rem;
   }

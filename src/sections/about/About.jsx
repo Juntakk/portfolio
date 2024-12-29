@@ -35,9 +35,6 @@ const About = () => {
 
   return (
     <section id="about" className="about">
-      {/* <h2 className="about_title">
-        {language === "en" ? "About Me" : "À propos de moi"}
-      </h2> */}
       <div className="container about__container" data-aos="fade-up">
         <div className="about__content">
           <div className="circle-background2"></div>
@@ -48,19 +45,17 @@ const About = () => {
           <h1 className="about__headline">
             {language === "en" ? (
               <>
-                I'm Nick, a full-stack developer passionate about building
-                impactful web and mobile applications. <br />
-                I excel at crafting user-friendly designs, solving complex
-                problems, and collaborating. <br />
-                Ready to bring my skills to your team and create amazing stuff!
+                I'm Nick, a freelance designer & developer passionate about
+                building impactful web and mobile applications, even games.{" "}
+                <br />
+                Ready to bring my skills to your projects and create amazing
+                stuff!
               </>
             ) : (
               <>
-                Je suis Nick, développeur full-stack passionné par la création
-                d'applications web et mobiles. <br />
-                Je conçois des expériences intuitives, résous des problèmes
-                techniques complexes et travaille en équipe. <br />
-                Prêt à rejoindre la vôtre pour construire des projets
+                Je suis Nick, designer freelance et développeur passionné par la
+                création d'applications web et mobiles, et de jeux vidéo. <br />
+                Prêt à vous accompagner pour construire des projets
                 exceptionnels!
               </>
             )}
