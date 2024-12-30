@@ -14,7 +14,9 @@
   flex-direction: row;
   width: 500px;
 }
-
+#service {
+  height: 100vh;
+}
 .card.service {
   display: flex;
   align-items: flex-start;
@@ -86,7 +88,7 @@
     gap: 1.5rem;
   }
   #services {
-    height: fit-content;
+    height: 100vh;
     padding: 3rem;
     h2 {
       margin-top: 3rem;
@@ -98,21 +100,26 @@
 @media screen and (max-width: 600px) {
   .services__container {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: 0.2rem;
   }
-  .card.service {
-    gap: 1.2 rem;
-  }
+
   .service__icon {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
   #services h2 {
-    margin-top: 2.5rem;
-  }
-  #services p {
-    display: none;
+    margin-top: 4.5rem;
   }
   #services {
-    height: auto;
+    height: 100vh;
+  }
+  .service__details h4 {
+    font-size: 1.25rem;
+  }
+  .card.service {
+    padding: 0;
+  }
+  .service__details {
+    padding-top: 0;
   }
 }

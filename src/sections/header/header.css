@@ -11,24 +11,13 @@ header {
 
 .desc_p {
   font-size: 1.75rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", "Gill Sans",
-    "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Times New Roman",
-    Times, serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif, Cochin, Georgia, Times, "Times New Roman",
+    "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    "Times New Roman", Times, serif;
   color: var(--color-secondary);
   display: inline-block;
-  border-right: 1px solid var(--color-secondary);
-  animation: blink 1s step-end infinite;
   margin-bottom: 1rem;
-}
-
-/* Blinking cursor effect */
-@keyframes blink {
-  50% {
-    border-right-color: transparent; /* Cursor becomes invisible */
-  }
-  100% {
-    border-right-color: orange; /* Cursor reappears */
-  }
 }
 
 .particles__container {
