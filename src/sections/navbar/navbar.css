@@ -20,13 +20,13 @@
   transform: translateX(100%);
   transition: all 1s ease;
   height: 100vh;
-  width: 6.5rem;
+  width: 9.5rem;
   visibility: hidden;
   z-index: 100;
 }
 
 .nav__container.show {
-  background-color: var(--color-primary);
+  background-color: transparent;
   z-index: 100;
   transform: translateX(0);
   opacity: 1;
@@ -38,17 +38,19 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: "Iceland";
   text-decoration: none;
-  font-size: 1.5rem;
-  color: var(--color-white);
+  font-size: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   margin-top: auto;
   margin-bottom: 1rem;
+  color: var(--color-secondary);
+  transition: all 1s;
 }
 
 .cv:hover {
-  color: var(--color-secondary);
+  transform: scale(1.15);
 }
 
 .icon {
@@ -60,21 +62,51 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  gap: 1.5rem;
+  gap: 4rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .nav__menu li a {
-  text-decoration: none;
-  color: var(--color-white);
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  position: relative;
+  color: var(--color-secondary);
+  font-family: "Iceland";
+  font-size: 1.4rem;
+  display: inline-block;
+  transition: transform 0.2s all ease-in-out !important;
 }
 
-.nav__menu li a:hover {
+.nav__menu li a.active {
+  visibility: hidden; /* Fully hide the text during animation */
+}
+
+.nav__menu li a.active::before {
+  content: ""; /* Start with no content */
+  animation: chitchat 1.2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  color: inherit; /* Match the link's text color */
+  visibility: visible;
+}
+
+.nav__menu li a.active.animation-complete {
+  visibility: visible; /* Reveal the main text after animation */
+  text-decoration: underline;
+}
+
+.nav__menu li a.active.animation-complete::before {
+  content: none; /* Remove the pseudo-element */
+}
+
+.nav__menu li {
+  transition: all 0.5s ease-in-out;
   color: var(--color-secondary);
+}
+.nav__menu li:hover {
+  transform: translateX(-20px);
 }
 
 /* Right Section */
@@ -93,7 +125,7 @@
   border: none;
   cursor: pointer;
   font-size: 1.75rem;
-  color: var(--color-white);
+  color: var(--color-secondary);
   transition: 0.75s all ease;
 }
 
@@ -102,23 +134,22 @@
 }
 
 .theme__icon:hover {
-  color: var(--color-secondary);
   transform: scale(1.15);
 }
 
 .line {
-  color: var(--color-white);
+  color: var(--color-secondary);
   font-size: 1.6rem;
 }
 
 .nav__logo {
   font-size: 1.2rem;
-  color: var(--color-white);
+  transition: all 1s;
+  border-radius: 50%;
 }
 .nav__logo:hover {
   transform: scale(1.15);
-  border-radius: 50%;
-  border: 2px solid var(--color-secondary);
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -158,5 +189,96 @@
     margin-bottom: 0;
     margin-top: 0;
     margin-right: 1rem;
+  }
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#-";
+  }
+
+  5% {
+    content: ".$";
+  }
+
+  10% {
+    content: "^{3e";
+  }
+
+  15% {
+    content: "-!op";
+  }
+
+  20% {
+    content: "#$_nick";
+  }
+
+  25% {
+    content: "№:07|e";
+  }
+
+  30% {
+    content: "#{+.[";}35%{content: "@}-?xo";
+  }
+
+  40% {
+    content: "?{4@%#-";
+  }
+
+  45% {
+    content: "=.,^!0!";
+  }
+
+  50% {
+    content: "?2@%L@";
+  }
+
+  55% {
+    content: "\;1}]=l";
+  }
+
+  60% {
+    content: "?{%:%/*";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4+%";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%Rx•";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<?&";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%**";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'&@";
+    right: 0;
+  }
+
+  90% {
+    content: "404";
+    right: 0;
+  }
+
+  95% {
+    content: "22";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
   }
 }

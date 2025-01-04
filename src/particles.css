@@ -1,0 +1,28 @@
+.particles__container {
+  position: fixed; /* Make it fixed to cover all sections */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Place it behind other content */
+}
+.spacing1 {
+  height: 5rem;
+  background-color: var(--color-white);
+}
+.spacing2 {
+  height: 6rem;
+  background-color: var(--color-white);
+}
+.spacing3 {
+  height: 8rem;
+  background-color: var(--color-white);
+}
+.spacing4 {
+  height: 4rem;
+  background-color: var(--color-white);
+}
+.spacing5 {
+  height: 4rem;
+  background-color: var(--color-white);
+}

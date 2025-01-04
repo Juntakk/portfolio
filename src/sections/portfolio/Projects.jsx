@@ -28,7 +28,11 @@ const Projects = ({ projects, data }) => {
   }, []);
 
   return (
-    <div className="portfolio__projects" data-aos="fade-up">
+    <div
+      className="portfolio__projects"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+    >
       {isMobile ? (
         <>
           {/* <p className="swipeMsg">

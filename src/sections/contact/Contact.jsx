@@ -1,22 +1,201 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./contact.css";
+import "magic.css/dist/magic.min.css";
+import { ImLinkedin } from "react-icons/im";
+import { FaGithubSquare } from "react-icons/fa";
 import { useLanguage } from "../../theme/LanguageContext";
-import ContactForm from "../../components/ContactForm";
+import { useState, useRef } from "react";
+import useVisibility from "../../hooks/useVisibility";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const { language } = useLanguage();
+  const myRef = useRef();
+  const isVisible = useVisibility(myRef);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "service_1ke57ce", // Replace with your service ID from EmailJS
+        "template_zrerjkw", // Replace with your template ID from EmailJS
+        {
+          to_name: "Nick", // Replace with the recipient's name or dynamic value
+          subject: formData.subject,
+          message: formData.message, // message will be the message from the form
+          reply_to: formData.email, // Optional: reply-to email from the sender
+        },
+        "78CM3jHVxqrSQ8s3i" // Replace with your user ID from EmailJS
+      )
+      .then(
+        (result) => {
+          setStatus(
+            language === "en"
+              ? "Message sent successfully, talk to you soon!"
+              : "Message envoyé avec succès, à bientôt !"
+          );
+          setFormData({
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("There was an error sending the message.");
+        }
+      );
+  };
+
   return (
-    <section id="contact">
-      <h2 className="first_h2">
-        {language === "en"
-          ? "Ready to join your project – Get in Touch !"
-          : "Prêt à rejoindre votre projet – Contactez-moi !"}
-      </h2>
-      <p className="second_p">
-        {language === "en"
-          ? "Shoot me an email via this form"
-          : "Envoyez-moi un courriel via ce formulaire"}
-      </p>
-      <ContactForm />
+    <section id="contact" ref={myRef}>
+      <div
+        className={`contact_container ${
+          isVisible ? "magictime slideRightReturn" : "none"
+        }`}
+      >
+        <div className="contact_container">
+          <h2
+            className={`${isVisible ? "magictime slideRightReturn" : "none"}`}
+          >
+            {language === "en"
+              ? "Ready to join your project"
+              : "Prêt à rejoindre votre projet"}
+          </h2>
+          <p className={`${isVisible ? "magictime slideUpReturn" : "none"}`}>
+            {language === "en" ? "Get in Touch" : "Contactez-moi"}
+          </p>
+          <form onSubmit={handleSubmit} className="form__group">
+            <div class="form__group field">
+              <input
+                className={`form__field ${
+                  isVisible ? "magictime slideUpReturn" : "none"
+                }`}
+                placeholder={
+                  language === "fr" ? "Votre courriel" : "Your email"
+                }
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <label
+                htmlFor="email"
+                className={`form__label ${
+                  isVisible ? "magictime slideUpReturn" : "none"
+                }`}
+              >
+                {" "}
+                {language === "fr" ? "Votre courriel" : "Your email"}
+              </label>
+            </div>
+            <div class="form__group field">
+              <input
+                className={`form__field ${
+                  isVisible ? "magictime slideUpReturn" : "none"
+                }`}
+                placeholder={language === "fr" ? "Compagnie" : "Company"}
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
+              <label
+                htmlFor="subject"
+                className={`form__label ${
+                  isVisible ? "magictime slideUpReturn" : "none"
+                }`}
+              >
+                {" "}
+                {language === "fr" ? "Compagnie" : "Company"}
+              </label>
+            </div>
+            <div class="form__group field">
+              <textarea
+                className={`form__field ${
+                  isVisible ? "magictime slideUpReturn" : "none"
+                }`}
+                placeholder="Message"
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows="5"
+                required
+              />
+              <label
+                htmlFor="message"
+                className={`form__label ${
+                  isVisible ? "magictime slideUpReturn" : "none"
+                }`}
+              >
+                Message
+              </label>
+            </div>
+            <div className="social-icons">
+              <button
+                className={`cta ${
+                  isVisible ? "magictime slideRightReturn" : "none"
+                }`}
+                type="submit"
+              >
+                <span>
+                  {language === "en" ? "Send email" : "Envoyer courriel"}
+                </span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+              <a
+                href="https://www.linkedin.com/in/nickhabashigauthier/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${
+                  isVisible ? "magictime slideLeftReturn" : "none"
+                }`}
+              >
+                <span className="social-icon">
+                  <FaGithubSquare />
+                </span>
+              </a>
+              <a
+                href="https://github.com/Juntakk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${
+                  isVisible ? "magictime slideLeftReturn" : "none"
+                }`}
+              >
+                <span className="social-icon" style={{ fontSize: "2.65rem" }}>
+                  <ImLinkedin />
+                </span>
+              </a>
+            </div>
+          </form>
+          {status && <p className="status_msg">{status}</p>}
+        </div>{" "}
+      </div>
     </section>
   );
 };

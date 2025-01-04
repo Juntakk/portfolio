@@ -1,23 +1,171 @@
-.services__container {
+#services {
+  background-color: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  gap: 2rem;
+  flex-direction: column;
 }
 #services h2 {
-  margin-bottom: 2rem;
+  font-size: 7rem;
+  font-family: "Iceland", serif;
+  color: var(--color-black);
 }
-.service {
+.services__container {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  width: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Iceland", "serif";
 }
-#service {
-  height: 100vh;
+
+.services__container .card {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
 }
-.card.service {
+
+.services__container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.services__container .card .face.face1 {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  background: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  overflow: hidden;
+  transform: translateY(100px);
+}
+
+.services__container .card:hover .face.face1 {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background: var(--color-secondary);
+  transform: translateY(0);
+}
+
+.services__container .card .face.face1 .content {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.services__container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.services__container .card .face.face1 .content span {
+  max-width: 100px;
+  color: var(--color-secondary);
+  transition: 1s all ease;
+}
+.services__container .card:hover .face.face1 .content span {
+  color: var(--color-primary);
+}
+
+.services__container .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: var(--color-black);
+  text-align: center;
+  font-size: 1.5em;
+}
+.services__container .card:hover .face.face1 .content h3 {
+  color: var(--color-black);
+}
+.services__container .card .face.face2 {
+  position: relative;
+  background: transparent;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(-100px);
+}
+
+.services__container .card:hover .face.face2 {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--color-black);
+  transform: translateY(0);
+}
+
+.services__container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+.services__container .card .face.face2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.card.one.magictime.slideLeftReturn {
+  animation-duration: 1.25s;
+}
+.card.two.magictime.slideLeftReturn {
+  animation-duration: 2s;
+}
+.card.three.magictime.slideLeftReturn {
+  animation-duration: 2.3s;
+}
+h2.none {
+  opacity: 0;
+}
+
+/* Styling for Statistics Row */
+.statistics__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  padding: 0rem 1rem;
+  border-radius: 10px;
+}
+
+.statistic {
+  text-align: center;
+}
+
+.statistic h3 {
+  font-family: "Iceland", serif;
+  font-size: 3.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.statistic p {
+  font-family: "Iceland", serif;
+  font-size: 1.7rem;
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+/* .card.service {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -58,7 +206,7 @@
   color: var(--color-secondary);
 }
 
-.progress__container {
+.progress__service__container {
   height: 4;
   background-color: var(--color-primary);
   margin: 10;
@@ -75,7 +223,7 @@
 }
 
 /*TABLETS*/
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
   .service {
     display: flex;
     flex-direction: row;
@@ -96,7 +244,6 @@
   }
 }
 
-/*PHONES*/
 @media screen and (max-width: 600px) {
   .services__container {
     grid-template-columns: 1fr;
@@ -111,7 +258,7 @@
     margin-top: 4.5rem;
   }
   #services {
-    height: 100vh;
+    height: 130vh;
   }
   .service__details h4 {
     font-size: 1.25rem;
@@ -122,4 +269,4 @@
   .service__details {
     padding-top: 0;
   }
-}
+}  */

@@ -38,18 +38,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
-  font-size: 0.9rem;
-  cursor: default;
-  background-color: #111;
-  margin: 0;
-}
-
 main.color-1 {
-  --color-primary: #2f4f3f; /* Dark forest green for strong contrast */
-  --color-secondary: #e0975e; /* Rich, warm tan like burnt orange */
+  --color-primary: #495867; /* Dark forest green for strong contrast */
+  --color-secondary: #d8a47f; /* Rich, warm tan like burnt orange */
 }
 
 main.color-2 {
@@ -108,20 +99,14 @@ main {
 /* GENERAL CONTAINER CLASS */
 .container {
   width: var(--container-width-lg);
-  margin-inline: auto;
   max-width: 1920px;
 }
 
 /* GENERAL SECTION STYLES */
 section {
-  padding: 4rem 0 0 0;
   height: 100vh;
-  background: var(--color-light);
-  transition: var(--transition);
-}
-
-section:nth-child(even) {
   background: var(--color-white);
+  transition: var(--transition);
 }
 
 section > h2 {
@@ -134,53 +119,12 @@ section > p {
   width: 40%;
 }
 
-/* GENERAL SECTION STYLES */
-a {
-  color: var(--color-white);
-  transition: var(--transition);
-}
-
-/* GENERAL HEADING STYLES */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.1;
-  color: var(--color-black);
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.1rem;
-}
-
-h5 {
-  font-size: 0.95rem;
-}
-
-h6 {
-  font-size: 0.8rem;
-}
-
 /* GENERAL IMAGES STYLES */
-img {
+/* img {
   display: block;
   width: 100%;
   object-fit: cover;
-}
+} */
 
 /* GENERAL BUTTON STYLES */
 .btn {

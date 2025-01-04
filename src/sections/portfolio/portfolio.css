@@ -1,18 +1,31 @@
-.portfolio__projects {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 2rem;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-}
 #portfolio {
-  padding: 4rem 0 3rem 0;
   background-color: var(--color-white);
-  text-align: center;
+  height: max-content;
+  overflow: hidden;
+  z-index: 1;
 }
+.portfolio__container.none {
+  opacity: 0;
+}
+.portfolio__categories.none {
+  opacity: 0;
+}
+#portfolio h2 {
+  font-size: 5rem;
+  font-family: "Iceland", serif;
+  color: var(--color-black);
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.portfolio__projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .portfolio__categories {
   display: flex;
   justify-content: center;
@@ -27,6 +40,7 @@
   transition: transform 0.75s ease-in-out;
   color: var(--color-secondary);
   border: 1px solid var(--color-secondary) !important;
+  z-index: 1;
 }
 .btn.cat__btn::before {
   background: var(--color-primary) !important;
@@ -83,15 +97,12 @@
   transform: rotateY(180deg);
 }
 .title {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  /* text-decoration: underline; */
-  font-family: "Times New Roman", Times, serif;
 }
 .info {
-  font-size: 1.5rem;
-  padding: 0rem 1.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.75rem;
+  padding: 1.5rem;
   text-align: start;
 }
 .desc {
@@ -103,7 +114,8 @@
 .desc,
 .info {
   cursor: default;
-  color: wheat;
+  color: var(--color-black);
+  opacity: 0.9;
   font-family: "Iceland", serif;
 }
 .btn_div {
@@ -114,10 +126,12 @@
   color: var(--color-white);
   background: var(--color-secondary);
   padding: 0.5rem 1.5rem;
+  font-family: "Iceland";
   width: 100%;
   border-radius: 0px;
   /* border: 2px solid var(--color-primary); */
   font-weight: 600;
+  font-size: 1.5rem;
 }
 .btn_div a:hover {
   color: var(--color-secondary);

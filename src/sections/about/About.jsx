@@ -1,46 +1,27 @@
-import AboutImage from "../../assets/header2-removebg.png";
 import "./about.css";
-import { useLanguage } from "../../theme/LanguageContext";
-import { useEffect } from "react";
+import AboutImage from "../../assets/header2-removebg.png";
+import { useRef } from "react";
+import useVisibility from "../../hooks/useVisibility";
+import Donut from "../../components/Donut";
+import ContactLinks from "../../components/ContactLinks";
 
 const About = () => {
-  const { language } = useLanguage();
-
-  useEffect(() => {
-    // Function to add the animation class
-    function animateOnScroll(entries, _observer) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-        } else {
-          entry.target.classList.remove("animate"); // Optional: Remove for re-trigger
-        }
-      });
-    }
-
-    // Create the Intersection Observer
-    const observer = new IntersectionObserver(animateOnScroll, {
-      threshold: 0.5, // Trigger when 50% of the element is visible
-    });
-
-    // Target the circles
-    const circles = document.querySelectorAll(
-      ".circle-background, .circle-background2"
-    );
-    circles.forEach((circle) => observer.observe(circle));
-
-    // Cleanup observer on unmount
-    return () => observer.disconnect();
-  }, []);
+  const myRef = useRef();
+  const isVisible = useVisibility(myRef);
 
   return (
-    <section id="about" className="about">
-      <div className="container about__container" data-aos="fade-up">
-        <div className="about__content">
+    <section id="about" ref={myRef}>
+      <div
+        className={`container about__container ${
+          isVisible ? "magictime slideRightReturn" : "none"
+        }`}
+      >
+        <ContactLinks />
+        <img src={AboutImage} alt="" className="about__image" />
+
+        <Donut></Donut>
+        {/* <div className="about__content">
           <div className="circle-background2"></div>
-          <div className="about__portrait">
-            <img src={AboutImage} alt="About Nick" className="about__image" />
-          </div>
           <div className="circle-background"></div>
           <h1 className="about__headline">
             {language === "en" ? (
@@ -60,7 +41,7 @@ const About = () => {
               </>
             )}
           </h1>
-        </div>
+        </div> */}
       </div>
     </section>
   );

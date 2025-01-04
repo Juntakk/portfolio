@@ -1,9 +1,10 @@
 .card.theme__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
   height: 400px;
   width: 400px;
-  position: fixed;
-  top: 20%;
-  left: calc(50% - 200px);
+  transform: translate(-50%, -50%);
   background: #dedede;
   z-index: 200;
   text-align: center;
@@ -19,18 +20,6 @@
   }
 }
 
-.language__toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  p {
-    font-size: 1.5rem;
-  }
-  p:hover {
-    color: var(--color-black);
-    cursor: pointer;
-  }
-}
 .card.theme__modal:hover {
   background: #dedede;
 }
@@ -62,27 +51,27 @@
 }
 
 .theme__primary-colors .color-1 {
-  background: linear-gradient(90deg, #2f4f3f, #e0975e);
+  background: hsl(270, 70%, 46%);
 }
 
 .theme__primary-colors .color-2 {
-  background: linear-gradient(90deg, #2b5a77, #d4a55a);
+  background: hsl(110, 70%, 46%);
 }
 
 .theme__primary-colors .color-3 {
-  background: linear-gradient(90deg, #5c4034, #9a520b);
+  background: hsl(240, 70%, 46%);
 }
 
 .theme__primary-colors .color-4 {
-  background: linear-gradient(90deg, #23694d, #ff986c);
+  background: hsl(325, 70%, 46%);
 }
 
 .theme__primary-colors .color-5 {
-  background: linear-gradient(90deg, #314c41, #89c2ad);
+  background: hsl(0, 70%, 46%);
 }
 
 .theme__primary-colors .color-6 {
-  background: linear-gradient(90deg, #483e5a, #d1a483);
+  background: hsl(52, 70%, 46%);
 }
 
 .theme__background-colors {
@@ -95,30 +84,20 @@
 .theme__background-colors button {
   width: 7rem;
   height: 2.5rem;
-  background: #111;
-  border-radius: var(--border-radius-3);
-  cursor: pointer;
-}
-
-.theme__background-colors .bg-1:hover {
-  width: 7rem;
-  height: 2.5rem;
-  background: #111;
+  background: white;
   border-radius: var(--border-radius-3);
   cursor: pointer;
 }
 
 .theme__background-colors .bg-2 {
-  background: white;
+  background: #111;
 }
 
-/*PHONES*/
+/* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
   .card.theme__modal {
-    width: 300px;
-    height: 350px;
-    padding: 1.5rem 1.5rem;
-    left: calc(50% - 150px);
+    width: var(--container-width-md);
+    padding: 3rem 1.5rem;
   }
 
   .theme__primary-colors {
