@@ -1,3 +1,11 @@
+nav {
+  display: flex;
+  flex-direction: row;
+}
+.socials {
+  color: wheat;
+  font-size: 10rem;
+}
 .nav__wrapper {
   position: relative;
   width: 100%;
@@ -14,7 +22,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  margin-right: 1rem;
   gap: 1rem;
   opacity: 0;
   transform: translateX(100%);
@@ -71,7 +80,7 @@
   position: relative;
   color: var(--color-secondary);
   font-family: "Iceland";
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: inline-block;
   transition: transform 0.2s all ease-in-out !important;
 }
@@ -108,9 +117,6 @@
 .nav__menu li:hover {
   transform: translateX(-20px);
 }
-
-/* Right Section */
-
 .nav__right {
   display: flex;
   align-items: center;
@@ -119,7 +125,6 @@
   margin-bottom: auto;
   margin-top: 1rem;
 }
-
 .theme__icon {
   background: none;
   border: none;
@@ -128,20 +133,16 @@
   color: var(--color-secondary);
   transition: 0.75s all ease;
 }
-
 .theme__icon:focus {
   border: none;
 }
-
 .theme__icon:hover {
   transform: scale(1.15);
 }
-
 .line {
   color: var(--color-secondary);
   font-size: 1.6rem;
 }
-
 .nav__logo {
   font-size: 1.2rem;
   transition: all 1s;
@@ -151,16 +152,6 @@
   transform: scale(1.15);
   cursor: pointer;
 }
-
-@media (max-width: 700px) {
-  .nav__menu li:nth-child(2) {
-    display: none;
-  }
-}
-
-@media (max-width: 1024px) {
-}
-
 /* Responsive Design */
 @media (max-width: 700px) {
   .nav__container {
@@ -184,14 +175,18 @@
     margin-right: auto;
     margin-left: 1rem;
   }
-  .cv {
-    margin-left: auto;
-    margin-bottom: 0;
-    margin-top: 0;
-    margin-right: 1rem;
+}
+@media (min-width: 807px) and (max-width: 1024px) {
+  .nav__container {
+    align-items: end;
+    margin-right: 0.75rem;
   }
 }
-
+@media (max-width: 806px) {
+  .nav__menu li a {
+    font-size: 1rem;
+  }
+}
 @keyframes chitchat {
   0% {
     content: "#-";

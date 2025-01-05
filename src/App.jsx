@@ -1,6 +1,5 @@
 import Navbar from "./sections/navbar/Navbar";
 import Header from "./sections/header/Header";
-import About from "./sections/about/About";
 import Services from "./sections/services/Services";
 import Portfolio from "./sections/portfolio/Portfolio";
 import Contact from "./sections/contact/Contact";
@@ -10,9 +9,11 @@ import { useThemeContext } from "./context/theme-context";
 import { useRef, useState, useEffect } from "react";
 import { LanguageProvider } from "./theme/LanguageContext";
 import Loader from "./components/Loader";
+import Socials from "./components/Socials";
 import "./particles.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Donut from "./sections/about/Donut";
 
 const App = () => {
   const { themeState } = useThemeContext();
@@ -155,13 +156,15 @@ const App = () => {
         ref={mainRef}
       >
         <Navbar />
+        <Socials />
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />
         <div className="spacing1"></div>
         <Services />
         <div className="spacing2"></div>
         <Portfolio />
         <div className="spacing3"></div>
-        <About />
+        {/* <About /> */}
+        <Donut />
         <div className="spacing4"></div>
         <Contact />
         <div className="spacing5"></div>

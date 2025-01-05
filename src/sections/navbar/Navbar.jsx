@@ -16,25 +16,31 @@ const Navbar = () => {
   const { language } = useLanguage();
   const { themeState } = useThemeContext();
   const data = language === "en" ? data_en : data_fr;
-  const [activeSection, setActiveSection] = useState(1); // Tracks the current section
-
+  const [activeSection, setActiveSection] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
   const isDarkMode = themeState.background === "bg-2";
   const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
     if (activeSection) {
-      setCompleted(false); // Reset state when section changes
-      const timer = setTimeout(() => setCompleted(true), 1200); // Match animation duration
+      setCompleted(false);
+      const timer = setTimeout(() => setCompleted(true), 1200);
       return () => clearTimeout(timer);
     }
   }, [activeSection]);
-
+  useEffect(() => {
+    if (window.innerWidth < 1400) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [isMobile]);
   useEffect(() => {
     let timeoutId;
 
     const handleScroll = () => {
       const navBar = document.querySelector(".nav__container");
-      const scrollThreshold = 1; // Adjust the threshold as needed
+      const scrollThreshold = 1;
 
       if (window.scrollY > scrollThreshold) {
         navBar.classList.add("show");
@@ -42,18 +48,15 @@ const Navbar = () => {
         navBar.classList.remove("show");
       }
     };
-
-    // Debounce the scroll handler
     const debouncedScroll = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         handleScroll();
-      }, 30); // Adjust the debounce time as needed
+      }, 30);
     };
 
     window.addEventListener("scroll", debouncedScroll);
 
-    // Clean up the event listeners and timeout
     return () => {
       window.removeEventListener("scroll", debouncedScroll);
       clearTimeout(timeoutId);
@@ -72,7 +75,7 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.2 } // Adjust the threshold to your preferenc
+      { threshold: 0.2 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -99,27 +102,28 @@ const Navbar = () => {
           </i>
         </div>
         <ul className="nav__menu">
-          {data.map((item) => (
-            <li key={item.id}>
-              <a
-                href={item.link}
-                className={`${
-                  activeSection === item.link.replace("#", "")
-                    ? `active ${completed ? "animation-complete" : ""}`
-                    : ""
-                }`}
-                aria-current={
-                  activeSection === item.link.replace("#", "")
-                    ? "true"
-                    : "false"
-                }
-              >
-                {item.title} - 0{item.id}
-              </a>
-            </li>
-          ))}
+          {data.map((item) => {
+            return (
+              <li key={item.id}>
+                <a
+                  href={item.link}
+                  className={`${
+                    activeSection === item.link.replace("#", "")
+                      ? `active ${completed ? "animation-complete" : ""}`
+                      : ""
+                  }`}
+                  aria-current={
+                    activeSection === item.link.replace("#", "")
+                      ? "true"
+                      : "false"
+                  }
+                >
+                  {item.title} - 0{item.id}
+                </a>
+              </li>
+            );
+          })}
         </ul>
-
         <a
           href={CV}
           download={

@@ -7,22 +7,31 @@ import { FaLaptopCode } from "react-icons/fa";
 import data_en from "./data";
 import data_fr from "./data_fr";
 import { useLanguage } from "../../theme/LanguageContext";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useVisibility from "../../hooks/useVisibility";
 
+//TODO make icons smaller for mobile devices
 const Services = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
+  const [isMobile, setIsMobile] = useState(false);
 
   const myRef = useRef();
   const isVisible = useVisibility(myRef);
-
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [isMobile]);
   return (
     <section id="services" ref={myRef}>
       <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
         Services
       </h2>
       <div class="container services__container">
+        {/* Card 1 */}
         <div
           className={`card one ${
             isVisible ? "magictime slideLeftReturn" : "none"
@@ -31,7 +40,7 @@ const Services = () => {
           <div class="face face1">
             <div class="content">
               <span>
-                <TfiLayoutAccordionList size={85} />
+                <TfiLayoutAccordionList size={isMobile ? 45 : 75} />
               </span>
               <h3>Design</h3>
             </div>
@@ -42,6 +51,7 @@ const Services = () => {
             </div>
           </div>
         </div>
+        {/* Card 2 */}
         <div
           className={`card two ${
             isVisible ? "magictime slideLeftReturn" : "none"
@@ -50,7 +60,7 @@ const Services = () => {
           <div class="face face1">
             <div class="content">
               <span>
-                <FaLaptopCode size={85} />
+                <FaLaptopCode size={isMobile ? 45 : 75} />
               </span>{" "}
               <h3>Code</h3>
             </div>
@@ -61,6 +71,7 @@ const Services = () => {
             </div>
           </div>
         </div>
+        {/* Card 3 */}
         <div
           className={`card three ${
             isVisible ? "magictime slideLeftReturn" : "none"
@@ -69,7 +80,7 @@ const Services = () => {
           <div class="face face1">
             <div class="content">
               <span>
-                <GrLaunch size={75} />
+                <GrLaunch size={isMobile ? 45 : 75} />
               </span>
               <h3>Launch</h3>
             </div>
@@ -81,6 +92,8 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+      {/* Statistics */}
       <div
         className={`statistics__row ${
           isVisible ? "magictime slideLeftReturn" : "none"

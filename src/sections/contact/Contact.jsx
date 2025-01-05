@@ -1,8 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "./contact.css";
 import "magic.css/dist/magic.min.css";
-import { ImLinkedin } from "react-icons/im";
-import { FaGithubSquare } from "react-icons/fa";
 import { useLanguage } from "../../theme/LanguageContext";
 import { useState, useRef } from "react";
 import useVisibility from "../../hooks/useVisibility";
@@ -71,131 +69,117 @@ const Contact = () => {
           isVisible ? "magictime slideRightReturn" : "none"
         }`}
       >
-        <div className="contact_container">
-          <h2
-            className={`${isVisible ? "magictime slideRightReturn" : "none"}`}
-          >
-            {language === "en"
-              ? "Ready to join your project"
-              : "Prêt à rejoindre votre projet"}
-          </h2>
-          <p className={`${isVisible ? "magictime slideUpReturn" : "none"}`}>
-            {language === "en" ? "Get in Touch" : "Contactez-moi"}
-          </p>
-          <form onSubmit={handleSubmit} className="form__group">
-            <div class="form__group field">
-              <input
-                className={`form__field ${
-                  isVisible ? "magictime slideUpReturn" : "none"
-                }`}
-                placeholder={
-                  language === "fr" ? "Votre courriel" : "Your email"
-                }
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <label
-                htmlFor="email"
-                className={`form__label ${
-                  isVisible ? "magictime slideUpReturn" : "none"
-                }`}
-              >
-                {" "}
-                {language === "fr" ? "Votre courriel" : "Your email"}
-              </label>
-            </div>
-            <div class="form__group field">
-              <input
-                className={`form__field ${
-                  isVisible ? "magictime slideUpReturn" : "none"
-                }`}
-                placeholder={language === "fr" ? "Compagnie" : "Company"}
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-              />
-              <label
-                htmlFor="subject"
-                className={`form__label ${
-                  isVisible ? "magictime slideUpReturn" : "none"
-                }`}
-              >
-                {" "}
-                {language === "fr" ? "Compagnie" : "Company"}
-              </label>
-            </div>
-            <div class="form__group field">
-              <textarea
-                className={`form__field ${
-                  isVisible ? "magictime slideUpReturn" : "none"
-                }`}
-                placeholder="Message"
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                required
-              />
-              <label
-                htmlFor="message"
-                className={`form__label ${
-                  isVisible ? "magictime slideUpReturn" : "none"
-                }`}
-              >
-                Message
-              </label>
-            </div>
-            <div className="social-icons">
-              <button
-                className={`cta ${
-                  isVisible ? "magictime slideRightReturn" : "none"
-                }`}
-                type="submit"
-              >
-                <span>
-                  {language === "en" ? "Send email" : "Envoyer courriel"}
-                </span>
-                <svg width="15px" height="10px" viewBox="0 0 13 10">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
-              </button>
-              <a
-                href="https://www.linkedin.com/in/nickhabashigauthier/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${
-                  isVisible ? "magictime slideLeftReturn" : "none"
-                }`}
-              >
-                <span className="social-icon">
-                  <FaGithubSquare />
-                </span>
-              </a>
-              <a
-                href="https://github.com/Juntakk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${
-                  isVisible ? "magictime slideLeftReturn" : "none"
-                }`}
-              >
-                <span className="social-icon" style={{ fontSize: "2.65rem" }}>
-                  <ImLinkedin />
-                </span>
-              </a>
-            </div>
-          </form>
-          {status && <p className="status_msg">{status}</p>}
-        </div>{" "}
-      </div>
+        <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
+          {language === "en"
+            ? "Ready to join your project"
+            : "Prêt à rejoindre votre projet"}
+        </h2>
+        <p className={`${isVisible ? "magictime slideUpReturn" : "none"}`}>
+          {language === "en" ? "Get in Touch" : "Contactez-moi"}
+        </p>
+        <form onSubmit={handleSubmit} className="form__group">
+          <div class="form__group field">
+            <input
+              className={`form__field ${
+                isVisible ? "magictime slideUpReturn" : "none"
+              }`}
+              placeholder={language === "fr" ? "Votre courriel" : "Your email"}
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <label
+              htmlFor="email"
+              className={`form__label ${
+                isVisible ? "magictime slideUpReturn" : "none"
+              }`}
+            >
+              {" "}
+              {language === "fr" ? "Votre courriel" : "Your email"}
+            </label>
+          </div>
+          <div class="form__group field">
+            <input
+              className={`form__field ${
+                isVisible ? "magictime slideUpReturn" : "none"
+              }`}
+              placeholder={language === "fr" ? "Compagnie" : "Company"}
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+            <label
+              htmlFor="subject"
+              className={`form__label ${
+                isVisible ? "magictime slideUpReturn" : "none"
+              }`}
+            >
+              {" "}
+              {language === "fr" ? "Compagnie" : "Company"}
+            </label>
+          </div>
+          <div class="form__group field">
+            <textarea
+              className={`form__field ${
+                isVisible ? "magictime slideUpReturn" : "none"
+              }`}
+              placeholder="Message"
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="5"
+              required
+            />
+            <label
+              htmlFor="message"
+              className={`form__label ${
+                isVisible ? "magictime slideUpReturn" : "none"
+              }`}
+            >
+              Message
+            </label>
+          </div>
+          <div className="social-icons">
+            <button
+              className={`cta ${
+                isVisible ? "magictime slideRightReturn" : "none"
+              }`}
+              type="submit"
+            >
+              <span>
+                {language === "en" ? "Send email" : "Envoyer courriel"}
+              </span>
+            </button>
+            {/* <a
+              href="https://www.linkedin.com/in/nickhabashigauthier/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${isVisible ? "magictime slideLeftReturn" : "none"}`}
+            >
+              <span className="social-icon">
+                <FaGithubSquare />
+              </span>
+            </a>
+            <a
+              href="https://github.com/Juntakk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${isVisible ? "magictime slideLeftReturn" : "none"}`}
+            >
+              <span className="social-icon">
+                <ImLinkedin />
+              </span>
+            </a> */}
+          </div>
+        </form>
+        {status && <p className="status_msg">{status}</p>}
+      </div>{" "}
     </section>
   );
 };

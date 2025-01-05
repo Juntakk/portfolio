@@ -10,6 +10,7 @@
   opacity: 0;
   transform: translateX(-50px); /* Initial fade-left position */
   transition: opacity 2s ease, transform 2s ease;
+  margin-top: 5rem;
 }
 
 .myName,
@@ -26,7 +27,7 @@
 
 .fade-right-active {
   opacity: 1;
-  transform: translateX(0); /* Final position for desc_p */
+  transform: translateX(0);
 }
 
 .desc_p {
@@ -41,7 +42,7 @@
   justify-self: flex-end;
   z-index: 1;
   margin-top: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 .down__arrow:hover {
   transform: scale(1.15);
@@ -61,8 +62,30 @@
   font-style: normal;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .myName {
+    font-size: 4rem !important;
+  }
+  .desc_p {
+    font-size: 1.5rem !important;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
+  .myName {
+    font-size: 3rem !important;
+  }
+  .desc_p {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra Small Mobile (Portrait) */
+  .myName {
+    font-size: 2.2rem !important;
+  }
+  .desc_p {
+    font-size: 1.5rem !important;
+  }
 }
