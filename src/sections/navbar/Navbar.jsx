@@ -24,7 +24,7 @@ const Navbar = () => {
   useEffect(() => {
     if (activeSection) {
       setCompleted(false);
-      const timer = setTimeout(() => setCompleted(true), 1200);
+      const timer = setTimeout(() => setCompleted(true), 750);
       return () => clearTimeout(timer);
     }
   }, [activeSection]);
@@ -75,7 +75,7 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.4 }
     );
 
     sections.forEach((section) => observer.observe(section));

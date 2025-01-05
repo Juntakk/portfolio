@@ -91,7 +91,7 @@ nav {
 
 .nav__menu li a.active::before {
   content: ""; /* Start with no content */
-  animation: chitchat 1.2s linear;
+  animation: chitchat 0.75s;
   position: absolute;
   top: 0;
   left: 0;
@@ -200,16 +200,8 @@ nav {
     content: "^{3e";
   }
 
-  15% {
-    content: "-!op";
-  }
-
   20% {
     content: "#$_nick";
-  }
-
-  25% {
-    content: "№:07|e";
   }
 
   30% {
@@ -220,16 +212,8 @@ nav {
     content: "?{4@%#-";
   }
 
-  45% {
-    content: "=.,^!0!";
-  }
-
   50% {
     content: "?2@%L@";
-  }
-
-  55% {
-    content: "\;1}]=l";
   }
 
   60% {
@@ -237,18 +221,8 @@ nav {
     right: 0;
   }
 
-  65% {
-    content: "|{f[4+%";
-    right: 0;
-  }
-
   70% {
     content: "{4%0%Rx•";
-    right: 0;
-  }
-
-  75% {
-    content: "'1_0<?&";
     right: 0;
   }
 
@@ -264,11 +238,6 @@ nav {
 
   90% {
     content: "404";
-    right: 0;
-  }
-
-  95% {
-    content: "22";
     right: 0;
   }
 

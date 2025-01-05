@@ -8,17 +8,35 @@
   flex-direction: column;
   z-index: 1;
   gap: 1rem;
+  transition: opacity 0.5s ease-in-out;
 }
 .socials__container a {
   color: var(--color-secondary);
   font-size: 4rem;
   transition: transform 0.75s ease-in-out;
 }
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Iceland";
+  font-weight: bolder;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
 .socials__container a:hover {
   transform: translateX(10px);
   cursor: pointer;
   color: var(--color-primary);
+}
+.socials__container a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 .socials__container.none {

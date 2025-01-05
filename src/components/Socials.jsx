@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./styles/socials.css";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaSquareGithub } from "react-icons/fa6";
@@ -5,22 +6,19 @@ import { useEffect, useState } from "react";
 
 const Socials = () => {
   const [isScrolling, setIsScrolling] = useState(false);
-  const [hideOnStop, setHideOnStop] = useState(true);
   let scrollTimeout;
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolling(true);
-      setHideOnStop(false);
 
       // Clear the previous timeout
       clearTimeout(scrollTimeout);
 
-      // Set a timeout to hide the container if no scrolling occurs for 1 second
+      // Set a timeout to hide the container when scrolling
       scrollTimeout = setTimeout(() => {
-        setHideOnStop(false);
         setIsScrolling(false);
-      }, 1000); // Adjust delay as needed
+      }, 500); // Adjust delay as needed
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,12 +31,14 @@ const Socials = () => {
   }, []);
 
   return (
-    <div className={`socials__container ${hideOnStop ? "none" : ""}`}>
+    <div className={`socials__container ${isScrolling ? "none" : ""}`}>
       <a href="https://www.linkedin.com/in/nickhabashigauthier/">
         <IoLogoLinkedin />
+        <span className="tooltip">LinkedIn</span>
       </a>
       <a href="https://github.com/Juntakk">
         <FaSquareGithub />
+        <span className="tooltip">Github</span>
       </a>
     </div>
   );

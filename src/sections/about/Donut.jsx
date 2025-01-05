@@ -39,7 +39,7 @@ const Donut = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsTablet(window.innerWidth < 1300);
+      setIsTablet(window.innerWidth < 1400);
       setIsMobile(window.innerWidth < 700);
     };
     handleResize();
@@ -56,8 +56,8 @@ const Donut = () => {
   const view = isMobile ? [250, 250] : isTablet ? [850, 850] : [1200, 1200];
   const dims = [view[0], view[1]];
   const radius = isMobile ? 65 : isTablet ? 150 : 400;
-  const imageSize = radius * 1.3;
-  const fontSize = isMobile ? "5px" : isTablet ? "23px" : "34px";
+  const imageSize = radius * 1.4;
+  const fontSize = isMobile ? "6px" : isTablet ? "23px" : "50px";
 
   const innerArcPath = arc()
     .innerRadius(radius * 0.7)
@@ -75,11 +75,6 @@ const Donut = () => {
         height="auto"
         viewBox={`0 0 ${dims[0]} ${dims[1]}`}
       >
-        <defs>
-          <clipPath id="circleClip">
-            <circle cx="0" cy="0" r={radius} />
-          </clipPath>
-        </defs>
         <g transform={`translate(${dims[0] / 2}, ${dims[1] / 2})`}>
           <image
             className="about__image"
@@ -88,7 +83,6 @@ const Donut = () => {
             y={-imageSize / 2}
             width={imageSize}
             height={imageSize}
-            clipPath="url(#circleClip)"
             style={{
               pointerEvents: "none",
             }}
