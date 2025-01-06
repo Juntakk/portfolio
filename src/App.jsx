@@ -6,7 +6,7 @@ import Portfolio from "./sections/portfolio/Portfolio";
 import Contact from "./sections/contact/Contact";
 import FloatingNav from "./sections/floating-nav/FloatingNav";
 import Themes from "./theme/Themes";
-import { useThemeContext } from "./context/theme-context";
+// import { useThemeContext } from "./context/theme-context";
 import { useRef, useState, useEffect } from "react";
 import { LanguageProvider } from "./theme/LanguageContext";
 import Loader from "./components/Loader";
@@ -20,7 +20,7 @@ const App = () => {
   const mainRef = useRef();
   const [isLoading, setIsLoading] = useState(true);
   const [particleColor, setParticleColor] = useState(null);
-  const themeContext = useThemeContext();
+  // const themeContext = useThemeContext();
   const [isMobile, setIsMobile] = useState(false);
   const [themeState, setThemeState] = useState("color-1");
 
