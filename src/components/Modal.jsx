@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
-import "./modal.css";
+import "./styles/modal.css";
 import { useModalContext } from "../context/modal-context";
 import Card from "./Card";
 

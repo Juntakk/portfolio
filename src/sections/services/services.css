@@ -1,125 +1,256 @@
-.services__container {
+#services {
+  background-color: var(--color-quinquenary);
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  gap: 2rem;
+  flex-direction: column;
 }
 #services h2 {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 7rem;
+  font-family: "Iceland", serif;
+  color: var(--color-primary);
 }
-.service {
+h2 .none {
+  opacity: 0;
+}
+
+.services__container {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  width: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Iceland", "serif";
 }
-#service {
-  height: 100vh;
-}
-.card.service {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-bottom: 1rem;
-  border: 2px solid var(--color-primary);
-}
-.card.service:hover {
-  transform: translateY(-0.5rem);
-  cursor: default;
+.services__container .card {
+  position: relative;
   background-color: transparent;
+  overflow: hidden;
 }
-
-.service__icon {
-  background: var(--color-white);
-  padding: 0.6rem;
-  margin-left: 1rem;
-  border-radius: 150px;
-  font-size: 1.4rem;
-  margin-top: 25px;
-  color: var(--color-secondary);
-  transition: var(--transition);
-  border: 2px solid;
+.services__container .card .face {
+  width: 245px;
+  height: 200px;
+  transition: 0.5s;
+}
+.services__container .card .face.face1 {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  background: var(--color-tertiary);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  overflow: hidden;
+  transform: translateY(100px);
 }
-
-.service:hover .service__icon {
-  background: var(--color-secondary);
-  color: var(--color-white);
-  transform: rotate(360deg);
+.services__container .card:hover .face.face1 {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background: var(--color-quaternary);
+  transform: translateY(0);
+}
+.services__container .card .face.face1 .content {
+  opacity: 1;
+  transition: 0.5s;
+}
+.services__container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+.services__container .card .face.face1 .content span {
+  max-width: 100px;
+  color: var(--color-quaternary);
+  transition: 1s all ease;
+}
+.services__container .card:hover .face.face1 .content span {
+  color: var(--color-tertiary);
+}
+.services__container .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 1.5em;
+}
+.services__container .card:hover .face.face1 .content h3 {
+  color: var(--color-secondary);
+}
+.services__container .card .face.face2 {
+  position: relative;
+  background: transparent;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateY(-100px);
+}
+.services__container .card:hover .face.face2 {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--color-tertiary);
+  transform: translateY(0);
+}
+.services__container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  color: var(--color-quinquenary);
+  font-size: 1.2rem;
+}
+.card.one.magictime.slideLeftReturn {
+  animation-duration: 1.25s;
+}
+.card.two.magictime.slideLeftReturn {
+  animation-duration: 2s;
+}
+.card.three.magictime.slideLeftReturn {
+  animation-duration: 2.3s;
+}
+h2.none {
+  opacity: 0;
+}
+.statistics__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  margin-bottom: 3rem;
+  background-color: transparent;
+  padding: 0rem 1rem;
+  border-radius: 10px;
+  opacity: 1;
   transition: all 1s ease-in-out;
 }
-
-.service h4 {
-  margin-bottom: 0.7rem;
-  margin-top: 1rem;
-  font-size: 1.5rem;
+.statistics__row .none {
+  opacity: 0;
+}
+.statistic {
+  text-align: center;
+}
+.statistic h3 {
   font-family: "Iceland", serif;
-  color: var(--color-secondary);
+  font-size: 3.5rem;
+  color: var(--color-tertiary);
+  margin-bottom: 0.5rem;
 }
-
-.progress__container {
-  height: 4;
-  background-color: var(--color-primary);
-  margin: 10;
-}
-
-.service__details {
-  padding: 10px;
-  width: 100%;
-}
-.percentage {
-  margin-top: 10px;
+.statistic p {
+  color: var(--color-primary);
+  font-family: "Iceland", serif;
+  font-size: 1.7rem;
   font-weight: bold;
-  color: var(--color-secondary);
 }
-
-/*TABLETS*/
-@media screen and (max-width: 1400px) {
-  .service {
-    display: flex;
-    flex-direction: row;
-    width: 400px;
+/*LANDSCAPE TABLETS*/
+@media (min-width: 807px) and (max-width: 1024px) {
+  #services h2 {
+    font-size: 5rem;
   }
-}
-@media screen and (max-width: 1024px) {
   .services__container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
-  #services {
-    height: 100vh;
-    padding: 3rem;
-    h2 {
-      margin-top: 3rem;
-    }
+  .services__container .card .face {
+    width: 190px;
+    height: 150px;
+    transition: 0.5s;
   }
-}
-
-/*PHONES*/
-@media screen and (max-width: 600px) {
-  .services__container {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
+  .services__container .card .face.face1 {
+    transform: translateY(75px);
   }
-
-  .service__icon {
+  .services__container .card:hover .face.face1 {
+    transform: translateY(0);
+  }
+  .services__container .card .face.face2 {
+    padding: 0px;
+    transform: translateY(-75px);
+  }
+  .services__container .card:hover .face.face2 {
+    transform: translateY(0);
+  }
+  .services__container .card .face.face2 .content {
+    font-size: 0.6rem;
+    height: 100%;
+  }
+  .services__container .card .face.face2 .content p {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  .statistics__row {
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  .statistic h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .statistic p {
     font-size: 1.2rem;
+    font-weight: lighter;
+  }
+}
+@media (min-width: 00px) and (max-width: 806px) {
+  #services h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .services__container {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .services__container .card .face {
+    width: 120px;
+    height: 105px;
+    transition: 0.5s;
+  }
+  .services__container .card .face.face1 .content span {
+    width: 100px;
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    transition: 1s all ease;
+  }
+  .services__container .card .face.face1 {
+    transform: translateY(0px);
+  }
+  .services__container .card:hover .face.face1 {
+    transform: translateY(0);
+  }
+  .services__container .card .face.face2 {
+    padding: 0px;
+    display: none;
+    transform: translateY(-75px);
+  }
+  .services__container .card:hover .face.face2 {
+    transform: translateY(0);
+  }
+  .services__container .card .face.face2 .content {
+    font-size: 0.6rem;
+    height: 100%;
+  }
+  .services__container .card .face.face2 .content p {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  .statistics__row {
+    gap: 3rem;
     margin-top: 1rem;
   }
-  #services h2 {
-    margin-top: 4.5rem;
+  .statistic h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
-  #services {
-    height: 100vh;
-  }
-  .service__details h4 {
-    font-size: 1.25rem;
-  }
-  .card.service {
-    padding: 0;
-  }
-  .service__details {
-    padding-top: 0;
+  .statistic p {
+    font-size: 0.8rem;
+    font-weight: lighter;
   }
 }

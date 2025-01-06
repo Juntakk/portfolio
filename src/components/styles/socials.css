@@ -1,0 +1,71 @@
+.socials__container {
+  position: fixed;
+  display: flex;
+  bottom: 2%;
+  left: 1%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  gap: 1rem;
+  transition: opacity 0.5s ease-in-out;
+}
+.socials__container a {
+  color: var(--color-secondary);
+  font-size: 3rem;
+  transition: transform 0.75s ease-in-out;
+}
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: var(--color-quaternary);
+  color: var(--color-secondary);
+  padding: 5px;
+  border-radius: 1px;
+  font-size: 15px;
+  font-family: "Iceland";
+  font-weight: bolder;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.socials__container a:hover {
+  transform: translateX(10px);
+  cursor: pointer;
+  color: var(--color-quaternary);
+}
+.socials__container a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.socials__container.none {
+  opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  .socials__container a {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .socials__container a {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .socials__container a {
+    font-size: 1.75rem;
+  }
+  .socials__container {
+    position: fixed;
+    display: flex;
+    bottom: 35%;
+    left: 2%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    gap: 1rem;
+  }
+}

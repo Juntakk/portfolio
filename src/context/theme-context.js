@@ -5,7 +5,6 @@ export const ThemeContext = createContext();
 
 const initialThemeState = JSON.parse(localStorage.getItem("themeSettings")) || {
   primary: "color-1",
-  background: "bg-2",
 };
 
 export const ThemeProvider = ({ children }) => {
@@ -22,7 +21,7 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("themeSettings", JSON.stringify(themeState));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [themeState.primary, themeState.background]);
+  }, [themeState.primary]);
 
   return (
     <ThemeContext.Provider value={{ themeState, themeHandler }}>

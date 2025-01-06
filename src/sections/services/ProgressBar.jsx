@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import "./progress_bar.css";
 
 const ProgressBar = (props) => {
-  const { level, title } = props;
+  const { title } = props;
   const [isVisible, setIsVisible] = useState(false);
 
   const progressBarRef = useRef(null);
@@ -33,7 +33,7 @@ const ProgressBar = (props) => {
       <div className="skill-box">
         <div className="skill-bar">
           <span className={`skill-per ${title} ${isVisible ? "animate" : ""}`}>
-            <span className="tooltip">{level}%</span>
+            {/* <span className="tooltip">{level}%</span> */}
           </span>
         </div>
       </div>

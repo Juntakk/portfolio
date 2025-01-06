@@ -1,97 +1,383 @@
-.contact__container {
-  padding: 1rem;
-  width: fit-content;
+/* Main container */
+/* Style the autofill background */
+input:-webkit-autofill {
+  background-color: transparent !important; /* Custom color */
+  color: var(--color-primary) !important; /* Text color */
+  -webkit-text-fill-color: var(
+    --color-primary
+  ) !important; /* Force text color */
+  transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+}
+
+/* Remove white flash when element is focused */
+input:-webkit-autofill:focus {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+  -webkit-text-fill-color: var(--color-primary) !important;
+}
+
+#contact {
   display: flex;
   justify-content: center;
-  gap: 6rem;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-quinquenary);
 }
-
-.contact__container a {
-  width: 15rem;
-  height: 5rem;
-  color: white;
-  background: var(--color-primary);
-  display: grid;
-  place-items: center;
+.contact_container {
+  position: relative;
+  width: 50rem;
+  border-radius: 5px;
+  background: var(--color-quaternary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.contact_container.none {
+  opacity: 0;
+}
+.contact_container h2 {
+  font-size: 3rem;
+  color: var(--color-quinquenary);
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: 1.5rem;
+  font-family: "Iceland", serif;
+}
+.contact_container p {
   font-size: 2rem;
-  border: 2px solid transparent;
-  border-radius: var(--border-radius-1);
+  font-family: "Iceland", serif;
+  margin-right: auto;
+  margin-left: 1.5rem;
+  color: var(--color-quinquenary);
+}
+.container.none {
+  display: none;
 }
 
-.contact__container a:hover {
-  background: transparent;
-  border-color: var(--color-primary);
+/* From Uiverse.io by mrhyddenn */
+.form__group {
+  position: relative;
+  padding: 18px;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+  outline: 0;
+  font-size: 1.4rem;
   color: var(--color-primary);
-  transform: translateY(-0.5rem);
+  padding: 7px 0;
+  background: var(--color-quaternary);
+  transition: border-color 0.2s;
 }
 
-.second_p {
-  margin-top: -10px;
-  margin-bottom: 0;
+.form__field::placeholder {
+  color: transparent;
 }
 
-.first_h2 {
-  margin-top: 20px;
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
 }
 
-/*PHONES*/
-@media screen and (max-width: 1024px) {
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 1.2rem !important ;
+  color: var(--color-primary);
+  opacity: 0.5;
+  pointer-events: none;
+  font-family: "Iceland", "serif";
+}
+
+/*ANIMATIONS*/
+.contact_container.magictime.slideDownReturn {
+  animation-duration: 1.5s;
+}
+
+h2.magictime.slideRightReturn {
+  animation-duration: 2s;
+}
+p.magictime.slideUpReturn {
+  animation-duration: 2.5s;
+}
+
+.cta.magictime.slideRightReturn {
+  animation-duration: 2s;
+}
+a.magictime.slideLeftReturn {
+  animation-delay: 1s;
+  animation-duration: 1s;
+}
+
+.form__field:focus {
+  font-weight: 500;
+  border-width: 3px;
+  border-image: var(--color-primary);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: -10;
+  display: block;
+  transition: 0.2s;
+  font-size: 1.5rem !important;
+  color: var(--color-primary);
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+  position: relative;
+  padding: 12px 12px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: var(--color-tertiary);
+  width: 57px;
+  opacity: 0.5;
+  height: 57px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Iceland", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-quinquenary);
+  padding: 5px;
+}
+
+.cta:hover:before {
+  width: 100%;
+}
+
+.cta:hover span {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+/* Status message */
+.status_msg {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+@media (max-width: 1025px) {
+  .contact_container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 800px) {
+  /* Main container */
   #contact {
-    height: 100vh;
-    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+  }
+  .contact_container {
+    position: relative;
+    width: 65%;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
+    margin-right: 0;
   }
-  .contact__container {
-    gap: 1.5rem;
+  .contact_container.none {
+    opacity: 0;
   }
-  .contact__container a {
-    width: 2rem;
-    height: 5rem;
-  }
-  .contact__container {
-    padding: 1rem;
-  }
-  .first_h2 {
+  .contact_container h2 {
     font-size: 1.5rem;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: 0.5rem;
+    font-family: "Iceland", serif;
   }
-  .second_p {
-    font-size: 0.75rem;
+  .contact_container p {
+    font-size: 1rem;
+    font-family: "Iceland", serif;
+    margin-right: auto;
+    margin-left: 0.5rem;
   }
-}
-@media screen and (max-width: 725px) {
-  .contact__container {
-    gap: 1.5rem;
+  .container.none {
+    display: none;
   }
-  .contact__container a {
-    width: 2rem;
-    height: 5rem;
-  }
-  .contact__container {
-    padding: 1rem;
-  }
-  .first_h2 {
-    font-size: 1.25rem;
-  }
-  .second_p {
-    font-size: 0.75rem;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  #contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  /* From Uiverse.io by mrhyddenn */
+  .form__group {
+    position: relative;
+    padding: 8px;
+    width: 100%;
   }
-  .first_h2 {
-    font-size: 1.5rem;
+
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    outline: 0;
+    font-size: 1.4rem;
+    padding: 7px 0;
+    transition: border-color 0.2s;
+  }
+
+  .form__field::placeholder {
+    color: transparent;
+  }
+
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-size: 1.2rem !important ;
+    opacity: 0.5;
+    pointer-events: none;
+    font-family: "Iceland", "serif";
+  }
+
+  /*ANIMATIONS*/
+  .contact_container.magictime.slideDownReturn {
+    animation-duration: 1.5s;
+  }
+
+  h2.magictime.slideRightReturn {
+    animation-duration: 2s;
+  }
+  p.magictime.slideUpReturn {
+    animation-duration: 2.5s;
+  }
+
+  .cta.magictime.slideRightReturn {
+    animation-duration: 2s;
+  }
+  a.magictime.slideLeftReturn {
+    animation-delay: 1s;
+    animation-duration: 1s;
+  }
+
+  .form__field:focus {
+    font-weight: 500;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: -5;
+    display: block;
+    transition: 0.2s;
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  /* From Uiverse.io by alexmaracinaru */
+  .cta {
+    position: relative;
+    padding: 5px 5px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    width: 30px;
+    opacity: 0.2;
+    height: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .cta span {
+    position: relative;
+    font-family: "Iceland", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 5px;
+  }
+
+  .cta svg {
+    display: none;
+  }
+
+  .cta:hover:before {
+    width: 100%;
+  }
+
+  .cta:hover span {
+    transform: translateX(0);
+  }
+
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+
+  .cta:active {
+    transform: scale(0.95);
+  }
+
+  /* reset input */
+  .form__field:required,
+  .form__field:invalid {
+    box-shadow: none;
+  }
+
+  /* Status message */
+  .status_msg {
     text-align: center;
-    /* width: 85%; */
-    margin-top: 5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
 }

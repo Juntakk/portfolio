@@ -1,0 +1,28 @@
+.particles__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.spacing1 {
+  height: 5rem;
+  background-color: var(--color-quinquenary);
+}
+.spacing2 {
+  height: 6rem;
+  background-color: var(--color-quinquenary);
+}
+.spacing3 {
+  height: 8rem;
+  background-color: var(--color-quinquenary);
+}
+.spacing4 {
+  height: 4rem;
+  background-color: var(--color-quinquenary);
+}
+.spacing5 {
+  height: 4rem;
+  background-color: var(--color-quinquenary);
+}

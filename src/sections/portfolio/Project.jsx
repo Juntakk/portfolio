@@ -1,5 +1,5 @@
 // import { NavLink } from "react-router-dom";
-import Card from "../../components/Card";
+// import Card from "../../components/Card";
 import React, { useEffect } from "react";
 // import { useLanguage } from "../../theme/LanguageContext";
 
@@ -33,7 +33,7 @@ const Project = ({ project, data }) => {
 
   return (
     <>
-      <Card className="portfolio__project">
+      <div className="portfolio__project">
         <div className="inner_card">
           <div className="front">
             <img src={projectData.image} alt="" />
@@ -71,7 +71,7 @@ const Project = ({ project, data }) => {
             </div>
           </div>
         </div>
-      </Card>
+      </div>
     </>
   );
 };
