@@ -17,20 +17,16 @@ import "aos/dist/aos.css";
 import Donut from "./sections/about/Donut";
 
 const App = () => {
-  const { themeState } = useThemeContext();
   const mainRef = useRef();
   const [isLoading, setIsLoading] = useState(true);
   const [particleColor, setParticleColor] = useState(null);
   const themeContext = useThemeContext();
   const [isMobile, setIsMobile] = useState(false);
+  const [themeState, setThemeState] = useState("color-1");
 
   const colorMap = {
-    "color-1": "#f4a261", // Soft coral to contrast the grayish tones
-    "color-2": "#e76f51", // Bright lime to pop against the greens
-    "color-3": "#ffb4a2", // Light pink to complement the warm pinkish tones
-    "color-4": "#ffcb69", // Warm orange for a vibrant contrast to the reds
-    "color-5": "#a8dadc", // Light cyan to contrast the blue-gray tones
-    "color-6": "#e9c46a", // Fresh green to offset the teal-green tones
+    "color-1": "#92a8d1", // Soft coral to contrast the grayish tones
+    "color-2": "#3a5f5d", // Bright lime to pop against the greens
   };
   useEffect(() => {
     if (window.innerWidth < 800) {
@@ -40,14 +36,17 @@ const App = () => {
     }
   }, [isMobile]);
   const handleParticleColor = (theme) => colorMap[theme] || "#CCCCCC";
-
+  const toggleTheme = () => {
+    const nextTheme = themeState === "color-1" ? "color-2" : "color-1";
+    setThemeState(nextTheme);
+  };
   // Update particle color when the theme changes
   useEffect(() => {
-    if (themeContext?.themeState?.primary) {
-      const newColor = handleParticleColor(themeContext.themeState.primary);
+    if (themeState) {
+      const newColor = handleParticleColor(themeState);
       setParticleColor(newColor);
     }
-  }, [themeContext.themeState.primary]);
+  }, [themeState]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -152,11 +151,8 @@ const App = () => {
           height: "100%", // Ensure it covers the entire screen
         }}
       ></div>
-      <main
-        className={`${themeState.primary} ${themeState.background}`}
-        ref={mainRef}
-      >
-        <Navbar />
+      <main className={themeState} ref={mainRef}>
+        <Navbar toggleTheme={toggleTheme} />
         <Socials />
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />
         <div className="spacing1"></div>

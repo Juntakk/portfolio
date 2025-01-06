@@ -17,7 +17,7 @@ const Services = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const myRef = useRef();
-  const isVisible = useVisibility(myRef);
+  const isVisible = useVisibility(myRef, 0.1);
   useEffect(() => {
     if (window.innerWidth < 800) {
       setIsMobile(true);

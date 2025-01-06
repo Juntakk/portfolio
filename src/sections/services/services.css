@@ -1,5 +1,5 @@
 #services {
-  background-color: var(--color-white);
+  background-color: var(--color-quinquenary);
   height: 100vh;
   overflow: hidden;
   z-index: 1;
@@ -12,8 +12,12 @@
   margin-top: 2rem;
   font-size: 7rem;
   font-family: "Iceland", serif;
-  color: var(--color-black);
+  color: var(--color-primary);
 }
+h2 .none {
+  opacity: 0;
+}
+
 .services__container {
   position: relative;
   display: flex;
@@ -38,7 +42,7 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
-  background: var(--color-primary);
+  background: var(--color-tertiary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +53,7 @@
 .services__container .card:hover .face.face1 {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background: var(--color-secondary);
+  background: var(--color-quaternary);
   transform: translateY(0);
 }
 .services__container .card .face.face1 .content {
@@ -61,21 +65,21 @@
 }
 .services__container .card .face.face1 .content span {
   max-width: 100px;
-  color: var(--color-secondary);
+  color: var(--color-quaternary);
   transition: 1s all ease;
 }
 .services__container .card:hover .face.face1 .content span {
-  color: var(--color-primary);
+  color: var(--color-tertiary);
 }
 .services__container .card .face.face1 .content h3 {
   margin: 10px 0 0;
   padding: 0;
-  color: var(--color-black);
+  color: var(--color-primary);
   text-align: center;
   font-size: 1.5em;
 }
 .services__container .card:hover .face.face1 .content h3 {
-  color: var(--color-black);
+  color: var(--color-secondary);
 }
 .services__container .card .face.face2 {
   position: relative;
@@ -96,13 +100,13 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: var(--color-black);
+  background-color: var(--color-tertiary);
   transform: translateY(0);
 }
 .services__container .card .face.face2 .content p {
   margin: 0;
   padding: 0;
-  color: var(--color-primary);
+  color: var(--color-quinquenary);
   font-size: 1.2rem;
 }
 .card.one.magictime.slideLeftReturn {
@@ -126,6 +130,11 @@ h2.none {
   background-color: transparent;
   padding: 0rem 1rem;
   border-radius: 10px;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.statistics__row .none {
+  opacity: 0;
 }
 .statistic {
   text-align: center;
@@ -133,13 +142,13 @@ h2.none {
 .statistic h3 {
   font-family: "Iceland", serif;
   font-size: 3.5rem;
-  color: var(--color-secondary);
+  color: var(--color-tertiary);
   margin-bottom: 0.5rem;
 }
 .statistic p {
+  color: var(--color-primary);
   font-family: "Iceland", serif;
   font-size: 1.7rem;
-  color: var(--color-black);
   font-weight: bold;
 }
 /*LANDSCAPE TABLETS*/

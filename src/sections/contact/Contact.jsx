@@ -156,26 +156,6 @@ const Contact = () => {
                 {language === "en" ? "Send email" : "Envoyer courriel"}
               </span>
             </button>
-            {/* <a
-              href="https://www.linkedin.com/in/nickhabashigauthier/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${isVisible ? "magictime slideLeftReturn" : "none"}`}
-            >
-              <span className="social-icon">
-                <FaGithubSquare />
-              </span>
-            </a>
-            <a
-              href="https://github.com/Juntakk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${isVisible ? "magictime slideLeftReturn" : "none"}`}
-            >
-              <span className="social-icon">
-                <ImLinkedin />
-              </span>
-            </a> */}
           </div>
         </form>
         {status && <p className="status_msg">{status}</p>}

@@ -1,24 +1,18 @@
 import { MdDarkMode } from "react-icons/md";
-import { MdOutlineDarkMode } from "react-icons/md";
-import { useModalContext } from "../../context/modal-context";
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
-import { useThemeContext } from "../../context/theme-context";
 import { useEffect, useState } from "react";
 import CV from "../../assets/NicolasGauthier_Dev.pdf";
 import data_en from "./data";
 import data_fr from "./data_fr";
 import "./navbar.css";
 
-const Navbar = () => {
-  const { showModalHandler } = useModalContext();
+const Navbar = ({ toggleTheme }) => {
   const { language } = useLanguage();
-  const { themeState } = useThemeContext();
   const data = language === "en" ? data_en : data_fr;
   const [activeSection, setActiveSection] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
-  const isDarkMode = themeState.background === "bg-2";
   const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
@@ -89,12 +83,8 @@ const Navbar = () => {
     <nav>
       <div className="nav__container">
         <div className="nav__right">
-          <button className="theme__icon" onClick={showModalHandler}>
-            {isDarkMode ? (
-              <MdOutlineDarkMode style={{ fontWeight: 55 }} />
-            ) : (
-              <MdDarkMode style={{ fontWeight: 55 }} />
-            )}
+          <button className="theme__icon" onClick={toggleTheme}>
+            <MdDarkMode />
           </button>
           <span className="line">|</span>
           <i className="nav__logo">

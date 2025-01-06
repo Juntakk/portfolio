@@ -6,96 +6,30 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-}
-
-:root {
-  --primary-hue: 270;
-  --black-lightness: 15%;
-  --dark-lightness: 20%;
-  --light-lightness: 94%;
-  --white-lightness: 100%;
-  --color-primary: #2f4f3f;
-  --color-secondary: #e0975e;
-  --color-white: hsl(0, 5%, var(--white-lightness));
-  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
-  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
-  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
-
-  /* GENERAL CONTAINER VARIABLES */
-  --container-width-lg: 76%;
-  --container-width-md: 90%;
-
-  /* BORDER RADIUS VARIABLES */
-  --border-radius-1: 1.2rem;
-  --border-radius-2: 0.8rem;
-  --border-radius-3: 0.5rem;
-
-  /* GENERAL TRANSITION VARIABLE */
-  --transition: all 500ms ease;
+  /* transition: all 1.667s ease-in-out !important; */
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Mixed Theme - Light Mode */
 main.color-1 {
-  --color-primary: #495867; /* Dark forest green for strong contrast */
-  --color-secondary: #d8a47f; /* Rich, warm tan like burnt orange */
+  --color-primary: #333333; /* Charcoal (monochrome) */
+  --color-secondary: #92a8d1; /* Sky Blue (colorful) */
+  --color-tertiary: #666666; /* Dark Gray (monochrome) */
+  --color-quaternary: #f7cac9; /* Blush Pink (colorful) */
+  --color-quinquenary: #f2f2f2; /* Light Gray (monochrome) */
 }
 
+/* Complementary Theme - Dark Mode */
 main.color-2 {
-  --color-primary: #2b5a77; /* Deep ocean blue for prominence */
-  --color-secondary: #d4a55a; /* Vibrant golden-taupe */
+  --color-primary: #cccccc; /* Complement of Charcoal */
+  --color-secondary: #35405a; /* Deep Midnight Blue */
+  --color-tertiary: #999999; /* Complement of Dark Gray */
+  --color-quaternary: #3a5f5d; /* Rich Teal - Complement of Blush Pink */
+  --color-quinquenary: #0d0d0d; /* Complement of Light Gray */
 }
-
-main.color-3 {
-  --color-primary: #5c4034; /* Strong earthy brown */
-  --color-secondary: #9a520b; /* Rich sandstone beige */
-}
-
-main.color-4 {
-  --color-primary: #23694d; /* Bold sea green */
-  --color-secondary: #ff986c; /* Bright peach for standout contrast */
-}
-
-main.color-5 {
-  --color-primary: #314c41; /* Strong sage green */
-  --color-secondary: #89c2ad; /* Vibrant mint green */
-}
-
-main.color-6 {
-  --color-primary: #483e5a; /* Bold dusty lavender */
-  --color-secondary: #d1a483; /* Warm beige with more saturation */
-}
-
-main.bg-2 {
-  --black-lightness: 96%;
-  --dark-lightness: 60%;
-  --light-lightness: 12%;
-  --white-lightness: 6%;
-  --color-white: hsl(0, 5%, var(--white-lightness));
-  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
-  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
-  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
-  --color-tertiary: hsl(var(--primary-hue), 55%, var(--dark-lightness));
-}
-main.bg-1 {
-  --black-lightness: 10%;
-  --dark-lightness: 20%;
-  --light-lightness: 90%;
-  --white-lightness: 95%;
-  --color-white: hsl(0, 5%, var(--white-lightness));
-  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
-  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
-  --color-tertiary: hsl(var(--primary-hue), 55%, var(--dark-lightness));
-}
-
-main {
-  color: var(--color-dark);
-  --color-primary: hsl(var(--primary-hue), 89%, 41%);
-  --color-secondary: hsl(var(--primary-hue), 89%, 41%);
-}
-
 /* GENERAL CONTAINER CLASS */
 .container {
   width: var(--container-width-lg);
@@ -105,7 +39,6 @@ main {
 /* GENERAL SECTION STYLES */
 section {
   height: 100vh;
-  background: var(--color-white);
   transition: var(--transition);
 }
 
@@ -159,8 +92,8 @@ section > p {
 
 .btn.primary {
   border: none;
-  background: var(--color-primary);
-  color: var(--color-secondary);
+  background: var(--color-quaternary);
+  color: var(--color-quinquenary);
   font-weight: bolder;
 }
 
@@ -172,7 +105,7 @@ section > p {
   background: transparent;
   border: 1px solid;
   border-color: var(--color-primary);
-  color: var(--color-secondary);
+  color: var(--color-quinquenary);
 }
 
 .btn.sm {

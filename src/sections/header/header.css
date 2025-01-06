@@ -4,13 +4,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--color-white);
+  background: var(--color-quinquenary);
 }
 .myName {
   opacity: 0;
   transform: translateX(-50px); /* Initial fade-left position */
   transition: opacity 2s ease, transform 2s ease;
   margin-top: 5rem;
+  text-align: center;
+  color: var(--color-tertiary) !important;
 }
 
 .myName,
@@ -33,11 +35,11 @@
 .desc_p {
   font-size: 1.75rem;
   font-family: "Iceland", serif;
-  color: var(--color-secondary);
+  color: var(--color-tertiary);
   margin-bottom: 1rem;
 }
 .down__arrow {
-  color: var(--color-black);
+  color: var(--color-tertiary);
   font-size: 3rem;
   justify-self: flex-end;
   z-index: 1;

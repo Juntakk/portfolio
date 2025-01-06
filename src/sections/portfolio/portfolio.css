@@ -1,19 +1,21 @@
 #portfolio {
-  background-color: var(--color-white);
+  background-color: var(--color-quinquenary);
   height: max-content;
   overflow: hidden;
   z-index: 1;
 }
+
+.portfolio__container {
+  transition: all 1s ease-in-out;
+}
 .portfolio__container.none {
   opacity: 0;
 }
-.portfolio__categories.none {
-  opacity: 0;
-}
+
 #portfolio h2 {
   font-size: 5rem;
   font-family: "Iceland", serif;
-  color: var(--color-black);
+  color: var(--color-primary);
   text-align: center;
   padding-top: 2rem;
 }
@@ -37,18 +39,19 @@
 .btn.cat__btn {
   padding: 1rem 3rem;
   font-size: 1rem;
-  transition: transform 0.75s ease-in-out;
-  color: var(--color-secondary);
-  border: 1px solid var(--color-secondary) !important;
+  transition: all 0.75s ease-in-out;
+  color: var(--color-primary);
+  border-radius: 5px;
+  border: 2px solid var(--color-primary) !important;
   z-index: 1;
 }
 .btn.cat__btn::before {
-  background: var(--color-primary) !important;
-  transition: opacity 0.5s ease-in-out;
+  background: var(--color-quaternary) !important;
+  transition: all 0.5s ease-in-out;
 }
 .btn.cat__btn:hover {
-  background: var(--color-primary) !important;
-  color: var(--color-secondary);
+  background: var(--color-quaternary) !important;
+  color: var(--color-quinquenary);
 }
 .portfolio__project {
   background-color: transparent;
@@ -86,27 +89,30 @@
   object-fit: cover;
 }
 .back {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0rem 0rem;
-  border: 1px solid;
-  border-color: var(--color-secondary);
+  border: 2px solid;
+  border-color: var(--color-primary);
   transform: rotateY(180deg);
 }
 .title {
   font-size: 2.5rem;
   font-weight: bold;
+  color: var(--color-quinquenary);
 }
 .info {
+  color: var(--color-primary);
   font-size: 1.75rem;
   padding: 1.5rem;
   text-align: start;
 }
 .desc {
   margin-top: auto;
+  color: var(--color-quinquenary);
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
 }
@@ -114,7 +120,6 @@
 .desc,
 .info {
   cursor: default;
-  color: var(--color-black);
   opacity: 0.9;
   font-family: "Iceland", serif;
 }
@@ -123,10 +128,10 @@
   width: 100%;
 }
 .btn_div a {
-  color: var(--color-white);
-  background: var(--color-secondary);
+  background: var(--color-quaternary);
   padding: 0.5rem 1.5rem;
   font-family: "Iceland";
+  color: var(--color-primary);
   width: 100%;
   border-radius: 0px;
   /* border: 2px solid var(--color-primary); */
@@ -134,8 +139,8 @@
   font-size: 1.5rem;
 }
 .btn_div a:hover {
-  color: var(--color-secondary);
-  border-top: 1px solid var(--color-secondary);
+  color: var(--color-quinquenary);
+  border-top: 1px solid var(--color-quinquenary);
 }
 .btn_demo {
   border-bottom-right-radius: 0px !important;
@@ -147,7 +152,6 @@
 .btn_demo:hover,
 .btn_git:hover {
   background: var(--color-primary);
-  /* border: 1px solid var(--color-primary); */
 }
 .btn_git:hover {
   border-left: 0px;

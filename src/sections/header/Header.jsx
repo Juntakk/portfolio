@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./header.css";
 import { useLanguage } from "../../theme/LanguageContext";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import useVisibility from "../../hooks/useVisibility";
+import { m } from "framer-motion";
 
 const Header = ({ isLoading, setIsLoading }) => {
   const { language } = useLanguage();
@@ -15,6 +17,8 @@ const Header = ({ isLoading, setIsLoading }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(10);
   const [isPaused, setIsPaused] = useState(false);
+  const myRef = useRef();
+  const isVisible = useVisibility(myRef);
 
   useEffect(() => {
     const handleTyping = () => {
@@ -44,24 +48,28 @@ const Header = ({ isLoading, setIsLoading }) => {
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, typingSpeed, texts, currentIndex, isPaused]);
 
-  useEffect(() => {
-    const loadingElement = document.querySelector(".myName");
-    const loadingElement2 = document.querySelector(".desc_p");
-    if (loadingElement) {
-      if (isLoading) {
-        // Add animation on initial load
-        setTimeout(() => {
-          loadingElement.classList.add("fade-left");
-          loadingElement2.classList.add("fade-right");
-          setTimeout(() => setIsLoading(false), 2000); // Matches animation duration
-        }, 300); // Initial delay
-      }
-    }
-  }, [isLoading, setIsLoading]);
+  // useEffect(() => {
+  //   const loadingElement = document.querySelector(".myName");
+  //   const loadingElement2 = document.querySelector(".desc_p");
+  //   if (loadingElement) {
+  //     if (isLoading) {
+  //       // Add animation on initial load
+  //       setTimeout(() => {
+  //         loadingElement.classList.add("fade-left");
+  //         loadingElement2.classList.add("fade-right");
+  //         setTimeout(() => setIsLoading(false), 2000); // Matches animation duration
+  //       }, 300); // Initial delay
+  //     }
+  //   }
+  // }, [isLoading, setIsLoading]);
 
   return (
-    <section id="header">
-      <div className="header__container">
+    <section id="header" ref={myRef}>
+      <div
+        className={`header__container ${
+          isVisible ? "magictime slideLeftReturn" : "none"
+        }`}
+      >
         <h1
           className={`myName ${!isLoading ? "fade-left-active" : ""}`}
           style={{

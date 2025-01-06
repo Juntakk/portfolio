@@ -1,10 +1,11 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { arc, pie } from "d3-shape";
 import { easeExpOut } from "d3-ease";
 import sortBy from "lodash/sortBy";
 import { NodeGroup } from "react-move";
 import AboutImage from "../../assets/header2-removebg.png";
 import "./donut.css";
+import useVisibility from "../../hooks/useVisibility";
 
 const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - (min + 1))) + min;
@@ -63,12 +64,14 @@ const Donut = () => {
     .innerRadius(radius * 0.7)
     .outerRadius(radius * 0.9);
   const outerArcPath = arc()
-    .innerRadius(radius * 1.1)
-    .outerRadius(radius * 1.1);
+    .innerRadius(radius * 1.01)
+    .outerRadius(radius * 1.01);
   const mid = (d) => Math.PI > d.startAngle + (d.endAngle - d.startAngle);
+  const myRef = useRef();
+  const isVisible = useVisibility(myRef);
 
   return (
-    <section id="about">
+    <section id="about" ref={myRef}>
       <svg
         className="donut"
         width="100%"
@@ -77,7 +80,9 @@ const Donut = () => {
       >
         <g transform={`translate(${dims[0] / 2}, ${dims[1] / 2})`}>
           <image
-            className="about__image"
+            className={`about__image ${
+              isVisible ? "magictime slideRightReturn" : "none"
+            }`}
             href={AboutImage}
             x={-imageSize / 2}
             y={-imageSize / 2}
@@ -85,6 +90,8 @@ const Donut = () => {
             height={imageSize}
             style={{
               pointerEvents: "none",
+              position: "relative",
+              zIndex: "20",
             }}
           />
           <NodeGroup
@@ -105,11 +112,15 @@ const Donut = () => {
             })}
           >
             {(nodes) => (
-              <g>
+              <g
+                className={`${
+                  isVisible ? "magictime slideDownReturn" : "none"
+                }`}
+              >
                 {nodes.map(({ key, data, state }) => {
                   const p1 = outerArcPath.centroid(state);
                   const p2 = [
-                    mid(state) ? p1[0] + radius * 0.4 : p1[0] - radius * 0.4,
+                    mid(state) ? p1[0] + radius * 0.2 : p1[0] - radius * 0.2,
                     p1[1],
                   ];
                   return (

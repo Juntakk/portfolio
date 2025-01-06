@@ -1,16 +1,34 @@
 /* Main container */
+/* Style the autofill background */
+input:-webkit-autofill {
+  background-color: transparent !important; /* Custom color */
+  color: var(--color-primary) !important; /* Text color */
+  -webkit-text-fill-color: var(
+    --color-primary
+  ) !important; /* Force text color */
+  transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+}
+
+/* Remove white flash when element is focused */
+input:-webkit-autofill:focus {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+  -webkit-text-fill-color: var(--color-primary) !important;
+}
+
 #contact {
   display: flex;
   justify-content: center;
   overflow: hidden;
   align-items: center;
   flex-direction: column;
+  background-color: var(--color-quinquenary);
 }
 .contact_container {
   position: relative;
   width: 50rem;
   border-radius: 5px;
-  background: var(--color-primary);
+  background: var(--color-quaternary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +40,7 @@
 }
 .contact_container h2 {
   font-size: 3rem;
-  color: var(--color-secondary);
+  color: var(--color-quinquenary);
   flex-direction: row;
   margin-right: auto;
   margin-left: 1.5rem;
@@ -33,6 +51,7 @@
   font-family: "Iceland", serif;
   margin-right: auto;
   margin-left: 1.5rem;
+  color: var(--color-quinquenary);
 }
 .container.none {
   display: none;
@@ -49,12 +68,12 @@
   font-family: inherit;
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--color-light);
+  border-bottom: 1px solid var(--color-primary);
   outline: 0;
   font-size: 1.4rem;
-  color: var(--color-black);
+  color: var(--color-primary);
   padding: 7px 0;
-  background: var(--color-primary);
+  background: var(--color-quaternary);
   transition: border-color 0.2s;
 }
 
@@ -73,7 +92,7 @@
   top: 0;
   display: block;
   font-size: 1.2rem !important ;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   opacity: 0.5;
   pointer-events: none;
   font-family: "Iceland", "serif";
@@ -102,7 +121,7 @@ a.magictime.slideLeftReturn {
 .form__field:focus {
   font-weight: 500;
   border-width: 3px;
-  border-image: var(--color-black);
+  border-image: var(--color-primary);
   border-image-slice: 1;
 }
 
@@ -112,7 +131,7 @@ a.magictime.slideLeftReturn {
   display: block;
   transition: 0.2s;
   font-size: 1.5rem !important;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-weight: bold;
   opacity: 1;
 }
@@ -135,9 +154,9 @@ a.magictime.slideLeftReturn {
   left: 0;
   display: block;
   border-radius: 50px;
-  background: var(--color-dark);
+  background: var(--color-tertiary);
   width: 57px;
-  opacity: 0.2;
+  opacity: 0.5;
   height: 57px;
   transition: all 0.3s ease;
 }
@@ -147,21 +166,8 @@ a.magictime.slideLeftReturn {
   font-family: "Iceland", serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--color-quinquenary);
   padding: 5px;
-}
-
-.cta svg {
-  position: relative;
-  margin-left: 7.5px;
-  top: 0;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke: var(--color-secondary);
-  stroke-width: 3;
-  transform: translateX(-5px);
-  transition: all 0.3s ease;
 }
 
 .cta:hover:before {
@@ -170,11 +176,6 @@ a.magictime.slideLeftReturn {
 
 .cta:hover span {
   transform: translateX(0);
-}
-
-.cta:hover svg {
-  transform: translateX(0);
-  color: var(--color-dark) !important;
 }
 
 .cta:active {
@@ -193,22 +194,7 @@ a.magictime.slideLeftReturn {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--color-secondary);
-}
-.social-icons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-}
-.social-icon {
-  font-size: 3rem;
-  color: var(--color-secondary);
-  transition: color 0.5s ease;
-}
-
-span.social-icon:hover {
-  color: var(--color-black);
+  color: var(--color-primary);
 }
 
 @media (max-width: 1025px) {
@@ -229,7 +215,6 @@ span.social-icon:hover {
     position: relative;
     width: 65%;
     border-radius: 5px;
-    background: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,7 +227,6 @@ span.social-icon:hover {
   }
   .contact_container h2 {
     font-size: 1.5rem;
-    color: var(--color-secondary);
     flex-direction: row;
     margin-right: auto;
     margin-left: 0.5rem;
@@ -269,12 +253,9 @@ span.social-icon:hover {
     font-family: inherit;
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--color-light);
     outline: 0;
     font-size: 1.4rem;
-    color: var(--color-black);
     padding: 7px 0;
-    background: var(--color-primary);
     transition: border-color 0.2s;
   }
 
@@ -293,7 +274,6 @@ span.social-icon:hover {
     top: 0;
     display: block;
     font-size: 1.2rem !important ;
-    color: var(--color-secondary);
     opacity: 0.5;
     pointer-events: none;
     font-family: "Iceland", "serif";
@@ -322,7 +302,6 @@ span.social-icon:hover {
   .form__field:focus {
     font-weight: 500;
     border-width: 3px;
-    border-image: var(--color-black);
     border-image-slice: 1;
   }
 
@@ -332,7 +311,6 @@ span.social-icon:hover {
     display: block;
     transition: 0.2s;
     font-size: 1.2rem !important;
-    color: var(--color-secondary);
     font-weight: bold;
     opacity: 1;
   }
@@ -355,7 +333,6 @@ span.social-icon:hover {
     left: 0;
     display: block;
     border-radius: 50px;
-    background: var(--color-dark);
     width: 30px;
     opacity: 0.2;
     height: 30px;
@@ -367,7 +344,6 @@ span.social-icon:hover {
     font-family: "Iceland", serif;
     font-size: 1rem;
     font-weight: 700;
-    color: var(--color-secondary);
     padding: 5px;
   }
 
@@ -385,7 +361,6 @@ span.social-icon:hover {
 
   .cta:hover svg {
     transform: translateX(0);
-    color: var(--color-secondary);
   }
 
   .cta:active {
@@ -404,21 +379,5 @@ span.social-icon:hover {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: var(--color-secondary);
-  }
-  .social-icons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-  }
-  .social-icon {
-    font-size: 1rem;
-    color: var(--color-secondary);
-    transition: color 0.5s ease;
-  }
-
-  span.social-icon:hover {
-    color: var(--color-black);
   }
 }

@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   bottom: 2%;
-  left: 2%;
+  left: 1%;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -12,17 +12,17 @@
 }
 .socials__container a {
   color: var(--color-secondary);
-  font-size: 4rem;
+  font-size: 3rem;
   transition: transform 0.75s ease-in-out;
 }
 .tooltip {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--color-quaternary);
+  color: var(--color-secondary);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 1px;
   font-size: 15px;
   font-family: "Iceland";
   font-weight: bolder;
@@ -32,7 +32,7 @@
 .socials__container a:hover {
   transform: translateX(10px);
   cursor: pointer;
-  color: var(--color-primary);
+  color: var(--color-quaternary);
 }
 .socials__container a:hover .tooltip {
   visibility: visible;

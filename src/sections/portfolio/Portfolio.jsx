@@ -3,13 +3,15 @@ import Projects from "./Projects";
 import ProjectsCategories from "./ProjectsCategories";
 import data_en from "./data";
 import data_fr from "./data_fr";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 import { useLanguage } from "../../theme/LanguageContext";
+import useVisibility from "../../hooks/useVisibility";
 
 const Portfolio = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
-
+  const myRef = useRef();
+  const isVisible = useVisibility(myRef);
   const [projects, setProjects] = useState(() =>
     data.filter((project) => project.category === "Web")
   );
@@ -34,11 +36,13 @@ const Portfolio = () => {
   );
 
   return (
-    <section id="portfolio">
-      <div className="portfolio__container">
-        <h2 className="" data-aos="fade-left" data-aos-duration="1500">
-          {language === "en" ? "Projects" : "Projets"}
-        </h2>
+    <section id="portfolio" ref={myRef}>
+      <div
+        className={`portfolio__container ${
+          isVisible ? "magictime slideLeftReturn" : "none"
+        }`}
+      >
+        <h2>{language === "en" ? "Projects" : "Projets"}</h2>
         <ProjectsCategories
           categories={categories}
           onFilterProjects={filterProjectsHandler}
