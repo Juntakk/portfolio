@@ -75,7 +75,7 @@ const Donut = () => {
       <svg
         className="donut"
         width="100%"
-        height="auto"
+        length="auto"
         viewBox={`0 0 ${dims[0]} ${dims[1]}`}
       >
         <g transform={`translate(${dims[0] / 2}, ${dims[1] / 2})`}>
