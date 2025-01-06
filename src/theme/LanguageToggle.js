@@ -1,5 +1,4 @@
 import { useLanguage } from "./LanguageContext";
-import "./theme.css";
 import enImg from "../assets/uk.png";
 import frImg from "../assets/france.png";
 

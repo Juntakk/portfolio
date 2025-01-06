@@ -4,7 +4,6 @@ import "./header.css";
 import { useLanguage } from "../../theme/LanguageContext";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import useVisibility from "../../hooks/useVisibility";
-import { m } from "framer-motion";
 
 const Header = ({ isLoading, setIsLoading }) => {
   const { language } = useLanguage();
